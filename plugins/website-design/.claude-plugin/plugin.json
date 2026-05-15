@@ -1,0 +1,7 @@
+{
+  "name": "website-design",
+  "version": "0.1.0",
+  "description": "Specialist agents for designing and building high-quality websites for small businesses. Supports clear decision gates between No/Low-Code (Webflow) and modern code-based (Next.js + Tailwind) paths.",
+  "author": "Matthew Corbett / Raven Power LLC",
+  "extends": "ravenclaude-core"
+}
