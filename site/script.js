@@ -61,12 +61,15 @@
 
   /* ---------- Hero canvas: subtle constellation field ---------- */
   const canvas = document.getElementById('hero-canvas');
+  const heroEl = document.querySelector('.hero');
   if (canvas && canvas.getContext && !reduceMotion) {
     const ctx = canvas.getContext('2d');
     let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
     let particles = [];
     let raf = 0;
-    let running = true;
+    let visible = true;      // hero in viewport
+    let pageVisible = true;  // tab focused
+    const running = () => visible && pageVisible;
 
     const ACCENT = [94, 231, 255];
     const WHITE = [220, 230, 240];
@@ -100,7 +103,7 @@
     }
 
     function step() {
-      if (!running) return;
+      if (!running()) { raf = 0; return; }
       ctx.clearRect(0, 0, w, h);
 
       // Draw connections — short range only
@@ -144,19 +147,39 @@
       raf = requestAnimationFrame(step);
     }
 
+    function startLoop() {
+      if (raf === 0 && running()) {
+        raf = requestAnimationFrame(step);
+      }
+    }
+
     resize();
-    step();
+    startLoop();
+
     window.addEventListener('resize', () => {
-      cancelAnimationFrame(raf);
+      cancelAnimationFrame(raf); raf = 0;
       resize();
-      step();
+      startLoop();
     }, { passive: true });
 
+    // Pause animation when tab is hidden
     document.addEventListener('visibilitychange', () => {
-      running = !document.hidden;
-      if (running) { raf = requestAnimationFrame(step); }
-      else { cancelAnimationFrame(raf); }
+      pageVisible = !document.hidden;
+      if (pageVisible) startLoop();
+      else { cancelAnimationFrame(raf); raf = 0; }
     });
+
+    // Pause animation when hero scrolls off screen
+    if ('IntersectionObserver' in window && heroEl) {
+      const heroIO = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          visible = entry.isIntersecting;
+          if (visible) startLoop();
+          else { cancelAnimationFrame(raf); raf = 0; }
+        }
+      }, { threshold: 0 });
+      heroIO.observe(heroEl);
+    }
   }
 
   /* ---------- Contact form ---------- */
@@ -225,7 +248,7 @@
         }
       } else {
         // No endpoint configured — use mailto fallback.
-        setStatus('Opening your email app…', 'ok');
+        setStatus('Opening your email app — your message will be sent from matt@ravenpower.net.', 'ok');
         window.location.href = buildMailto(data);
       }
     });

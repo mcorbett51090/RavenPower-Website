@@ -22,29 +22,71 @@ Deploy this `site/` directory as the publish root on any static host:
 - **GitHub Pages** — set Pages source to this directory.
 - **Netlify / Vercel** — drop-in static deploy.
 
-## Activate the contact form (optional)
+## Activate the contact form (≈ 2 minutes, ready to paste)
 
-By default the contact form falls back to a `mailto:` link to
-`matt@ravenpower.net` — it works out of the box on any static host.
+The contact form ships in a "ready-to-activate" state:
 
-To capture submissions to a Formspree-style inbox instead, edit
-`index.html` and set the form's `data-endpoint` attribute:
+- **Default (no setup):** submissions open the visitor's email client with
+  the message pre-filled to `matt@ravenpower.net`. Works on any static
+  host with zero config.
+- **One paste away from live:** drop a Formspree (or Basin / Web3Forms /
+  Netlify Forms) endpoint URL into the form's `data-endpoint` attribute
+  and submissions will POST directly to your inbox / dashboard. The
+  `mailto:` flow still kicks in if the request fails.
 
-```html
-<form id="contact-form" data-endpoint="https://formspree.io/f/XXXXXXXX">
-```
+### Step-by-step — Formspree
 
-The JavaScript will POST JSON to that endpoint, and fall back to the
-`mailto:` flow only if the request fails.
+1. Sign up at [formspree.io](https://formspree.io/) (free tier is fine to start).
+2. Create a new form. Copy the endpoint URL — it looks like:
+   ```
+   https://formspree.io/f/XXXXXXXX
+   ```
+3. Open `index.html`, find the contact form (search for `id="contact-form"`),
+   and paste your URL into `data-endpoint`:
+   ```html
+   <form id="contact-form" data-endpoint="https://formspree.io/f/XXXXXXXX">
+   ```
+4. Save and redeploy. That's it — submissions now go to your Formspree inbox.
+
+Any provider that accepts a JSON POST works the same way (Basin, Web3Forms,
+Netlify Forms, your own endpoint). The visitor-facing email
+`matt@ravenpower.net` is also shown in plain text next to the form, so a
+visitor can always reach out directly even if JavaScript is disabled.
+
+## Fill in the placeholders
+
+The v2 site has a handful of clearly-commented placeholders the owner
+should fill in before going live:
+
+- **By-the-numbers strip** (top of `index.html`, search for
+  `class="stats"`) — replace the four placeholder figures with real
+  numbers, or remove cards you can't substantiate.
+- **Work-card outcome metrics** (each `.proj` card) — replace the
+  `14d → 3d` style placeholders inside `.proj__metric` with real before/
+  after numbers, or delete the whole `<p class="proj__metric">` block if
+  you don't have a number yet for that engagement.
+- **Headshot** — drop a square (~600×600) photo at `assets/matt.jpg` and
+  uncomment the `<img>` tag inside `.about__portrait` in `index.html`.
+  The placeholder ring with initials stays in place until you do.
+- **Testimonial** — the `<section class="testimonial" hidden>` block is
+  hidden by default. Remove the `hidden` attribute and replace the quote
+  + attribution when you have a real one.
+- **Bermuda LLC registration number** — search for `Reg. No.` in the
+  footer of `index.html` and replace `[pending]` with the issued number.
 
 ## Edit the placeholder project cards
 
 Each card in the **Work** section is a self-contained `<article class="proj">`
-in `index.html`, clearly commented. Replace the title, copy, and
-`data-tag` value to swap in real engagements.
+in `index.html`, clearly commented. Replace the title, copy,
+`data-tag` value, and the `.proj__metric` figures to swap in real
+engagements. The motif (SVG block at the top of the card) is keyed to
+`data-tag` (`ai`, `pp`, `bi`, `fabric`, `web`); reuse the matching motif
+when adding new cards, or extend the set in `index.html` and add a
+matching CSS rule for `--tag-tint`.
 
 ## About bio
 
 The bio in the **About** section is a *draft* — see the HTML comment
-above that section. Replace the three paragraphs with Matt's final
-LinkedIn "About" text when ready.
+above that section. Replace the paragraphs with Matt's final LinkedIn
+"About" text when ready. The LinkedIn link is already wired to
+[linkedin.com/in/matthewlcorbett](https://www.linkedin.com/in/matthewlcorbett).

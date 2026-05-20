@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="55%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#5EE7FF" stop-opacity="0.30"/>
+      <stop offset="55%" stop-color="#5EE7FF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#5EE7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0 L0 0 0 56" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <!-- Hairline top accent -->
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="#5EE7FF" stroke-width="1" opacity="0.45"/>
+
+  <!-- Constellation motif: connected dots, top-right corner -->
+  <g opacity="0.85">
+    <g fill="#5EE7FF">
+      <circle cx="930" cy="120" r="3.5"/>
+      <circle cx="1020" cy="170" r="2.5" opacity="0.7"/>
+      <circle cx="985" cy="240" r="2" opacity="0.55"/>
+      <circle cx="1080" cy="290" r="2.5" opacity="0.7"/>
+      <circle cx="1130" cy="180" r="2" opacity="0.5"/>
+      <circle cx="900" cy="220" r="2" opacity="0.55"/>
+      <circle cx="860" cy="160" r="2" opacity="0.5"/>
+    </g>
+    <g stroke="#5EE7FF" stroke-width="0.8" opacity="0.4" fill="none">
+      <path d="M930 120 L1020 170 L985 240 L1080 290"/>
+      <path d="M930 120 L860 160"/>
+      <path d="M1020 170 L1130 180"/>
+      <path d="M985 240 L900 220"/>
+    </g>
+  </g>
+
+  <!-- Logo mark + wordmark -->
+  <g transform="translate(86, 86)">
+    <g>
+      <path d="M2 22 L22 2 L42 22 L22 42 Z" fill="none" stroke="#5EE7FF" stroke-width="2.4"/>
+      <path d="M22 11 L33 22 L22 33 L11 22 Z" fill="#5EE7FF"/>
+    </g>
+    <text x="62" y="32" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="26" font-weight="600" fill="#f5f7fa" letter-spacing="-0.5">Raven Power</text>
+  </g>
+
+  <!-- Eyebrow -->
+  <g transform="translate(86, 250)">
+    <circle cx="6" cy="6" r="5" fill="#5EE7FF"/>
+    <text x="22" y="11" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#9aa3b2" letter-spacing="2.8" text-transform="uppercase">HAMILTON · BERMUDA</text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(86, 320)">
+    <text font-family="'Space Grotesk', 'Inter', sans-serif" font-size="78" font-weight="600" letter-spacing="-2.5">
+      <tspan x="0" y="0" fill="#5EE7FF">Agentic AI,</tspan>
+      <tspan x="0" y="92" fill="#f5f7fa">shipped with</tspan>
+      <tspan x="0" y="184" fill="#f5f7fa">regulator-grade rigor.</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom hairline + meta -->
+  <line x1="86" y1="566" x2="1114" y2="566" stroke="#ffffff" stroke-width="1" opacity="0.10"/>
+  <text x="86" y="596" font-family="'Inter', sans-serif" font-size="16" fill="#9aa3b2">ravenpower.net</text>
+  <text x="1114" y="596" font-family="'Inter', sans-serif" font-size="16" fill="#6b7280" text-anchor="end">Claude · Power Platform · Power BI · Fabric</text>
+</svg>
