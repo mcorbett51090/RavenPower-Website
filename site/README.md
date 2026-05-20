@@ -58,9 +58,17 @@ visitor can always reach out directly even if JavaScript is disabled.
 The v2 site has a handful of clearly-commented placeholders the owner
 should fill in before going live:
 
-- **By-the-numbers strip** (top of `index.html`, search for
-  `class="stats"`) — replace the four placeholder figures with real
-  numbers, or remove cards you can't substantiate.
+- **HQ location & LLC jurisdiction** — the site currently presents as
+  "Remote, worldwide" everywhere a location appears (hero eyebrow,
+  About → Location fact, footer, JSON-LD). LinkedIn lists the Raven Power
+  role as Jacksonville, FL (Remote) but Matt's profile location is
+  Hamilton, Bermuda. Once the registered LLC jurisdiction is confirmed,
+  search for `LOCATION CAVEAT` in `index.html` and update each of those
+  five spots, then update `addressLocality` / `addressCountry` in the
+  JSON-LD block at the top.
+- **By-the-numbers strip** — the four figures (13+, 2, 4, 1) are
+  verified against Matt's record; adjust the year counts as time passes.
+  Search for `STATS STRIP` in `index.html`.
 - **Work-card outcome metrics** (each `.proj` card) — replace the
   `14d → 3d` style placeholders inside `.proj__metric` with real before/
   after numbers, or delete the whole `<p class="proj__metric">` block if
@@ -71,8 +79,9 @@ should fill in before going live:
 - **Testimonial** — the `<section class="testimonial" hidden>` block is
   hidden by default. Remove the `hidden` attribute and replace the quote
   + attribution when you have a real one.
-- **Bermuda LLC registration number** — search for `Reg. No.` in the
-  footer of `index.html` and replace `[pending]` with the issued number.
+- **LLC registration number** — search for `Reg. No.` in the footer of
+  `index.html` and replace `[pending]` with the issued number once the
+  LLC jurisdiction is confirmed.
 
 ## Edit the placeholder project cards
 
@@ -86,7 +95,10 @@ matching CSS rule for `--tag-tint`.
 
 ## About bio
 
-The bio in the **About** section is a *draft* — see the HTML comment
-above that section. Replace the paragraphs with Matt's final LinkedIn
-"About" text when ready. The LinkedIn link is already wired to
+The bio in the **About** section is written from Matt's verified
+LinkedIn record — see the HTML comment above that section. It can be
+tightened or expanded freely, but the underlying facts (13+ years,
+BMA tenure Jan 2024 – Nov 2025, MBA + BS Finance from University of
+South Alabama, the four certifications) are accurate as of writing.
+The LinkedIn link is already wired to
 [linkedin.com/in/matthewlcorbett](https://www.linkedin.com/in/matthewlcorbett).
