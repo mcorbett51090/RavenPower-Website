@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "ravenclaude-core@ravenclaude": true,
+    "web-design@ravenclaude": true
+  }
+}
