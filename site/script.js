@@ -23,17 +23,49 @@
   const toggle = document.querySelector('.nav__toggle');
   const mobile = document.getElementById('nav-mobile');
   if (toggle && mobile) {
+    const setMenu = (open) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      mobile.hidden = !open;
+      mobile.classList.toggle('is-open', open);
+    };
+
     toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      mobile.hidden = open;
-      mobile.classList.toggle('is-open', !open);
+      const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+      setMenu(willOpen);
+      if (willOpen) {
+        const firstLink = mobile.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
+
     mobile.addEventListener('click', (e) => {
       if (e.target instanceof HTMLAnchorElement) {
-        toggle.setAttribute('aria-expanded', 'false');
-        mobile.hidden = true;
-        mobile.classList.remove('is-open');
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    // Esc closes; Tab while open keeps focus inside the menu (simple trap)
+    document.addEventListener('keydown', (e) => {
+      if (toggle.getAttribute('aria-expanded') !== 'true') return;
+      if (e.key === 'Escape') {
+        setMenu(false);
+        toggle.focus();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const links = Array.from(mobile.querySelectorAll('a'));
+        if (links.length === 0) return;
+        const first = links[0];
+        const last = links[links.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     });
   }
@@ -64,7 +96,11 @@
   const heroEl = document.querySelector('.hero');
   if (canvas && canvas.getContext && !reduceMotion) {
     const ctx = canvas.getContext('2d');
-    let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Cap dpr more aggressively on narrow viewports (mobile) to drop GPU/CPU
+    // pressure; an O(n²) line pass over particles plus dpr=3 was wasteful.
+    const mobileDpr = window.matchMedia('(max-width: 768px)').matches;
+    let w = 0, h = 0;
+    let dpr = Math.min(window.devicePixelRatio || 1, mobileDpr ? 1.5 : 2);
     let particles = [];
     let raf = 0;
     let visible = true;      // hero in viewport
@@ -78,6 +114,8 @@
       const rect = canvas.getBoundingClientRect();
       w = rect.width;
       h = rect.height;
+      // Re-read dpr in case the window moved to a different-density display
+      dpr = Math.min(window.devicePixelRatio || 1, mobileDpr ? 1.5 : 2);
       canvas.width = Math.floor(w * dpr);
       canvas.height = Math.floor(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -85,9 +123,11 @@
     }
 
     function seed() {
-      // Density scaled to viewport area; capped for perf
+      // Density scaled to viewport area; capped harder on narrow viewports
+      // (n² line pass means doubling count quadruples per-frame cost).
       const area = w * h;
-      const count = Math.max(40, Math.min(110, Math.floor(area / 16000)));
+      const cap = w < 768 ? 60 : 110;
+      const count = Math.max(30, Math.min(cap, Math.floor(area / 18000)));
       particles = new Array(count).fill(0).map(() => {
         const accent = Math.random() < 0.22;
         return {
@@ -254,19 +294,25 @@
     });
   }
 
-  /* ---------- Smooth scroll for in-page anchors (offset for sticky nav) ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener('click', (e) => {
-      const href = a.getAttribute('href');
-      if (!href || href === '#' || href.length < 2) return;
-      const target = document.getElementById(href.slice(1));
-      if (!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 56;
-      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
-      // Move focus for a11y without re-scrolling
+  /* ---------- Smooth scroll for in-page anchors (offset for sticky nav) ----------
+     One delegated listener; survives any future dynamic anchors and avoids
+     binding to N nodes at load. Adds a transient tabindex only when the
+     target isn't naturally focusable, and cleans up on blur. */
+  document.addEventListener('click', (e) => {
+    const a = e.target instanceof Element ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || href === '#' || href.length < 2) return;
+    const target = document.getElementById(href.slice(1));
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 56;
+    window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+    const isNaturallyFocusable = target.matches('a,button,input,textarea,select,[tabindex]');
+    if (!isNaturallyFocusable) {
       target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-    });
+      target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+    }
+    target.focus({ preventScroll: true });
   });
 })();

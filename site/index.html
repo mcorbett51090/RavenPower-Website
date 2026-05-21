@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark" />
 
   <title>Raven Power — Agentic AI consulting · Remote, worldwide</title>
-  <meta name="description" content="Raven Power LLC — an independent consultancy pairing financial-regulatory discipline with agentic AI. Claude, Power Platform, Power BI, and Microsoft Fabric, shipped fast and built to stand up to audit." />
+  <meta name="description" content="Raven Power LLC — agentic AI consulting that ships fast and stands up to audit. Claude, Power Platform, Power BI, and Microsoft Fabric." />
   <meta name="author" content="Matt Corbett" />
 
   <!-- Open Graph / Twitter -->
@@ -31,10 +31,15 @@
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- Type: Inter via Google Fonts — trimmed to 4 weights (was 7) for perf -->
+  <!-- Type: Inter + Space Grotesk via Google Fonts.
+       Preload-as-style + onload swap so the stylesheet doesn't render-block.
+       Plain <link rel="stylesheet"> kept inside <noscript> as a fallback. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  </noscript>
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -46,28 +51,48 @@
     site presents as Remote / worldwide. Update addressLocality and
     addressCountry below to the registered LLC jurisdiction once confirmed.
   -->
+  <!--
+    JSON-LD: using Organization (not ProfessionalService) until the LLC's
+    registered postal address is finalised. ProfessionalService requires
+    `address`; Organization does not. Switch back once the registration
+    jurisdiction is confirmed and a real PostalAddress can be supplied.
+  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "name": "Raven Power LLC",
     "alternateName": "Raven Power",
     "description": "Independent consultancy pairing financial-regulatory discipline with agentic AI — Claude, Microsoft Power Platform, Power BI, and Microsoft Fabric.",
+    "slogan": "Agentic AI, shipped with regulator-grade rigor.",
     "url": "https://ravenpower.net/",
+    "logo": "https://ravenpower.net/assets/raven-mark-dark.png",
+    "image": "https://ravenpower.net/assets/og-image.png",
     "email": "matt@ravenpower.net",
+    "sameAs": [
+      "https://www.linkedin.com/in/matthewlcorbett"
+    ],
     "founder": {
       "@type": "Person",
       "name": "Matt Corbett",
       "jobTitle": "Founder",
-      "sameAs": "https://www.linkedin.com/in/matthewlcorbett"
+      "sameAs": [
+        "https://www.linkedin.com/in/matthewlcorbett"
+      ]
     },
-    "areaServed": "Worldwide",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Worldwide"
+    },
     "knowsAbout": [
       "Agentic AI",
       "Anthropic Claude",
       "Microsoft Power Platform",
+      "Microsoft Power Automate",
       "Microsoft Power BI",
       "Microsoft Fabric",
+      "Dataverse",
+      "DAX",
       "Regulatory reporting",
       "Data analytics"
     ]
@@ -107,8 +132,7 @@
     <section class="hero" id="top">
       <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
       <div class="hero__glow" aria-hidden="true"></div>
-      <img class="hero__mark" src="assets/raven-mark-dark.png" alt="" aria-hidden="true" />
-      <span class="hero__bolt" aria-hidden="true"></span>
+      <img class="hero__mark" src="assets/raven-mark-dark.png" width="760" height="760" loading="lazy" decoding="async" alt="" aria-hidden="true" />
       <div class="container hero__inner">
         <p class="eyebrow reveal" data-reveal>
           <span class="eyebrow__dot" aria-hidden="true"></span>
@@ -119,7 +143,7 @@
           <span class="accent">Agentic AI,</span> shipped with regulator-grade rigor.
         </h1>
         <p class="hero__sub reveal" data-reveal data-reveal-delay="140">
-          An independent consultancy pairing financial-regulatory discipline with Claude, Power Platform, and Microsoft Fabric — AI that ships fast and stands up to audit.
+          Claude, Power Platform, and Microsoft Fabric — built with the precision of a financial regulator, shipped at startup pace.
         </p>
         <div class="hero__actions reveal" data-reveal data-reveal-delay="220">
           <a href="#contact" class="btn btn--primary">
@@ -181,7 +205,7 @@
         </header>
 
         <ul class="caps" role="list">
-          <li class="cap cap--ai reveal" data-reveal>
+          <li class="cap cap--ai reveal" data-reveal data-reveal-delay="0">
             <div class="cap__icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" width="28" height="28">
                 <circle cx="16" cy="16" r="3" fill="currentColor"/>
@@ -239,7 +263,7 @@
               </svg>
             </div>
             <h3 class="cap__title">Web design &amp; build</h3>
-            <p class="cap__copy">Hand-crafted marketing sites and lightweight web tools — fast, accessible, and on-brand from the first paint.</p>
+            <p class="cap__copy">Static-first marketing sites and internal tools — no CMS tax, hand-coded, accessible, and editable in plain HTML by the founder.</p>
             <p class="cap__detail">Static-first · accessible · founder-editable</p>
           </li>
         </ul>
@@ -272,18 +296,18 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <radialGradient id="m-ai" cx="30%" cy="40%" r="60%">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".55"/>
-                      <stop offset="60%" stop-color="#C9A249" stop-opacity=".05"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".55"/>
+                      <stop offset="60%" stop-color="currentColor" stop-opacity=".05"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </radialGradient>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-ai)"/>
-                  <g fill="none" stroke="#C9A249" stroke-width=".5" opacity=".55">
+                  <g fill="none" stroke="currentColor" stroke-width=".5" opacity=".55">
                     <circle cx="60" cy="50" r="20"/>
                     <circle cx="60" cy="50" r="32"/>
                     <circle cx="60" cy="50" r="46"/>
                   </g>
-                  <g fill="#C9A249">
+                  <g fill="currentColor">
                     <circle cx="60" cy="50" r="2.4"/>
                     <circle cx="80" cy="50" r="1.4" opacity=".8"/>
                     <circle cx="60" cy="30" r="1.4" opacity=".8"/>
@@ -293,7 +317,7 @@
                     <circle cx="155" cy="60" r="1" opacity=".5"/>
                     <circle cx="175" cy="25" r="1" opacity=".5"/>
                   </g>
-                  <g stroke="#C9A249" stroke-width=".4" opacity=".35">
+                  <g stroke="currentColor" stroke-width=".4" opacity=".35">
                     <path d="M60 50 L130 35"/>
                     <path d="M130 35 L155 60"/>
                     <path d="M155 60 L175 25"/>
@@ -313,12 +337,12 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <linearGradient id="m-bi" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".4"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".4"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </linearGradient>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-bi)"/>
-                  <g fill="#C9A249">
+                  <g fill="currentColor">
                     <rect x="16" y="58" width="12" height="30" opacity=".55"/>
                     <rect x="36" y="44" width="12" height="44" opacity=".75"/>
                     <rect x="56" y="28" width="12" height="60" opacity=".95"/>
@@ -332,7 +356,7 @@
               </div>
               <span class="proj__tag" data-tag="bi">Power BI / Fabric</span>
               <h3 class="proj__title">Executive Performance Dashboard</h3>
-              <p class="proj__copy">A unified Fabric semantic model behind a Power BI executive view — twelve disparate source systems condensed into a single, board-ready board.</p>
+              <p class="proj__copy">A unified Fabric semantic model behind a Power BI executive view — twelve disparate source systems condensed into a single, board-ready view.</p>
               <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
               <p class="proj__metric"><span class="proj__metric-from">12</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">1</span><span class="proj__metric-label">source systems unified</span></p>
             </article>
@@ -343,24 +367,24 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <linearGradient id="m-pp" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".25"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".25"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </linearGradient>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-pp)"/>
-                  <g stroke="#C9A249" stroke-width=".6" fill="none" opacity=".55">
+                  <g stroke="currentColor" stroke-width=".6" fill="none" opacity=".55">
                     <rect x="18" y="34" width="28" height="20" rx="2"/>
-                    <rect x="70" y="22" width="28" height="20" rx="2" fill="#C9A249" fill-opacity=".18"/>
+                    <rect x="70" y="22" width="28" height="20" rx="2" fill="currentColor" fill-opacity=".18"/>
                     <rect x="70" y="58" width="28" height="20" rx="2"/>
                     <rect x="122" y="34" width="28" height="20" rx="2"/>
                   </g>
-                  <g stroke="#C9A249" stroke-width=".5" opacity=".7" fill="none">
+                  <g stroke="currentColor" stroke-width=".5" opacity=".7" fill="none">
                     <path d="M46 44 L70 32"/>
                     <path d="M46 44 L70 68"/>
                     <path d="M98 32 L122 44"/>
                     <path d="M98 68 L122 44"/>
                   </g>
-                  <g fill="#C9A249">
+                  <g fill="currentColor">
                     <circle cx="70" cy="32" r="1.4"/>
                     <circle cx="70" cy="68" r="1.4"/>
                     <circle cx="98" cy="32" r="1.4"/>
@@ -383,17 +407,17 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <linearGradient id="m-fab" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".35"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".35"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </linearGradient>
                     <pattern id="weave" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-                      <path d="M0 7 L14 7 M7 0 L7 14" stroke="#C9A249" stroke-width=".4" opacity=".4"/>
-                      <circle cx="7" cy="7" r=".8" fill="#C9A249" opacity=".55"/>
+                      <path d="M0 7 L14 7 M7 0 L7 14" stroke="currentColor" stroke-width=".4" opacity=".4"/>
+                      <circle cx="7" cy="7" r=".8" fill="currentColor" opacity=".55"/>
                     </pattern>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-fab)"/>
                   <rect width="200" height="100" fill="url(#weave)"/>
-                  <g stroke="#C9A249" stroke-width=".6" fill="none" opacity=".6">
+                  <g stroke="currentColor" stroke-width=".6" fill="none" opacity=".6">
                     <path d="M0 28 Q 50 18 100 28 T 200 28"/>
                     <path d="M0 56 Q 50 46 100 56 T 200 56"/>
                     <path d="M0 84 Q 50 74 100 84 T 200 84"/>
@@ -413,26 +437,26 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <radialGradient id="m-ka" cx="70%" cy="50%" r="65%">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".45"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".45"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </radialGradient>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-ka)"/>
-                  <g fill="none" stroke="#C9A249" stroke-width=".5">
+                  <g fill="none" stroke="currentColor" stroke-width=".5">
                     <path d="M40 20 L40 80 M40 30 L80 30 M40 50 L70 50 M40 70 L85 70" opacity=".55"/>
                   </g>
-                  <g fill="#C9A249" opacity=".75">
+                  <g fill="currentColor" opacity=".75">
                     <rect x="83" y="27" width="3" height="6"/>
                     <rect x="73" y="47" width="3" height="6"/>
                     <rect x="88" y="67" width="3" height="6"/>
                   </g>
-                  <g fill="none" stroke="#C9A249" stroke-width=".4" opacity=".5">
+                  <g fill="none" stroke="currentColor" stroke-width=".4" opacity=".5">
                     <path d="M100 30 Q 130 30 140 50 Q 150 70 180 70"/>
                     <path d="M100 50 Q 130 50 145 50"/>
                     <path d="M100 70 Q 130 70 140 50"/>
                   </g>
-                  <circle cx="180" cy="70" r="6" fill="#C9A249" opacity=".25"/>
-                  <circle cx="180" cy="70" r="2.4" fill="#C9A249"/>
+                  <circle cx="180" cy="70" r="6" fill="currentColor" opacity=".25"/>
+                  <circle cx="180" cy="70" r="2.4" fill="currentColor"/>
                 </svg>
               </div>
               <span class="proj__tag" data-tag="ai">Agentic AI</span>
@@ -448,22 +472,22 @@
                 <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
                   <defs>
                     <linearGradient id="m-web" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stop-color="#C9A249" stop-opacity=".3"/>
-                      <stop offset="100%" stop-color="#C9A249" stop-opacity="0"/>
+                      <stop offset="0%" stop-color="currentColor" stop-opacity=".3"/>
+                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
                     </linearGradient>
                     <pattern id="grid-pat" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-                      <path d="M16 0 L0 0 0 16" fill="none" stroke="#C9A249" stroke-width=".3" opacity=".4"/>
+                      <path d="M16 0 L0 0 0 16" fill="none" stroke="currentColor" stroke-width=".3" opacity=".4"/>
                     </pattern>
                   </defs>
                   <rect width="200" height="100" fill="url(#m-web)"/>
                   <rect width="200" height="100" fill="url(#grid-pat)"/>
-                  <g fill="none" stroke="#C9A249" stroke-width=".7" opacity=".8">
+                  <g fill="none" stroke="currentColor" stroke-width=".7" opacity=".8">
                     <rect x="22" y="22" width="46" height="56" rx="2"/>
                     <rect x="78" y="22" width="46" height="26" rx="2"/>
                     <rect x="78" y="56" width="46" height="22" rx="2"/>
                     <rect x="134" y="22" width="44" height="56" rx="2"/>
                   </g>
-                  <g fill="#C9A249" opacity=".6">
+                  <g fill="currentColor" opacity=".6">
                     <rect x="28" y="30" width="22" height="3"/>
                     <rect x="28" y="38" width="34" height="2"/>
                     <rect x="28" y="44" width="30" height="2"/>
@@ -686,9 +710,13 @@
       <p class="footer__meta">
         <!-- LOCATION CAVEAT: HQ jurisdiction pending Matt's confirmation (Bermuda vs. Florida). Update copy + registration line once known. -->
         <span>&copy; <span id="year">2026</span> Raven Power LLC · Remote, worldwide</span>
-        <span class="footer__sep" aria-hidden="true">·</span>
-        <!-- TODO: paste registration number and jurisdiction once confirmed, e.g. "Bermuda LLC Reg. No. 51234" or "Florida LLC L-25-XXXXXXXX" -->
-        <span class="footer__reg">LLC Reg. No. <span class="footer__reg-num">[pending]</span></span>
+        <!--
+          Registration line hidden until Matt confirms the LLC's jurisdiction and number.
+          To restore: unwrap the span.footer__reg block below and drop a real value into
+          .footer__reg-num, then add the surrounding `·` separators back in.
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <span class="footer__reg">LLC Reg. No. <span class="footer__reg-num">[pending]</span></span>
+        -->
         <span class="footer__sep" aria-hidden="true">·</span>
         <a class="link" href="mailto:matt@ravenpower.net">matt@ravenpower.net</a>
         <span class="footer__sep" aria-hidden="true">·</span>
