@@ -18,6 +18,10 @@ permissions:
   pages: write
   id-token: write
 
+# Opt JS-based actions into Node 24 ahead of GitHub's June 2 2026 cutover.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 # Only one concurrent deploy at a time; never cancel a deploy in flight.
 concurrency:
   group: pages
