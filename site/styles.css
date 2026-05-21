@@ -1,6 +1,6 @@
 /* =========================================================
    Raven Power — styles.css
-   Dark, sleek, high-contrast. One cold accent. Generous space.
+   Dark, sleek, high-contrast. One restrained gold accent. Generous space.
    ========================================================= */
 
 :root {
@@ -17,16 +17,18 @@
   --fg-muted:     #9aa3b2;
   --fg-dim:       #6b7280;
 
-  /* One accent — electric cyan */
-  --accent:       #5EE7FF;
-  --accent-soft:  rgba(94, 231, 255, 0.16);
-  --accent-glow:  rgba(94, 231, 255, 0.35);
+  /* One accent — refined gold, tuned to the raven mark's lightning bolt.
+     Kept restrained: a single sharp highlight, not gold everywhere. */
+  --accent:       #C9A249;
+  --accent-2:     #D9B459; /* hover/brighter step */
+  --accent-soft:  rgba(201, 162, 73, 0.16);
+  --accent-glow:  rgba(201, 162, 73, 0.35);
 
   /* Per-discipline tints (used for capability tiles + project tags) */
-  --tint-ai:      #5EE7FF;  /* cyan — primary accent */
-  --tint-pp:      #B79CFF;  /* lavender — Power Platform */
-  --tint-bi:      #7CF3C2;  /* mint — BI / Fabric */
-  --tint-web:     #FFC36B;  /* warm amber — Web */
+  --tint-ai:      #C9A249;  /* gold — primary accent, matches logo bolt */
+  --tint-pp:      #B79CFF;  /* lavender — Power Platform (cool counter) */
+  --tint-bi:      #6FDDC4;  /* teal-mint — BI / Fabric */
+  --tint-web:     #E8995A;  /* copper — Web (warm sibling to gold) */
 
   /* Type */
   --font-sans:    'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -64,7 +66,7 @@ img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 input, textarea, select { font: inherit; color: inherit; }
-::selection { background: var(--accent); color: #001017; }
+::selection { background: var(--accent); color: #1a1200; }
 
 /* Visually hidden utility (a11y) */
 .visually-hidden {
@@ -162,7 +164,13 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
   color: var(--fg);
 }
-.nav__mark { color: var(--accent); }
+.nav__mark {
+  width: 32px;
+  height: auto;
+  display: block;
+  /* Subtle gold halo around the mark to lift it from the dark nav */
+  filter: drop-shadow(0 0 6px rgba(201, 162, 73, 0.18));
+}
 .nav__wordmark { font-size: 15px; }
 
 .nav__links {
@@ -198,7 +206,7 @@ h1, h2, h3 {
 }
 .nav__cta:hover {
   background: var(--accent);
-  color: #001017 !important;
+  color: #1a1200 !important;
   border-color: var(--accent);
 }
 
@@ -266,7 +274,7 @@ h1, h2, h3 {
 .btn--primary:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #001017;
+  color: #1a1200;
   box-shadow: 0 0 0 6px var(--accent-soft);
 }
 
@@ -304,9 +312,43 @@ h1, h2, h3 {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 50% at 55% 35%, rgba(94, 231, 255, 0.08), transparent 60%),
-    radial-gradient(50% 40% at 20% 75%, rgba(94, 231, 255, 0.05), transparent 70%),
+    radial-gradient(60% 50% at 55% 35%, rgba(201, 162, 73, 0.08), transparent 60%),
+    radial-gradient(50% 40% at 20% 75%, rgba(201, 162, 73, 0.05), transparent 70%),
     linear-gradient(180deg, transparent 60%, #000 100%);
+}
+/* Subtle large raven mark backdrop — right-anchored, low opacity.
+   The mark's own gold bolt becomes a faint signature behind the headline.
+   Hidden on small screens to keep the title legible. */
+.hero__mark {
+  position: absolute;
+  right: -6%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(420px, 52vw, 760px);
+  height: auto;
+  z-index: -1;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 0 60px rgba(201, 162, 73, 0.18));
+}
+.hero__bolt {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  z-index: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+  opacity: 0.25;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .hero__mark { opacity: 0.05; right: -28%; }
+}
+@media (max-width: 480px) {
+  .hero__mark { display: none; }
 }
 .hero__inner {
   position: relative;
@@ -407,7 +449,7 @@ h1, h2, h3 {
   pointer-events: none;
 }
 
-/* Hairline accent at section top — reuses the cyan motif */
+/* Hairline accent at section top — reuses the gold motif */
 .section::after {
   content: '';
   position: absolute;
@@ -420,7 +462,7 @@ h1, h2, h3 {
 
 .section--alt {
   background:
-    radial-gradient(60% 45% at 50% 0%, rgba(94, 231, 255, 0.10), transparent 60%),
+    radial-gradient(60% 45% at 50% 0%, rgba(201, 162, 73, 0.10), transparent 60%),
     linear-gradient(180deg, var(--bg-1) 0%, var(--bg) 100%);
 }
 /* Faint gradient ribbon along the top of alt sections — visible */
@@ -435,8 +477,8 @@ h1, h2, h3 {
       90deg,
       transparent 0,
       transparent 38px,
-      rgba(94,231,255,0.045) 38px,
-      rgba(94,231,255,0.045) 39px
+      rgba(201,162,73,0.045) 38px,
+      rgba(201,162,73,0.045) 39px
     );
   mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
   -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
@@ -465,7 +507,7 @@ h1, h2, h3 {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(94,231,255,0.025) 0%, transparent 100%),
+    linear-gradient(180deg, rgba(201,162,73,0.025) 0%, transparent 100%),
     #050608;
   padding: clamp(28px, 4vw, 44px) 0;
 }
@@ -637,10 +679,12 @@ h1, h2, h3 {
   background: linear-gradient(180deg, transparent 55%, var(--panel) 100%);
   pointer-events: none;
 }
-.proj__motif[data-tag="pp"]     svg { filter: hue-rotate(60deg); }
-.proj__motif[data-tag="bi"]     svg { filter: hue-rotate(-50deg); }
-.proj__motif[data-tag="fabric"] svg { filter: hue-rotate(-50deg); }
-.proj__motif[data-tag="web"]    svg { filter: hue-rotate(160deg) saturate(.9); }
+/* Motif fills are baked as gold (#C9A249, hue ~42°). Per-tag filters
+   shift hue to land on the matching --tint-* color. */
+.proj__motif[data-tag="pp"]     svg { filter: hue-rotate(205deg); }
+.proj__motif[data-tag="bi"]     svg { filter: hue-rotate(115deg); }
+.proj__motif[data-tag="fabric"] svg { filter: hue-rotate(115deg); }
+.proj__motif[data-tag="web"]    svg { filter: hue-rotate(-20deg) saturate(1.05); }
 
 .proj__tag {
   position: absolute;
@@ -718,7 +762,7 @@ h1, h2, h3 {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(60% 80% at 0% 0%, rgba(94,231,255,0.06), transparent 60%),
+    radial-gradient(60% 80% at 0% 0%, rgba(201,162,73,0.06), transparent 60%),
     var(--panel);
   position: relative;
   max-width: 880px;
@@ -780,13 +824,13 @@ h1, h2, h3 {
   margin: 0 0 14px 24px;
   position: relative;
   background:
-    radial-gradient(60% 60% at 35% 30%, rgba(94,231,255,0.18), transparent 70%),
+    radial-gradient(60% 60% at 35% 30%, rgba(201,162,73,0.18), transparent 70%),
     linear-gradient(135deg, #0e1218 0%, #060709 100%);
   border: 1px solid var(--line-strong);
   box-shadow:
-    inset 0 0 0 1px rgba(94,231,255,0.08),
+    inset 0 0 0 1px rgba(201,162,73,0.08),
     0 0 0 1px rgba(0,0,0,0.6),
-    0 18px 40px -16px rgba(94,231,255,0.18);
+    0 18px 40px -16px rgba(201,162,73,0.18);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -897,7 +941,7 @@ h1, h2, h3 {
   padding: 10px 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(94,231,255,0.04);
+  background: rgba(201,162,73,0.04);
   font-size: 13.5px;
   color: var(--fg-muted);
 }
@@ -995,7 +1039,12 @@ h1, h2, h3 {
   font-size: 14px;
   color: var(--fg);
 }
-.footer__brand svg { color: var(--accent); }
+.footer__mark {
+  width: 24px;
+  height: auto;
+  display: block;
+  opacity: 0.92;
+}
 .footer__meta {
   font-size: 13px;
   color: var(--fg-muted);

@@ -71,8 +71,8 @@
     let pageVisible = true;  // tab focused
     const running = () => visible && pageVisible;
 
-    const ACCENT = [94, 231, 255];
-    const WHITE = [220, 230, 240];
+    const ACCENT = [201, 162, 73];
+    const WHITE = [220, 222, 228];
 
     function resize() {
       const rect = canvas.getBoundingClientRect();
