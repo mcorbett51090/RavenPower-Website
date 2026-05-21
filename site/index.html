@@ -111,6 +111,7 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="#capabilities">Capabilities</a>
         <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
         <a href="#about">About</a>
         <a href="#contact" class="nav__cta">Contact</a>
       </nav>
@@ -121,6 +122,7 @@
     <div class="nav__mobile" id="nav-mobile" hidden>
       <a href="#capabilities">Capabilities</a>
       <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -289,7 +291,27 @@
           <p class="section__lede">A sample of the kind of work Raven Power takes on. Names and details are generalized to respect client confidentiality.</p>
         </header>
 
-        <ul class="grid" role="list">
+        <!-- ============ WORK CONTROLS — tag filter + live search ============ -->
+        <div class="work-controls" role="group" aria-label="Filter work">
+          <div class="work-filters" role="tablist" aria-label="Filter by discipline">
+            <button type="button" class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button type="button" class="chip" data-filter="ai" role="tab" aria-selected="false">Agentic AI</button>
+            <button type="button" class="chip" data-filter="pp" role="tab" aria-selected="false">Power Platform</button>
+            <button type="button" class="chip" data-filter="bi" role="tab" aria-selected="false">Power BI / Fabric</button>
+            <button type="button" class="chip" data-filter="web" role="tab" aria-selected="false">Web</button>
+          </div>
+          <label class="work-search">
+            <span class="visually-hidden">Search engagements</span>
+            <svg class="work-search__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M10.5 10.5 L14 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <input id="work-search" type="search" placeholder="Search engagements…" autocomplete="off" />
+          </label>
+        </div>
+        <p class="work-empty" id="work-empty" hidden role="status">No engagements match that filter.</p>
+
+        <ul class="grid" id="work-grid" role="list">
           <li>
             <article class="proj reveal" data-reveal>
               <div class="proj__motif" data-tag="ai" aria-hidden="true">
@@ -509,6 +531,153 @@
             </article>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <!--
+      STACK SECTION — interactive showcase of the RavenClaude marketplace
+      (Matt's open methodology / agent library that powers every engagement).
+      Tabs + count pills mirror the interaction pattern of repo-guide.html.
+      Tab data is hand-curated from the live guide; full breakdown lives at
+      /repo-guide.html.
+    -->
+    <section class="section section--grid" id="stack" aria-labelledby="stack-heading">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
+          <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
+          <p class="section__lede">
+            Every engagement runs on <a class="link" href="repo-guide.html">RavenClaude</a> — an opinionated marketplace of Claude Code agents, skills, and hooks I maintain in the open. Pick a discipline to see what comes ready out of the box.
+          </p>
+        </header>
+
+        <div class="stack-wrap">
+          <!-- Top-line counts pulled from the live guide -->
+          <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
+            <li class="stack-stat"><strong>5</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>45</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>36</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>9</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>38</strong><span>templates</span></li>
+          </ul>
+
+          <div class="stack-tabs" role="tablist" aria-label="Plugins">
+            <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-core" id="stack-tab-core" data-stack-tab="core">
+              <span class="stack-tab__name">ravenclaude-core</span>
+              <span class="stack-tab__ver">v0.6.0</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-pp" id="stack-tab-pp" data-stack-tab="pp">
+              <span class="stack-tab__name">power-platform</span>
+              <span class="stack-tab__ver">v0.8.0</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
+              <span class="stack-tab__name">finance</span>
+              <span class="stack-tab__ver">v0.1.0</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-reg" id="stack-tab-reg" data-stack-tab="reg">
+              <span class="stack-tab__name">regulatory-compliance</span>
+              <span class="stack-tab__ver">v0.1.0</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-web" id="stack-tab-web" data-stack-tab="web">
+              <span class="stack-tab__name">web-design</span>
+              <span class="stack-tab__ver">v0.2.0</span>
+            </button>
+          </div>
+
+          <div class="stack-panels">
+            <div class="stack-panel is-active" role="tabpanel" id="stack-panel-core" aria-labelledby="stack-tab-core" data-stack-panel="core">
+              <p class="stack-panel__desc">Domain-neutral specialist agents and team-lead dispatch playbook. Architect, coders, reviewers, designer, documentarian, deep-researcher, project-manager, partner-success-manager, prompt-engineer, data-engineer — plus the orchestration glue.</p>
+              <ul class="stack-counts" role="list">
+                <li><strong>14</strong> Agents</li>
+                <li><strong>11</strong> Skills</li>
+                <li><strong>5</strong> Hooks</li>
+                <li><strong>4</strong> Rules</li>
+                <li><strong>13</strong> Templates</li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li><code>architect</code><span>Technical conscience across design → build → review.</span></li>
+                <li><code>code-reviewer</code><span>Pre-merge review with blockers, suggestions, and praise.</span></li>
+                <li><code>deep-researcher</code><span>Multi-source research with confidence ratings and citations.</span></li>
+                <li><code>project-manager</code><span>PMP / PMBOK-aligned RAID, status, and stakeholder hygiene.</span></li>
+              </ul>
+            </div>
+
+            <div class="stack-panel" role="tabpanel" id="stack-panel-pp" aria-labelledby="stack-tab-pp" data-stack-panel="pp" hidden>
+              <p class="stack-panel__desc">Eleven Microsoft Power Platform specialists with a production knowledge bank — Dataverse, Power Fx, Power Automate, model-driven, Power Pages, Power BI, Copilot Studio, PCF, solution ALM, and tenant admin.</p>
+              <ul class="stack-counts" role="list">
+                <li><strong>11</strong> Agents</li>
+                <li><strong>13</strong> Skills</li>
+                <li><strong>1</strong> Hook</li>
+                <li><strong>1</strong> Template</li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li><code>dataverse-architect</code><span>Tables, security, plug-ins, and business rules.</span></li>
+                <li><code>power-bi-engineer</code><span>Semantic models, DAX, PBIP source control, ALM.</span></li>
+                <li><code>solution-alm-engineer</code><span>pac CLI, env vars, connection refs, pipelines.</span></li>
+                <li><code>power-platform-admin</code><span>Managed environments, DLP, capacity, CoE Starter Kit.</span></li>
+              </ul>
+            </div>
+
+            <div class="stack-panel" role="tabpanel" id="stack-panel-finance" aria-labelledby="stack-tab-finance" data-stack-panel="finance" hidden>
+              <p class="stack-panel__desc">Seven corporate-finance &amp; FP&amp;A specialists — controller, FP&amp;A, treasury, valuation, financial modeler, board-pack composer, audit-prep — each backed by templates that stand up to lender and board scrutiny.</p>
+              <ul class="stack-counts" role="list">
+                <li><strong>7</strong> Agents</li>
+                <li><strong>4</strong> Skills</li>
+                <li><strong>1</strong> Hook</li>
+                <li><strong>8</strong> Templates</li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li><code>controller</code><span>Close mechanics, JEs, recons, accruals.</span></li>
+                <li><code>fpa-analyst</code><span>Budgets, rolling forecasts, variance walks.</span></li>
+                <li><code>treasury-analyst</code><span>13-week direct cash, covenants, FX exposure.</span></li>
+                <li><code>board-pack-composer</code><span>Narrative-first board / lender / investor packs.</span></li>
+              </ul>
+            </div>
+
+            <div class="stack-panel" role="tabpanel" id="stack-panel-reg" aria-labelledby="stack-tab-reg" data-stack-panel="reg" hidden>
+              <p class="stack-panel__desc">Six financial-regulatory specialists with field-experience BMA positioning — supervisory returns, AML / KYC, examination prep, risk &amp; controls, policy &amp; procedure, and Bermuda-domiciled insurance.</p>
+              <ul class="stack-counts" role="list">
+                <li><strong>6</strong> Agents</li>
+                <li><strong>4</strong> Skills</li>
+                <li><strong>1</strong> Hook</li>
+                <li><strong>8</strong> Templates</li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li><code>bermuda-insurance-specialist</code><span>BMA Insurance Act, captives, BSCR / ECR / EBS.</span></li>
+                <li><code>regulatory-reporting-analyst</code><span>FATCA, CRS, Solvency II QRTs, US RBC.</span></li>
+                <li><code>aml-kyc-analyst</code><span>KYC, sanctions, SAR / STR narratives.</span></li>
+                <li><code>examination-prep-specialist</code><span>PBC, walkthrough rehearsals, MRA remediation.</span></li>
+              </ul>
+            </div>
+
+            <div class="stack-panel" role="tabpanel" id="stack-panel-web" aria-labelledby="stack-tab-web" data-stack-panel="web" hidden>
+              <p class="stack-panel__desc">Seven web specialists with WCAG / Core Web Vitals / SEO discipline — architecture, UX, visual, frontend implementation, accessibility, performance, and content strategy.</p>
+              <ul class="stack-counts" role="list">
+                <li><strong>7</strong> Agents</li>
+                <li><strong>4</strong> Skills</li>
+                <li><strong>1</strong> Hook</li>
+                <li><strong>8</strong> Templates</li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li><code>web-architect</code><span>Site / info architecture, stack, technical SEO.</span></li>
+                <li><code>visual-designer</code><span>Brand systems, tokens, theming, motion.</span></li>
+                <li><code>accessibility-auditor</code><span>WCAG 2.2 AA / AAA audits, ARIA, focus, contrast.</span></li>
+                <li><code>performance-engineer</code><span>Core Web Vitals (LCP / CLS / INP), CDN, budgets.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="stack-cta">
+            <a class="btn btn--primary" href="repo-guide.html">
+              Explore the full guide
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">View on GitHub</a>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -294,6 +294,117 @@
     });
   }
 
+  /* ---------- Stack section: tabbed plugin browser ----------
+     Same interaction model as repo-guide.html — click a tab, the matching
+     panel becomes visible, others get the `hidden` attribute. Arrow keys
+     move between tabs for keyboard users.
+  */
+  const stackTabs = Array.from(document.querySelectorAll('.stack-tab'));
+  const stackPanels = Array.from(document.querySelectorAll('.stack-panel'));
+  if (stackTabs.length && stackPanels.length) {
+    function activateStack(key, focus) {
+      stackTabs.forEach((t) => {
+        const isActive = t.getAttribute('data-stack-tab') === key;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', String(isActive));
+        t.setAttribute('tabindex', isActive ? '0' : '-1');
+        if (isActive && focus) t.focus();
+      });
+      stackPanels.forEach((p) => {
+        const isActive = p.getAttribute('data-stack-panel') === key;
+        p.classList.toggle('is-active', isActive);
+        if (isActive) {
+          p.removeAttribute('hidden');
+        } else {
+          p.setAttribute('hidden', '');
+        }
+      });
+    }
+
+    // Initialize tabindex on tabs so arrow-key roving works
+    stackTabs.forEach((t) => {
+      t.setAttribute('tabindex', t.classList.contains('is-active') ? '0' : '-1');
+    });
+
+    stackTabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        activateStack(tab.getAttribute('data-stack-tab'), false);
+      });
+      tab.addEventListener('keydown', (e) => {
+        let nextIdx = null;
+        if (e.key === 'ArrowRight') nextIdx = (idx + 1) % stackTabs.length;
+        else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + stackTabs.length) % stackTabs.length;
+        else if (e.key === 'Home') nextIdx = 0;
+        else if (e.key === 'End') nextIdx = stackTabs.length - 1;
+        if (nextIdx !== null) {
+          e.preventDefault();
+          activateStack(stackTabs[nextIdx].getAttribute('data-stack-tab'), true);
+        }
+      });
+    });
+  }
+
+  /* ---------- Work section: tag filter + live search ----------
+     Mirrors the search/filter pattern from RavenClaude's repo-guide.html.
+     Each work card carries a discipline tag via its inner `.proj__tag[data-tag]`.
+     Chip buttons set the active filter; the search input does a substring match
+     on the card's title + copy. Cards hide via the `is-hidden` class.
+  */
+  const workGrid = document.getElementById('work-grid');
+  if (workGrid) {
+    const chips = Array.from(document.querySelectorAll('.work-filters .chip'));
+    const searchInput = document.getElementById('work-search');
+    const empty = document.getElementById('work-empty');
+    const items = Array.from(workGrid.querySelectorAll('li')).map((li) => {
+      const tagEl = li.querySelector('.proj__tag[data-tag]');
+      const titleEl = li.querySelector('.proj__title');
+      const copyEl = li.querySelector('.proj__copy');
+      const tag = tagEl ? (tagEl.getAttribute('data-tag') || '').toLowerCase() : '';
+      const text = [
+        titleEl ? titleEl.textContent : '',
+        copyEl ? copyEl.textContent : '',
+        tagEl ? tagEl.textContent : ''
+      ].join(' ').toLowerCase();
+      return { li, tag, text };
+    });
+
+    let activeFilter = 'all';
+    let activeQuery = '';
+
+    function applyFilter() {
+      let visible = 0;
+      for (const it of items) {
+        const tagMatch = activeFilter === 'all' || it.tag === activeFilter;
+        const queryMatch = !activeQuery || it.text.includes(activeQuery);
+        const show = tagMatch && queryMatch;
+        it.li.classList.toggle('is-hidden', !show);
+        if (show) visible += 1;
+      }
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const next = chip.getAttribute('data-filter') || 'all';
+        if (next === activeFilter) return;
+        activeFilter = next;
+        chips.forEach((c) => {
+          const isActive = c === chip;
+          c.classList.toggle('is-active', isActive);
+          c.setAttribute('aria-selected', String(isActive));
+        });
+        applyFilter();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        activeQuery = searchInput.value.trim().toLowerCase();
+        applyFilter();
+      });
+    }
+  }
+
   /* ---------- Smooth scroll for in-page anchors (offset for sticky nav) ----------
      One delegated listener; survives any future dynamic anchors and avoids
      binding to N nodes at load. Adds a transient tabindex only when the
