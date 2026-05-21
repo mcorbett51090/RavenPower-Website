@@ -342,6 +342,38 @@
         }
       });
     });
+
+    // Per-panel kind filter: clicking a count chip filters .stack-items
+    // by data-kind. Click an already-active chip again to clear.
+    stackPanels.forEach((panel) => {
+      const chips = Array.from(panel.querySelectorAll('.stack-chip'));
+      const items = Array.from(panel.querySelectorAll('.stack-items > li'));
+      const empty = panel.querySelector('.stack-empty');
+      if (!chips.length || !items.length) return;
+
+      function applyKind(kind) {
+        let shown = 0;
+        items.forEach((li) => {
+          const match = !kind || li.getAttribute('data-kind') === kind;
+          li.toggleAttribute('hidden', !match);
+          if (match) shown += 1;
+        });
+        if (empty) empty.toggleAttribute('hidden', shown !== 0);
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          const wasActive = chip.getAttribute('aria-pressed') === 'true';
+          chips.forEach((c) => c.setAttribute('aria-pressed', 'false'));
+          if (wasActive) {
+            applyKind(null);
+          } else {
+            chip.setAttribute('aria-pressed', 'true');
+            applyKind(chip.getAttribute('data-kind'));
+          }
+        });
+      });
+    });
   }
 
   /* ---------- Work section: tag filter + live search ----------

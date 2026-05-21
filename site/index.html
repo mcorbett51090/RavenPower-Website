@@ -588,83 +588,120 @@
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-core" aria-labelledby="stack-tab-core" data-stack-panel="core">
               <p class="stack-panel__desc">Domain-neutral specialist agents and team-lead dispatch playbook. Architect, coders, reviewers, designer, documentarian, deep-researcher, project-manager, partner-success-manager, prompt-engineer, data-engineer — plus the orchestration glue.</p>
-              <ul class="stack-counts" role="list">
-                <li><strong>14</strong> Agents</li>
-                <li><strong>11</strong> Skills</li>
-                <li><strong>5</strong> Hooks</li>
-                <li><strong>4</strong> Rules</li>
-                <li><strong>13</strong> Templates</li>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>14</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>11</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>5</strong> Hooks</button></li>
+                <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>4</strong> Rules</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>13</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
-                <li><code>architect</code><span>Technical conscience across design → build → review.</span></li>
-                <li><code>code-reviewer</code><span>Pre-merge review with blockers, suggestions, and praise.</span></li>
-                <li><code>deep-researcher</code><span>Multi-source research with confidence ratings and citations.</span></li>
-                <li><code>project-manager</code><span>PMP / PMBOK-aligned RAID, status, and stakeholder hygiene.</span></li>
+                <li data-kind="agent"><code>architect</code><span>Technical conscience across design → build → review.</span></li>
+                <li data-kind="agent"><code>code-reviewer</code><span>Pre-merge review with blockers, suggestions, and praise.</span></li>
+                <li data-kind="agent"><code>deep-researcher</code><span>Multi-source research with confidence ratings and citations.</span></li>
+                <li data-kind="agent"><code>project-manager</code><span>PMP / PMBOK-aligned RAID, status, and stakeholder hygiene.</span></li>
+                <li data-kind="skill"><code>spawn-team</code><span>Team-lead dispatch playbook for routing work across agents.</span></li>
+                <li data-kind="skill"><code>audit-ci-gates</code><span>Verifies every CI gate actually fails on a known-bad input.</span></li>
+                <li data-kind="skill"><code>run-full-test-suite</code><span>Format, lint, typecheck, unit, integration &mdash; in order, fail-fast.</span></li>
+                <li data-kind="hook"><code>enforce-layout.sh</code><span>Blocks off-pattern writes against the repo's allow-list.</span></li>
+                <li data-kind="hook"><code>guard-destructive.sh</code><span>Catches destructive shell commands that slip past deny-lists.</span></li>
+                <li data-kind="rule"><code>coding-standards</code><span>Long-form coding standards applied across all agents.</span></li>
+                <li data-kind="rule"><code>security</code><span>Long-form security rule applied across all agents.</span></li>
+                <li data-kind="template"><code>raid-log.md</code><span>Risks / Assumptions / Issues / Decisions log scaffold.</span></li>
+                <li data-kind="template"><code>status-report.md</code><span>Weekly status report scaffold (PMBOK-aligned).</span></li>
               </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
 
             <div class="stack-panel" role="tabpanel" id="stack-panel-pp" aria-labelledby="stack-tab-pp" data-stack-panel="pp" hidden>
               <p class="stack-panel__desc">Eleven Microsoft Power Platform specialists with a production knowledge bank — Dataverse, Power Fx, Power Automate, model-driven, Power Pages, Power BI, Copilot Studio, PCF, solution ALM, and tenant admin.</p>
-              <ul class="stack-counts" role="list">
-                <li><strong>11</strong> Agents</li>
-                <li><strong>13</strong> Skills</li>
-                <li><strong>1</strong> Hook</li>
-                <li><strong>1</strong> Template</li>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>11</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>13</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>1</strong> Template</button></li>
               </ul>
               <ul class="stack-items" role="list">
-                <li><code>dataverse-architect</code><span>Tables, security, plug-ins, and business rules.</span></li>
-                <li><code>power-bi-engineer</code><span>Semantic models, DAX, PBIP source control, ALM.</span></li>
-                <li><code>solution-alm-engineer</code><span>pac CLI, env vars, connection refs, pipelines.</span></li>
-                <li><code>power-platform-admin</code><span>Managed environments, DLP, capacity, CoE Starter Kit.</span></li>
+                <li data-kind="agent"><code>dataverse-architect</code><span>Tables, security, plug-ins, and business rules.</span></li>
+                <li data-kind="agent"><code>power-bi-engineer</code><span>Semantic models, DAX, PBIP source control, ALM.</span></li>
+                <li data-kind="agent"><code>solution-alm-engineer</code><span>pac CLI, env vars, connection refs, pipelines.</span></li>
+                <li data-kind="agent"><code>power-platform-admin</code><span>Managed environments, DLP, capacity, CoE Starter Kit.</span></li>
+                <li data-kind="skill"><code>power-automate</code><span>Veteran patterns for flows &mdash; expressions, retries, error handling.</span></li>
+                <li data-kind="skill"><code>power-bi</code><span>Semantic models, DAX, PBIP git workflows, deployment.</span></li>
+                <li data-kind="skill"><code>dataverse-web-api</code><span>OData v4 schema, FetchXML, solution ALM, Custom API.</span></li>
+                <li data-kind="hook"><code>check-house-opinions.sh</code><span>Flags hard-coded GUIDs and default publisher prefixes in Power Fx.</span></li>
+                <li data-kind="template"><code>maintainability-review-template.md</code><span>Long-term maintainability review scaffold for Power Platform solutions.</span></li>
               </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
 
             <div class="stack-panel" role="tabpanel" id="stack-panel-finance" aria-labelledby="stack-tab-finance" data-stack-panel="finance" hidden>
               <p class="stack-panel__desc">Seven corporate-finance &amp; FP&amp;A specialists — controller, FP&amp;A, treasury, valuation, financial modeler, board-pack composer, audit-prep — each backed by templates that stand up to lender and board scrutiny.</p>
-              <ul class="stack-counts" role="list">
-                <li><strong>7</strong> Agents</li>
-                <li><strong>4</strong> Skills</li>
-                <li><strong>1</strong> Hook</li>
-                <li><strong>8</strong> Templates</li>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
-                <li><code>controller</code><span>Close mechanics, JEs, recons, accruals.</span></li>
-                <li><code>fpa-analyst</code><span>Budgets, rolling forecasts, variance walks.</span></li>
-                <li><code>treasury-analyst</code><span>13-week direct cash, covenants, FX exposure.</span></li>
-                <li><code>board-pack-composer</code><span>Narrative-first board / lender / investor packs.</span></li>
+                <li data-kind="agent"><code>controller</code><span>Close mechanics, JEs, recons, accruals.</span></li>
+                <li data-kind="agent"><code>fpa-analyst</code><span>Budgets, rolling forecasts, variance walks.</span></li>
+                <li data-kind="agent"><code>treasury-analyst</code><span>13-week direct cash, covenants, FX exposure.</span></li>
+                <li data-kind="agent"><code>board-pack-composer</code><span>Narrative-first board / lender / investor packs.</span></li>
+                <li data-kind="skill"><code>month-end-close</code><span>Reference playbook for designing and running a clean close.</span></li>
+                <li data-kind="skill"><code>variance-commentary</code><span>How to write variance commentary that tells a story.</span></li>
+                <li data-kind="skill"><code>model-review</code><span>7-pass review pattern for financial models.</span></li>
+                <li data-kind="hook"><code>flag-finance-anti-patterns.sh</code><span>Catches hardcoded tax / growth rates that should be assumptions.</span></li>
+                <li data-kind="template"><code>cash-flow-forecast.md</code><span>13-week direct cash forecast scaffold.</span></li>
+                <li data-kind="template"><code>board-pack-outline.md</code><span>Board-pack outline scaffold (narrative-first).</span></li>
               </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
 
             <div class="stack-panel" role="tabpanel" id="stack-panel-reg" aria-labelledby="stack-tab-reg" data-stack-panel="reg" hidden>
               <p class="stack-panel__desc">Six financial-regulatory specialists with field-experience BMA positioning — supervisory returns, AML / KYC, examination prep, risk &amp; controls, policy &amp; procedure, and Bermuda-domiciled insurance.</p>
-              <ul class="stack-counts" role="list">
-                <li><strong>6</strong> Agents</li>
-                <li><strong>4</strong> Skills</li>
-                <li><strong>1</strong> Hook</li>
-                <li><strong>8</strong> Templates</li>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>6</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
-                <li><code>bermuda-insurance-specialist</code><span>BMA Insurance Act, captives, BSCR / ECR / EBS.</span></li>
-                <li><code>regulatory-reporting-analyst</code><span>FATCA, CRS, Solvency II QRTs, US RBC.</span></li>
-                <li><code>aml-kyc-analyst</code><span>KYC, sanctions, SAR / STR narratives.</span></li>
-                <li><code>examination-prep-specialist</code><span>PBC, walkthrough rehearsals, MRA remediation.</span></li>
+                <li data-kind="agent"><code>bermuda-insurance-specialist</code><span>BMA Insurance Act, captives, BSCR / ECR / EBS.</span></li>
+                <li data-kind="agent"><code>regulatory-reporting-analyst</code><span>FATCA, CRS, Solvency II QRTs, US RBC.</span></li>
+                <li data-kind="agent"><code>aml-kyc-analyst</code><span>KYC, sanctions, SAR / STR narratives.</span></li>
+                <li data-kind="agent"><code>examination-prep-specialist</code><span>PBC, walkthrough rehearsals, MRA remediation.</span></li>
+                <li data-kind="skill"><code>aml-program-review</code><span>Structured review against FATF / FFIEC expectations.</span></li>
+                <li data-kind="skill"><code>sar-narrative-drafting</code><span>SAR / STR narratives that survive regulator review.</span></li>
+                <li data-kind="skill"><code>examination-readiness</code><span>Pre-exam playbook for regulator examinations.</span></li>
+                <li data-kind="hook"><code>scrub-confidential-pre-write.sh</code><span>Scans for confidential / customer data before writes land.</span></li>
+                <li data-kind="template"><code>sar-narrative-template.md</code><span>SAR / STR narrative scaffold.</span></li>
+                <li data-kind="template"><code>examination-response-tracker.md</code><span>Exam response tracker scaffold (PBC + MRA).</span></li>
               </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
 
             <div class="stack-panel" role="tabpanel" id="stack-panel-web" aria-labelledby="stack-tab-web" data-stack-panel="web" hidden>
               <p class="stack-panel__desc">Seven web specialists with WCAG / Core Web Vitals / SEO discipline — architecture, UX, visual, frontend implementation, accessibility, performance, and content strategy.</p>
-              <ul class="stack-counts" role="list">
-                <li><strong>7</strong> Agents</li>
-                <li><strong>4</strong> Skills</li>
-                <li><strong>1</strong> Hook</li>
-                <li><strong>8</strong> Templates</li>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
-                <li><code>web-architect</code><span>Site / info architecture, stack, technical SEO.</span></li>
-                <li><code>visual-designer</code><span>Brand systems, tokens, theming, motion.</span></li>
-                <li><code>accessibility-auditor</code><span>WCAG 2.2 AA / AAA audits, ARIA, focus, contrast.</span></li>
-                <li><code>performance-engineer</code><span>Core Web Vitals (LCP / CLS / INP), CDN, budgets.</span></li>
+                <li data-kind="agent"><code>web-architect</code><span>Site / info architecture, stack, technical SEO.</span></li>
+                <li data-kind="agent"><code>visual-designer</code><span>Brand systems, tokens, theming, motion.</span></li>
+                <li data-kind="agent"><code>accessibility-auditor</code><span>WCAG 2.2 AA / AAA audits, ARIA, focus, contrast.</span></li>
+                <li data-kind="agent"><code>performance-engineer</code><span>Core Web Vitals (LCP / CLS / INP), CDN, budgets.</span></li>
+                <li data-kind="skill"><code>accessibility-review</code><span>WCAG 2.2-aligned accessibility audit playbook.</span></li>
+                <li data-kind="skill"><code>core-web-vitals-tuning</code><span>Diagnose and improve LCP / CLS / INP.</span></li>
+                <li data-kind="skill"><code>seo-technical-audit</code><span>Crawlability, indexability, structured data, i18n.</span></li>
+                <li data-kind="hook"><code>check-web-anti-patterns.sh</code><span>Flags oversized images and missing alt attributes.</span></li>
+                <li data-kind="template"><code>launch-checklist.md</code><span>Launch-readiness checklist scaffold.</span></li>
+                <li data-kind="template"><code>performance-budget.md</code><span>Performance budget scaffold.</span></li>
               </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
           </div>
 
@@ -681,26 +718,14 @@
       </div>
     </section>
 
-    <!-- ============ TESTIMONIAL ============ -->
-    <!--
-      TESTIMONIAL — PLACEHOLDER.
-      Drop in a real quote when you have one. Until then, this block is
-      hidden by default (the .testimonial wrapper has hidden attribute).
-      To activate: remove the `hidden` attribute on the <section> below
-      and replace the quote, name, and role.
-    -->
-    <section class="section testimonial" aria-labelledby="testimonial-heading" hidden>
+    <!-- ============ REFERENCES ============ -->
+    <section class="section testimonial" aria-labelledby="references-heading">
       <div class="container">
-        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>What clients say</p>
-        <h2 class="visually-hidden" id="testimonial-heading">Client testimonial</h2>
-        <blockquote class="quote">
-          <p class="quote__mark" aria-hidden="true">&ldquo;</p>
-          <p class="quote__text"><!-- TODO -->Placeholder quote. Replace with a real client testimonial before publishing.</p>
-          <footer class="quote__attr">
-            <span class="quote__name"><!-- TODO -->Client name</span>
-            <span class="quote__role"><!-- TODO -->Role · Company</span>
-          </footer>
-        </blockquote>
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>References</p>
+        <h2 class="visually-hidden" id="references-heading">Client references</h2>
+        <p class="references__line">
+          Case studies under NDA — references available on request.
+        </p>
       </div>
     </section>
 
@@ -782,8 +807,23 @@
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Contact</p>
           <h2 class="section__title" id="contact-heading">Start a project.</h2>
           <p class="section__lede">
-            Tell us a little about what you're trying to do. Or write directly to
+            Engagements typically run 4&ndash;8 weeks, fixed-scope, in the $25&ndash;50k range &mdash; solo, with specialist agents pulled in as the work demands. Tell me about what you're trying to do, or write directly to
             <a href="mailto:matt@ravenpower.net" class="link">matt@ravenpower.net</a>.
+          </p>
+          <!--
+            BOOKING LINK — TODO.
+            Replace href="#" with your Cal.com or Calendly URL when ready
+            (e.g. https://cal.com/matt-corbett/intro). The button is wired
+            as the primary CTA; the form below remains the secondary path.
+          -->
+          <p class="contact__cta">
+            <a class="btn btn--primary" href="#" data-todo="booking-url">
+              Book a 30-min call
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <span class="contact__cta-or">or send a message below</span>
           </p>
         </header>
 
