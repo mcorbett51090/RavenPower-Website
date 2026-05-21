@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'scripts/build_stack.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -28,6 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Regenerate Stack section from repo-guide.html
+        run: python3 scripts/build_stack.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
