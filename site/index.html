@@ -563,11 +563,11 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>5</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>45</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>36</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>9</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>38</strong><span>templates</span></li>
+            <li class="stack-stat"><strong>7</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>55</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>86</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>11</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>66</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
 
@@ -575,23 +575,31 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.6.0</span>
+              <span class="stack-tab__ver">v0.14.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
-              <span class="stack-tab__ver">v0.8.0</span>
+              <span class="stack-tab__ver">v0.12.2</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
               <span class="stack-tab__name">finance</span>
-              <span class="stack-tab__ver">v0.1.0</span>
+              <span class="stack-tab__ver">v0.5.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-regulatory-compliance" id="stack-tab-regulatory-compliance" data-stack-tab="regulatory-compliance">
               <span class="stack-tab__name">regulatory-compliance</span>
-              <span class="stack-tab__ver">v0.1.0</span>
+              <span class="stack-tab__ver">v0.4.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-web-design" id="stack-tab-web-design" data-stack-tab="web-design">
               <span class="stack-tab__name">web-design</span>
-              <span class="stack-tab__ver">v0.2.0</span>
+              <span class="stack-tab__ver">v0.4.2</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-edtech-partner-success" id="stack-tab-edtech-partner-success" data-stack-tab="edtech-partner-success">
+              <span class="stack-tab__name">edtech-partner-success</span>
+              <span class="stack-tab__ver">v0.5.0</span>
+            </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-data-platform" id="stack-tab-data-platform" data-stack-tab="data-platform">
+              <span class="stack-tab__name">data-platform</span>
+              <span class="stack-tab__ver">v0.3.2</span>
             </button>
           </div>
           <!-- STACK_TABS:END -->
@@ -599,13 +607,13 @@
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 14 specialist agents (architect, coders, reviewers, designer, documentarian, deep-researcher, project-manager, partner-success-manager, prompt-engineer, data-engineer, etc.), team-lead dispatch playbook with cross-plugin dispatch section…</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 14 specialist agents, team-lead dispatch playbook, format/lint/test gates, hooks, templates, slash commands `/init-agent-ready` and `/wrap`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>14</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>11</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>18</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>5</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>4</strong> Rules</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>13</strong> Templates</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>14</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
                 <li data-kind="agent"><code>architect</code><span>Use this agent as the technical conscience across the entire software lifecycle — design, build, test, review, iterate.</span></li>
@@ -622,17 +630,24 @@
                 <li data-kind="agent"><code>prompt-engineer</code><span>Use this agent to author, critique, refine, or refactor agent definitions, skill files, and prompt patterns across RavenClaude and any Expert repo (PowerPlatformExpert, SalesforceExpert, etc.).</span></li>
                 <li data-kind="agent"><code>security-reviewer</code><span>Use this agent whenever a diff touches authentication, authorization, cryptography, secrets, sessions, untrusted input parsing, file uploads, deserialization, SQL, shell, network egress, or third-party integrations.</span></li>
                 <li data-kind="agent"><code>tester-qa</code><span>Use this agent to design test plans, hunt flakes, plug coverage gaps, or harden tests around a new feature.</span></li>
+                <li data-kind="skill"><code>agent-quality-rubric</code><span>Score and improve an agent file against a 6-dimension rubric — Mission clarity, Scope sharpness, Capability Grounding alignment, Output-Contract completeness, Escalation paths, Example scenarios.</span></li>
                 <li data-kind="skill"><code>audit-ci-gates</code><span>For any consumer project where a CI workflow is meant to *enforce* a property (lint, format, security scan, manifest validation, version pin, layout allow-list, etc.).</span></li>
                 <li data-kind="skill"><code>cleanup-worktrees</code><span>Remove finished agent worktrees, prune their branches, and surface anything still in flight.</span></li>
                 <li data-kind="skill"><code>contribute-finding</code><span>For Claude sessions running in a consumer project (any project where ravenclaude-core is installed).</span></li>
                 <li data-kind="skill"><code>create-pr</code><span>Open a pull request for the current branch using the project's standard template.</span></li>
+                <li data-kind="skill"><code>cross-platform-determinism</code><span>For any script that produces a file the repo COMMITS and CI DIFFS — generated HTML, lockfiles, JSON snapshots, fixture files, documentation rendered from source.</span></li>
                 <li data-kind="skill"><code>draft-agent-brief</code><span>Use this skill when the user wants to create a new agent and has a clear business goal but isn't fluent in the agent's target domain.</span></li>
+                <li data-kind="skill"><code>environment-discovery</code><span>Auto-discover the consumer's environment posture by probing installed CLIs (pac / az / aws / gcloud / gh) with read-only commands at session start, decoding JWTs for role/scope claims, and assembling a draft `.ravenclaude/environment-context.md` for save/edit/skip.</span></li>
+                <li data-kind="skill"><code>knowledge-file-staleness-sweep</code><span>Run a periodic staleness sweep over all `plugins/&lt;plugin&gt;/knowledge/*.md` files and any decision-tree sections — flag entries past their `last-verified` window, categorize by re-verification effort (Tier 1-5 per Researcher schema), produce a remediation queue with named re-verifiers.</span></li>
                 <li data-kind="skill"><code>new-worktree</code><span>Create an isolated git worktree under .claude/worktrees/ for a sub-agent to work in.</span></li>
-                <li data-kind="skill"><code>researcher</code><span>The Researcher is a meta-skill responsible for keeping all agents, skills, and knowledge files in the RavenClaude marketplace current and honest.</span></li>
+                <li data-kind="skill"><code>plugin-release-checklist</code><span>Pre-release checklist for shipping any plugin update through this marketplace — plugin.json + marketplace.json + architecture.md version-mirror discipline, .repo-layout.json glob coverage for new dirs, CLAUDE.md skill / template tables synced, JSON validation, prettier check, audit-gates meta-test, and the consumer migration-note rule.</span></li>
+                <li data-kind="skill"><code>prompt-pattern-library</code><span>Curated, applied prompt-pattern catalog used across this marketplace — decision-tree traversal pre-action prior, alternate-methods-before-blocked, Structured Output Protocol `---RESULT_START---` block, scenario-retrieval inline prior, escalation-by-mandatory-phrasing, citation-aware research, environment-context preamble, orchestrator-worker reinforcement, agent-scenario-authoring frontmatter.</span></li>
+                <li data-kind="skill"><code>researcher</code><span>Meta-skill that keeps all agents, skills, and knowledge files current and honest — Daily Quick Check + Weekly Deep Research modes.</span></li>
                 <li data-kind="skill"><code>review-staged-contributions</code><span>For the RavenClaude marketplace maintainer.</span></li>
                 <li data-kind="skill"><code>run-full-test-suite</code><span>Run the project's full quality gate — format check, lint, typecheck, unit tests, integration tests — in order, fail fast, summarize.</span></li>
+                <li data-kind="skill"><code>scenario-retrieval</code><span>Consult the unverified scenarios bank (`plugins/&lt;plugin&gt;/scenarios/*.md`) before answering plugin-domain questions.</span></li>
                 <li data-kind="skill"><code>spawn-team</code><span>Team Lead dispatch playbook.</span></li>
-                <li data-kind="skill"><code>structured-output</code><span>Purpose**: Enforce the Structured Output Protocol across all agents and tasks for reliable, parseable, high-quality deliverables and handoffs.</span></li>
+                <li data-kind="skill"><code>structured-output</code><span>Enforce the Structured Output Protocol — every sub-agent handoff ends with a `---RESULT_START--- ...</span></li>
                 <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
                 <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash.</span></li>
@@ -648,6 +663,7 @@
                 <li data-kind="template"><code>agent-ready-repo/</code><span>(template folder)</span></li>
                 <li data-kind="template"><code>deliverables/</code><span>(template folder)</span></li>
                 <li data-kind="template"><code>design/</code><span>(template folder)</span></li>
+                <li data-kind="template"><code>environment-context.md</code><span>Environment Context — `&lt;engagement_name&gt;`</span></li>
                 <li data-kind="template"><code>partner-success/</code><span>(template folder)</span></li>
                 <li data-kind="template"><code>raid-log.md</code><span>RAID Log — *&lt;Project Name&gt;*</span></li>
                 <li data-kind="template"><code>research-report-template.md</code><span>Research Report Template</span></li>
@@ -659,10 +675,10 @@
               <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
             <div class="stack-panel" role="tabpanel" id="stack-panel-power-platform" aria-labelledby="stack-tab-power-platform" data-stack-panel="power-platform" hidden>
-              <p class="stack-panel__desc">Microsoft Power Platform specialist team — 11 specialists including power-platform-tester (Test Studio, flow run-history, DAX semantic correctness, pac solution check) and power-bi-engineer (semantic models, DAX, PBIP git + Azure DevOps integration) alongside canvas/Power Fx…</p>
+              <p class="stack-panel__desc">Microsoft Power Platform specialist team — 11 specialists (Test Studio + DAX + pac solution check tester, PBIP-git + DAX + ADO power-bi-engineer, canvas/Power Fx, Power Automate + connectors, Dataverse modeling, model-driven apps, pac CLI + ALM, tenant governance/DLP, PCF…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>11</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>13</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>18</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>1</strong> Template</button></li>
               </ul>
@@ -678,17 +694,22 @@
                 <li data-kind="agent"><code>power-platform-admin</code><span>Use this agent for tenant-level Power Platform admin work — environment strategy (Default avoidance, Production / Sandbox / Developer / Trial / Teams), managed environments, environment groups, DLP policies at tenant + environment scope, CoE Starter Kit, licensing audits, capacity reporting (Dataverse storage, API entitlements, Power Automate request limits), tenant-level analytics, sharing limits, weekly digest.</span></li>
                 <li data-kind="agent"><code>power-platform-tester</code><span>Use this agent for Power Platform-specific testing — Power Fx unit/integration tests in Test Studio, canvas-app monitor traces, Power Automate flow tests (`Test → Manually`, telemetry-driven assertions), Dataverse data validation, model-driven app form/business-rule testing, DAX measure correctness and performance, Power BI semantic model VertiPaq diagnostics, and `pac solution check`.</span></li>
                 <li data-kind="agent"><code>solution-alm-engineer</code><span>Use this agent for Power Platform Application Lifecycle Management — pac CLI mastery, source control of unpacked solutions, environment variables, connection references, environment strategy at the solution level (dev/test/prod promotion), and ALM pipelines (in-product Power Platform Pipelines, Azure DevOps + Power Platform Build Tools, GitHub Actions for Power Platform).</span></li>
+                <li data-kind="skill"><code>alm-pipeline-design</code><span>Design end-to-end ALM pipelines for Power Platform solutions — pac CLI primitives, Azure DevOps multi-stage pipelines, source-control unpacked solutions, env-var + connection-reference promotion across DEV → TEST → UAT → PROD, managed-vs-unmanaged discipline.</span></li>
+                <li data-kind="skill"><code>canvas-app-performance</code><span>Diagnose and fix Power Fx canvas app performance — delegation as a P1 design constraint, lazy-load patterns, Concurrent() vs sequential, ClearCollect vs collection growth, OnStart vs OnVisible, screen-transition cost, control-count budgets per screen, and the connector-call audit via Monitor.</span></li>
                 <li data-kind="skill"><code>code-review</code><span>Deep code audit that finds dead wiring, silent failures, unfinished features, placeholder stubs, bloated files, and unnecessary complexity.</span></li>
+                <li data-kind="skill"><code>copilot-studio-bot-design</code><span>Design Copilot Studio bots — topic vs generative-answers boundaries, knowledge-source hygiene, trigger-phrase design, slot-filling patterns, escalation-to-human criteria, AI Builder vs prompt-flow vs direct Azure OpenAI decisions, and the test-set discipline that catches regressions on every authoring change.</span></li>
                 <li data-kind="skill"><code>dataverse-plugins</code><span>Use when developing, registering, or deploying Dataverse plugins (C# server-side extensions).</span></li>
                 <li data-kind="skill"><code>dataverse-web-api</code><span>Use when programmatically creating, modifying, or querying Dataverse schema and metadata via the Web API (OData v4.0).</span></li>
                 <li data-kind="skill"><code>dataverse-web-resources</code><span>Use when creating, deploying, or managing Dataverse web resources for model-driven apps.</span></li>
-                <li data-kind="skill"><code>grounding-protocol</code><span>Reduce confident but incorrect claims of "I can't" by forcing agents to verify capabilities before refusing or limiting scope.</span></li>
-                <li data-kind="skill"><code>maintainability-review</code><span>Help teams build Power Platform solutions that remain healthy, understandable, and evolvable over time — not just ones that "work today."</span></li>
+                <li data-kind="skill"><code>dlp-policy-design</code><span>Design tenant Data Loss Prevention policies for Power Platform — business / non-business / blocked classification, environment-scoped vs tenant-wide policies, exemption process, common-connector pitfalls (HTTP, SharePoint, Dataverse, custom connectors), and the "every flow gets re-evaluated on policy change" implication.</span></li>
+                <li data-kind="skill"><code>grounding-protocol</code><span>Reduce confident-but-incorrect "I can't do that" claims by forcing agents to verify capabilities before refusing scope.</span></li>
+                <li data-kind="skill"><code>maintainability-review</code><span>Forward-looking maintainability + evolvability review of a Power Platform solution — understandability, modifiability, testability, evolution readiness, ownership.</span></li>
                 <li data-kind="skill"><code>pcf-controls</code><span>Use when building, deploying, or using PowerApps Component Framework (PCF) controls.</span></li>
                 <li data-kind="skill"><code>plan-with-team</code><span>Spawns an Agent Team to collaboratively plan Power Platform / Dataverse applications.</span></li>
                 <li data-kind="skill"><code>power-apps-code-apps</code><span>Use when building, scaffolding, debugging, or deploying Microsoft Power Apps Code Apps using React, Vue, or TypeScript in VS Code.</span></li>
-                <li data-kind="skill"><code>power-automate</code><span>Provide veteran-level depth for `flow-engineer` (and any agent touching flows) on design patterns, troubleshooting, solution-aware best practices, expressions, error handling, performance, and integration with the broader Power P</span></li>
-                <li data-kind="skill"><code>power-bi</code><span>Provide veteran-level reference and patterns for the new `power-bi-engineer` agent — semantic model design, DAX, PBIP git workflows with Azure DevOps, deployment, refresh troubleshooting, and integration with Power Platform solut</span></li>
+                <li data-kind="skill"><code>power-automate</code><span>Veteran-level reference for Power Automate work — expressions, error handling + scopes, child flows, solution-aware flows + connection references, Dataverse triggers, throttling, approvals, performance patterns.</span></li>
+                <li data-kind="skill"><code>power-bi</code><span>Veteran-level reference for Power BI — PBIP project structure + git, semantic model design, DAX patterns + performance, deployment pipelines, refresh / gateway troubleshooting, integration with Power Platform solutions / ALM.</span></li>
+                <li data-kind="skill"><code>power-pages-permissions</code><span>Design table permissions, web roles, and authentication for Power Pages — anonymous vs authenticated patterns, B2C / Entra-External-ID auth, table-permission scoping (global / contact / account / parental / self), record ownership, and the "row I can see in MDA but not in Pages" debugging playbook.</span></li>
                 <li data-kind="skill"><code>record-screen</code><span>Record a Chrome browser tab to video via CLI.</span></li>
                 <li data-kind="skill"><code>visual-qa</code><span>AI-powered visual QA testing that walks through an app in the browser, records every action with annotated captions (what was done, what should happen), captures screenshots/GIFs, and sends the evidence to Gemini for automated review.</span></li>
                 <li data-kind="hook"><code>check-house-opinions.sh</code><span>check-house-opinions.sh PostToolUse hook for Edit | Write | MultiEdit on Power Platform source files.</span></li>
@@ -700,7 +721,7 @@
               <p class="stack-panel__desc">Corporate finance &amp; FP&amp;A specialist team — FP&amp;A analyst (budgets, forecasts, variance commentary), financial modeler (3-statement, DCF, scenarios), controller (close, JEs, reconciliations), treasury analyst (cash, covenants, FX), valuation analyst…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>9</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
@@ -712,10 +733,15 @@
                 <li data-kind="agent"><code>fpa-analyst</code><span>Use this agent for FP&amp;A work — budgeting, rolling forecasts, KPI commentary, variance walks, scenario modeling at the P&amp;L level, headcount and opex planning.</span></li>
                 <li data-kind="agent"><code>treasury-analyst</code><span>Use this agent for treasury and cash-management work — 13-week direct cash forecasts, working-capital optimization, debt covenant compliance, FX exposure and hedging, banking operations, debt-schedule mechanics.</span></li>
                 <li data-kind="agent"><code>valuation-analyst</code><span>Use this agent for valuation work — business valuation (DCF + comparable companies + precedent transactions), 409A valuations, fairness-opinion support, valuation methodology defense, ESOP / RSU strike-price refreshes.</span></li>
-                <li data-kind="skill"><code>board-pack-composition</code><span>How to assemble a board / investor / lender reporting pack that gets read and drives decisions.</span></li>
-                <li data-kind="skill"><code>model-review</code><span>7-pass review pattern for financial models.</span></li>
-                <li data-kind="skill"><code>month-end-close</code><span>Reference playbook for designing and running a clean month-end close.</span></li>
-                <li data-kind="skill"><code>variance-commentary</code><span>How to write variance commentary that tells a story instead of restating a table.</span></li>
+                <li data-kind="skill"><code>board-pack-composition</code><span>Compose narrative-first board / investor / lender reporting packs — section sequencing, KPI selection, executive-summary patterns.</span></li>
+                <li data-kind="skill"><code>dcf-valuation</code><span>Run a defensible discounted-cash-flow valuation — explicit projection period, terminal value (Gordon vs exit-multiple), WACC build, sensitivities, scenario weighting, and the cross-check against trading / precedent multiples.</span></li>
+                <li data-kind="skill"><code>driver-based-forecasting</code><span>Build and refresh a driver-based rolling forecast that survives FP&amp;A review — driver tree from revenue volume × price, opex by category-driver, working-capital roll, capex schedule, scenario layer.</span></li>
+                <li data-kind="skill"><code>kpi-definition</code><span>Define KPIs that survive cross-team disagreement — single owner, single formula, single source of truth, decay-tested, documented in a KPI dictionary.</span></li>
+                <li data-kind="skill"><code>model-review</code><span>7-pass review of financial models — assumptions, mechanics, integrity (BS balances, CF reconciles), hardcodes, error-checks, scenarios, documentation.</span></li>
+                <li data-kind="skill"><code>month-end-close</code><span>Run a clean month-end / quarter-end close — close-calendar mechanics, JE buckets, reconciliation checklist, exception-triage playbook.</span></li>
+                <li data-kind="skill"><code>soc-control-walkthrough</code><span>Document a SOC 1 / SOC 2 control walkthrough — control description, test of design vs test of operating effectiveness, evidence-of-control patterns, sampling, exception triage, deficiency severity classification (control deficiency / significant deficiency / material weakness).</span></li>
+                <li data-kind="skill"><code>thirteen-week-cash-forecast</code><span>Build and operate a 13-week direct-method cash forecast — receipts by source, disbursements by category, week-by-week roll, variance-to-prior-forecast cadence, covenant headroom view, and the trigger thresholds for management action.</span></li>
+                <li data-kind="skill"><code>variance-commentary</code><span>Write variance commentary that tells a story instead of restating a table — templates for revenue, GM, opex, EBITDA, FCF with named drivers + materiality threshold applied.</span></li>
                 <li data-kind="hook"><code>flag-finance-anti-patterns.sh</code><span>flag-finance-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on finance-conventional files.</span></li>
                 <li data-kind="template"><code>account-reconciliation.md</code><span>Account reconciliation — [Account name] / [GL #]</span></li>
                 <li data-kind="template"><code>audit-pbc-tracker.md</code><span>Audit PBC tracker — [Audit / Period]</span></li>
@@ -732,7 +758,7 @@
               <p class="stack-panel__desc">Financial-regulatory &amp; compliance specialist team — AML/KYC analyst (sanctions, EDD, SAR/STR), regulatory-reporting analyst (FATCA/CRS, supervisory returns, Solvency II, BMA EBS), risk-and-controls specialist (three lines of defense, KRIs), policy &amp; procedure writer…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>6</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>9</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
@@ -743,10 +769,15 @@
                 <li data-kind="agent"><code>policy-and-procedure-writer</code><span>Use this agent for compliance manual / policy / procedure authoring — new policy drafting, P&amp;P refreshes, gap analysis against new regulation, regulator-facing documentation, jurisdictional adaptation of an existing policy.</span></li>
                 <li data-kind="agent"><code>regulatory-reporting-analyst</code><span>Use this agent for regulatory filings — FATCA, CRS, supervisory returns, Solvency II QRTs, BMA EBS, US RBC, statutory financial statements, supervisory reports, capital adequacy calculations.</span></li>
                 <li data-kind="agent"><code>risk-and-controls-specialist</code><span>Use this agent for enterprise risk management — risk-framework design, three lines of defense, risk-appetite statements, risk registers, KRI design, control self-assessment, ORM / ERM.</span></li>
-                <li data-kind="skill"><code>aml-program-review</code><span>Structured review of an AML program against FATF / FFIEC expectations.</span></li>
-                <li data-kind="skill"><code>examination-readiness</code><span>Pre-exam playbook for a regulator examination.</span></li>
-                <li data-kind="skill"><code>regulatory-mapping</code><span>Map internal controls / policies / procedures to specific regulatory citations.</span></li>
-                <li data-kind="skill"><code>sar-narrative-drafting</code><span>Draft SAR (Suspicious Activity Report) / STR (Suspicious Transaction Report) narratives that survive regulator (FinCEN, FIU, equivalent) review.</span></li>
+                <li data-kind="skill"><code>aml-program-review</code><span>Structured review of an AML program against FATF / FFIEC expectations — the 5 pillars, common findings, regulatory citations with primary sources.</span></li>
+                <li data-kind="skill"><code>control-testing</code><span>Compliance / second-line control testing rubric — design adequacy + operating effectiveness for compliance controls (KYC quality, monitoring rule tuning, training coverage, regulatory-mapping freshness).</span></li>
+                <li data-kind="skill"><code>examination-readiness</code><span>Pre-exam playbook for regulator examinations — PBC tracker, walkthrough rehearsal, mock interviews, exam-week posture, MRA / MRIA / management-letter response patterns.</span></li>
+                <li data-kind="skill"><code>kyc-edd-review</code><span>KYC file + EDD review playbook — risk-rating logic, BOI / UBO verification, source-of-wealth vs source-of-funds, EDD trigger conditions, file completeness checklist, sign-off chain.</span></li>
+                <li data-kind="skill"><code>regulatory-mapping</code><span>Map internal controls / policies / procedures to specific regulatory citations (regulator + section + paragraph).</span></li>
+                <li data-kind="skill"><code>risk-register-build</code><span>Build / refresh an enterprise risk register that survives audit committee scrutiny — three lines of defense assignment, inherent + residual rating math, KRI design, risk-appetite mapping, control coverage, and the half-yearly refresh cadence.</span></li>
+                <li data-kind="skill"><code>sanctions-hit-disposition</code><span>Disposition framework for sanctions screening alerts — true-match vs false-positive triage, secondary-match evidence chain, escalation criteria, documented-rationale template, list-version capture, and the audit-trail requirements that survive examiner review.</span></li>
+                <li data-kind="skill"><code>sar-narrative-drafting</code><span>Draft SAR / STR narratives that survive regulator review — typology + the W's + what to omit + reviewer sign-off chain.</span></li>
+                <li data-kind="skill"><code>supervisory-return-prep</code><span>Period-end supervisory / regulatory return preparation playbook — data lineage, maker-checker, materiality / threshold definitions, common return families (FATCA, CRS, BMA EBS, Solvency II, supervisory returns, capital adequacy / RBC), late-filing protocols.</span></li>
                 <li data-kind="hook"><code>scrub-confidential-pre-write.sh</code><span>scrub-confidential-pre-write.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="template"><code>aml-program-outline.md</code><span>AML program outline — [Entity]</span></li>
                 <li data-kind="template"><code>control-narrative.md</code><span>Control narrative — [Control ID] [Control name]</span></li>
@@ -763,7 +794,7 @@
               <p class="stack-panel__desc">Web design &amp; build specialist team — web architect (IA, stack, hosting), UX designer (wireframes, flows, conversion), visual designer (brand, typography, tokens), frontend implementer (HTML/CSS/JS, React, Astro, Next), content strategist (copy, microcopy, SEO content)…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>4</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>9</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
               </ul>
@@ -775,10 +806,15 @@
                 <li data-kind="agent"><code>ux-designer</code><span>Use this agent for UX work — wireframes, user flows, screen-level layouts, conversion design, interaction design, usability heuristics.</span></li>
                 <li data-kind="agent"><code>visual-designer</code><span>Use this agent for visual / brand work — brand systems, typography, color, layout grids, design tokens, component visual style, theming, dark-mode, motion design.</span></li>
                 <li data-kind="agent"><code>web-architect</code><span>Use this agent for web architecture decisions — site architecture, information architecture, tech-stack selection, hosting / CDN, build pipeline, repo structure, content modeling for headless CMS, technical SEO foundations.</span></li>
-                <li data-kind="skill"><code>accessibility-review</code><span>WCAG 2.2-aligned accessibility audit.</span></li>
-                <li data-kind="skill"><code>core-web-vitals-tuning</code><span>Diagnose and improve Core Web Vitals.</span></li>
+                <li data-kind="skill"><code>accessibility-review</code><span>WCAG 2.2-aligned accessibility audit — semantics, ARIA, keyboard navigation, color contrast, focus management, motion preferences.</span></li>
+                <li data-kind="skill"><code>content-audit</code><span>Audit existing site content — full inventory (URL × type × intent × last-updated × owner), scoring against business / user-need / SEO criteria, remediation queue (keep / consolidate / rewrite / retire), and the migration plan when re-platforming.</span></li>
+                <li data-kind="skill"><code>conversion-design</code><span>Design and audit conversion-focused screens — funnel definition, friction-vs-trust balance, form field selection (every field is a cost), one CTA per screen discipline, social-proof placement, microcopy patterns, and the conversion-rate measurement plan.</span></li>
+                <li data-kind="skill"><code>core-web-vitals-tuning</code><span>Diagnose and improve Core Web Vitals (LCP / CLS / INP).</span></li>
                 <li data-kind="skill"><code>design-system-audit</code><span>Audit an existing brand / design system for consistency, completeness, token coverage, dark-mode readiness.</span></li>
-                <li data-kind="skill"><code>seo-technical-audit</code><span>Technical SEO sweep — crawlability, indexability, structured data, social-share metadata, internationalization.</span></li>
+                <li data-kind="skill"><code>design-tokens-scaffolding</code><span>Scaffold a token system from brand spec to token JSON to CSS variables to framework theme (Tailwind / Shadcn / CSS-in-JS / Theme UI).</span></li>
+                <li data-kind="skill"><code>information-architecture</code><span>Design site information architecture — sitemap, URL taxonomy, navigation patterns (primary / utility / footer / contextual), card-sort discipline, content model that the IA implies, and the URL-to-template mapping.</span></li>
+                <li data-kind="skill"><code>seo-technical-audit</code><span>Technical SEO sweep — crawlability, indexability, schema markup, sitemaps, OG / Twitter Card metadata, hreflang, structured data.</span></li>
+                <li data-kind="skill"><code>third-party-script-hygiene</code><span>Catalogue and hygiene-audit third-party scripts on a marketing site — performance budget by category (analytics / chat / A/B / fonts / video / social), async-defer patterns, consent-gating (GDPR / CCPA / consent-mode v2), CSP implications, and the periodic re-audit cadence.</span></li>
                 <li data-kind="hook"><code>check-web-anti-patterns.sh</code><span>check-web-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on web-conventional files.</span></li>
                 <li data-kind="template"><code>accessibility-audit-report.md</code><span>Accessibility audit report — [Site / scope]</span></li>
                 <li data-kind="template"><code>content-style-guide.md</code><span>Content style guide — [Brand / site]</span></li>
@@ -788,6 +824,92 @@
                 <li data-kind="template"><code>performance-budget.md</code><span>Performance budget — [Site / page-type]</span></li>
                 <li data-kind="template"><code>seo-audit-report.md</code><span>SEO audit report — [Site]</span></li>
                 <li data-kind="template"><code>site-architecture.md</code><span>Site architecture — [Site name]</span></li>
+              </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
+            </div>
+            <div class="stack-panel" role="tabpanel" id="stack-panel-edtech-partner-success" aria-labelledby="stack-tab-edtech-partner-success" data-stack-panel="edtech-partner-success" hidden>
+              <p class="stack-panel__desc">EdTech-flavored Partner Success Manager team — 6 specialist agents anchored on the PSM lane.</p>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>6</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>12</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>15</strong> Templates</button></li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li data-kind="agent"><code>ferpa-comms-translator</code><span>Use this agent for FERPA-aware (and segment-equivalent data-privacy) multilingual, multi-audience partner &amp; end-user communication.</span></li>
+                <li data-kind="agent"><code>learning-analytics-analyst</code><span>Use this agent for partner-engagement signal design, health-score architecture, dashboard specs, and metric interpretation.</span></li>
+                <li data-kind="agent"><code>partner-profile-curator</code><span>Use this agent to maintain the durable partner record — the context that outlives any one PSM seat.</span></li>
+                <li data-kind="agent"><code>partner-success-manager</code><span>Use this agent for EdTech-specialized PSM work — onboarding, adoption, ongoing pulse, day-to-day partner-facing work.</span></li>
+                <li data-kind="agent"><code>qbr-composer</code><span>Use this agent for Quarterly Business Review materials end-to-end — data pull plan → narrative → deck → talk track → followup tracker.</span></li>
+                <li data-kind="agent"><code>success-playbook-designer</code><span>Use this agent to design or refresh PSM plays — renewal plays, expansion plays, recovery (red-flag intervention) plays, advocacy plays.</span></li>
+                <li data-kind="skill"><code>adoption-sequencing-k12</code><span>Sequence K-12 partner adoption activities by stage (newly-implemented / first-year-sustaining / multi-year-mature / pre-renewal) with school-year-phase overlay.</span></li>
+                <li data-kind="skill"><code>advocacy-program-design</code><span>Design a structured EdTech advocacy program with 5-tier ladder (logo → quote → case study → speaker → peer call).</span></li>
+                <li data-kind="skill"><code>executive-sponsor-mapping</code><span>Map the partner's buying committee — economic buyer, champion, technical buyer / IT, user-champion, blocker, executive sponsor — across segments (K-12 / higher-ed / corp L&amp;D).</span></li>
+                <li data-kind="skill"><code>expansion-play-design</code><span>Design expansion motions that fire only when the partner has earned value — 3-gate eligibility (top-quartile health + demonstrable adoption + organizational readiness), value-trigger taxonomy, seat / module / department land-and-expand patterns, internal-champion-armament, ROI-storytelling format, and the "don't sell to bottom-quartile" discipline.</span></li>
+                <li data-kind="skill"><code>implementation-90-day-arc</code><span>Run the 90-day technical-onboarding arc for a newly-contracted EdTech partner — discovery (weeks 1-2) → integration setup (3-4) → train-the-trainer (5-6) → go-live + Day-30 measurement (7-8) → stabilization + PSM handoff (9-12).</span></li>
+                <li data-kind="skill"><code>partner-health-scoring</code><span>Design and maintain a partner health score that actually predicts renewal / churn for EdTech partners.</span></li>
+                <li data-kind="skill"><code>partner-training-program-design</code><span>Design partner-facing training programs for EdTech — train-the-trainer is the only model that scales in K-12.</span></li>
+                <li data-kind="skill"><code>qbr-composition</code><span>Compose a Quarterly Business Review end-to-end — data pull plan, narrative arc, deck outline, talk track, post-QBR commitment tracker.</span></li>
+                <li data-kind="skill"><code>recovery-play-design</code><span>Design red-flag intervention sequences — root-cause diagnostic before remedy (4 parallel hypotheses), time-bound recovery plan with measurable 30/60/90-day signal targets, escalation criteria (PSM → success leadership → exec sponsor → counsel → churn-prep), the "is this recoverable?" rule, churn-prep workflow when not, and the post-recovery learning capture.</span></li>
+                <li data-kind="skill"><code>renewal-play-design</code><span>Design renewal motions that earn the renewal instead of negotiating it — T-180/T-120/T-90/T-60/T-30/T-0 sequence, sponsor-confirmation arc, value-evidence pack, multi-thread the buying committee, decision-memo support, expand/maintain/contract decision rule, and segment-specific overlays (K-12 budget cycle, higher-ed academic calendar, corp L&amp;D fiscal year).</span></li>
+                <li data-kind="skill"><code>rostering-data-quality</code><span>Diagnose rostering / SIS / LMS data-sync issues in EdTech contexts — K-12 (Clever, ClassLink, OneRoster), higher-ed (SIS/LMS), corporate L&amp;D (HRIS/LMS).</span></li>
+                <li data-kind="skill"><code>success-plan-authoring</code><span>Author a 30/60/90 day or quarterly success plan for an EdTech partner that has measurable success criteria, named owners, and a defensible cadence.</span></li>
+                <li data-kind="hook"><code>flag-psm-anti-patterns.sh</code><span>flag-psm-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on EdTech-PSM artifact files.</span></li>
+                <li data-kind="template"><code>adoption-diagnostic-worksheet.md</code><span>Adoption diagnostic worksheet — `&lt;partner_name&gt;`</span></li>
+                <li data-kind="template"><code>annual-partner-review.md</code><span>Annual Partner Review — `&lt;Partner Name&gt;` — `&lt;Year&gt;`</span></li>
+                <li data-kind="template"><code>case-study-draft.md</code><span>Case study draft — `&lt;partner_name | "Anonymized Partner"&gt;`</span></li>
+                <li data-kind="template"><code>cross-functional-partnership-map.md</code><span>Cross-functional partnership map — `&lt;partner_name | vendor_name&gt;`</span></li>
+                <li data-kind="template"><code>escalation-memo.md</code><span>Escalation Memo — `&lt;Partner Name&gt;` — `&lt;short risk description&gt;`</span></li>
+                <li data-kind="template"><code>health-score-dashboard.md</code><span>Health-Score Dashboard — Spec</span></li>
+                <li data-kind="template"><code>implementation-90-day-plan.md</code><span>Implementation 90-day plan — `&lt;partner_name&gt;`</span></li>
+                <li data-kind="template"><code>onboarding-checklist.md</code><span>Onboarding Checklist — First 90 Days — `&lt;Partner Name&gt;`</span></li>
+                <li data-kind="template"><code>partner-profile.md</code><span>Partner Profile — `&lt;Partner Name&gt;`</span></li>
+                <li data-kind="template"><code>qbr-deck-outline.md</code><span>QBR Deck Outline — `&lt;Partner Name&gt;` — `&lt;Quarter&gt;`</span></li>
+                <li data-kind="template"><code>reference-pipeline-tracker.md</code><span>Reference customer pipeline tracker</span></li>
+                <li data-kind="template"><code>renewal-decision-memo.md</code><span>Renewal decision memo — `&lt;partner_name&gt;`</span></li>
+                <li data-kind="template"><code>success-plan.md</code><span>Success Plan — `&lt;Partner Name&gt;`</span></li>
+                <li data-kind="template"><code>touchpoint-log.md</code><span>Touchpoint Log — `&lt;Partner Name&gt;`</span></li>
+                <li data-kind="template"><code>train-the-trainer-curriculum.md</code><span>Train-the-trainer curriculum — `&lt;partner_name&gt;`</span></li>
+              </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
+            </div>
+            <div class="stack-panel" role="tabpanel" id="stack-panel-data-platform" aria-labelledby="stack-tab-data-platform" data-stack-panel="data-platform" hidden>
+              <p class="stack-panel__desc">Data-platform team — 4 specialist agents (database-setup-guide, etl-pipeline-engineer, dashboard-builder, connector-developer) that guide cloud-database setup, ELT pipelines…</p>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>11</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>12</strong> Templates</button></li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li data-kind="agent"><code>connector-developer</code><span>Use this agent for custom Airbyte connector authoring when an ELT vendor doesn't ship a connector for the source the engagement needs.</span></li>
+                <li data-kind="agent"><code>dashboard-builder</code><span>Use this agent for interactive dashboard front-end generation — Evidence.dev (marketing-site portfolio), Apache Superset / Metabase OSS (client deliverable), Cube + Next.js + Tremor + Recharts + shadcn/ui (productized SaaS), Power BI Embedded F-SKU (Microsoft-stack engagements).</span></li>
+                <li data-kind="agent"><code>database-setup-guide</code><span>Use this agent for cloud-database setup guidance — Supabase, Neon, RDS, Azure SQL, Fabric, DuckDB, MotherDuck, Snowflake, Databricks, Turso.</span></li>
+                <li data-kind="agent"><code>etl-pipeline-engineer</code><span>Use this agent for ELT pipeline design and configuration — Airbyte, Fivetran, n8n, custom integrations.</span></li>
+                <li data-kind="skill"><code>cloud-database-comparison</code><span>Compare cloud databases (Supabase, Neon, RDS, Azure SQL, Fabric, DuckDB, MotherDuck, Snowflake, Databricks, Turso) for an SMB consulting engagement — pricing tables with retrieval dates, setup-complexity matrix, when-to-pick guidance.</span></li>
+                <li data-kind="skill"><code>connector-configuration</code><span>Connector-specific configuration patterns for ELT pipelines — QuickBooks OAuth + rate-limit handling, Stripe webhook + batch hybrid, Salesforce Bulk API 2.0, HubSpot API v3, GA4 BigQuery export, Shopify GraphQL Admin API.</span></li>
+                <li data-kind="skill"><code>cube-schema-scaffolding</code><span>Scaffold Cube semantic-layer schemas with mandatory `securityContext` baked in for multi-tenant customer-facing dashboards.</span></li>
+                <li data-kind="skill"><code>dashboard-performance-tuning</code><span>Tune interactive-dashboard performance against a per-widget-class budget — Cube pre-aggregation design, Postgres / DuckDB materialized views, cache layers (Cube + Redis + browser TanStack Query), the per-widget profile loop (measure → identify the slow stage → fix at the lowest-cost layer).</span></li>
+                <li data-kind="skill"><code>data-quality-tests</code><span>Design data-quality tests that catch real bugs — uniqueness / not-null / referential integrity / freshness / row-count drift / value-range / cross-source reconciliation.</span></li>
+                <li data-kind="skill"><code>dbt-project-scaffolding</code><span>Scaffold a dbt project that ships — sources → staging → intermediate → marts → metrics layer discipline, generic + custom tests, doc-blocks for every model, exposure tracking, RLS-safe role separation (build-role vs query-role), CI shape (`dbt build` on PR), and a dev/prod env-promotion shape.</span></li>
+                <li data-kind="skill"><code>embed-csp-and-iframe-sandboxing</code><span>Configure CSP `frame-ancestors`, iframe `sandbox` attributes, postMessage origin checks, and web-component shadow-DOM boundaries for embedded dashboards.</span></li>
+                <li data-kind="skill"><code>jwt-embed-issuance</code><span>Canonical 2026 JWT-embed flow for dashboard embedding — required claims (`sub`, `tenant_id`, `iat`, `exp`, `iss`, `aud`, `nonce`), tool-specific verification (Superset guest tokens, Metabase JWT URLs, Cube Authorization Bearer, Power BI MSAL-via-AAD), 5-15 min expiration policy, cross-boundary denial test contract.</span></li>
+                <li data-kind="skill"><code>multi-tenant-migration</code><span>Migrate a single-tenant database / dashboard stack to multi-tenant — `tenant_id` column propagation + backfill, RLS / semantic-layer scope rules introduced post-hoc, JWT-claim shape migration, embed-token cutover plan with parallel + backout window, and the mandatory cross-boundary denial test before flipping the switch.</span></li>
+                <li data-kind="skill"><code>rls-policy-authoring</code><span>Author Postgres Row Level Security policies (force-on, CI-deployed, denial-tested) for multi-tenant dashboards.</span></li>
+                <li data-kind="skill"><code>stack-selection</code><span>Select a dashboard-engagement stack via the Case A/B/C/D Mermaid decision tree (Portfolio / Per-client / Productized SaaS / Pipes-only) — surfaces the per-viewer-pricing-trap heuristic, recognizes the EdTech LMS connector-gap, returns a populated `stack-decision-record.md`.</span></li>
+                <li data-kind="hook"><code>flag-data-platform-smells.sh</code><span>flag-data-platform-smells.sh PreToolUse hook for Edit | Write | MultiEdit on data-platform artifact files.</span></li>
+                <li data-kind="template"><code>airbyte-source-config.yaml</code><span>---------------------------------------------------------------------------</span></li>
+                <li data-kind="template"><code>cube-schema-starter.yml</code><span>Cube schema starter — multi-tenant analytics</span></li>
+                <li data-kind="template"><code>dashboard-engagement-checklist.md</code><span>Dashboard engagement checklist — {{Engagement / Client Name}}</span></li>
+                <li data-kind="template"><code>database-schema-starter.sql</code><span></span></li>
+                <li data-kind="template"><code>dbt-project-starter/</code><span>(template folder)</span></li>
+                <li data-kind="template"><code>evidence-portfolio-page.md</code><span>{{Case Study Title}}</span></li>
+                <li data-kind="template"><code>jwt-issuer.ts</code><span></span></li>
+                <li data-kind="template"><code>metabase-interactive-embed.tsx.md</code><span>Metabase Interactive Embedding (React component) — seam-marked stub</span></li>
+                <li data-kind="template"><code>power-bi-embedded-react.tsx.md</code><span>Power BI Embedded App-Owns-Data (React component) — seam-marked stub</span></li>
+                <li data-kind="template"><code>rls-cross-tenant-test.sql</code><span></span></li>
+                <li data-kind="template"><code>stack-decision-record.md</code><span>Stack decision record — {{Engagement / Client Name}}</span></li>
+                <li data-kind="template"><code>superset-embed-iframe.tsx.md</code><span>Superset embed (React iframe component) — seam-marked stub</span></li>
               </ul>
               <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
