@@ -162,33 +162,6 @@
       </a>
     </section>
 
-    <!-- ============ BY THE NUMBERS — RavenClaude marketplace ============ -->
-    <!--
-      MARKETPLACE STATS — the RavenClaude marketplace at a glance.
-      HAND-MAINTAINED. site/repo-guide.html is stale (upstream generation
-      was removed in the RavenClaude portal redesign) and CI no longer runs
-      scripts/build_stack.py, so edit these figures directly when the
-      marketplace grows. Do NOT run build_stack.py — it would overwrite
-      these with stale numbers. The STACK_STATS markers are kept only as
-      anchors in case guide generation is ever restored.
-      (Founder/career stats now live just above the About section.)
-    -->
-    <section class="stats" aria-label="RavenClaude marketplace by the numbers">
-      <div class="container">
-        <div class="stats__marketplace">
-          <!-- STACK_STATS:START -->
-          <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>65</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>287</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>426</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>67</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>400</strong><span>templates</span></li>
-          </ul>
-          <!-- STACK_STATS:END -->
-        </div>
-      </div>
-    </section>
-
     <!-- ============ CAPABILITIES ============ -->
     <section class="section section--grid" id="capabilities" aria-labelledby="capabilities-heading">
       <div class="container">
@@ -548,14 +521,22 @@
             STACK SECTION — HAND-MAINTAINED.
             site/repo-guide.html is stale (upstream generation was removed
             in the RavenClaude portal redesign) and CI no longer runs
-            scripts/build_stack.py, so edit the tabs, counts, and panels
-            below directly. Do NOT run build_stack.py — it would overwrite
-            this section with stale figures. The STACK_TABS / STACK_PANELS
-            markers are kept only as anchors in case guide generation is
-            ever restored.
-            (The global marketplace stats strip now lives up top, right
-            below the hero — its STACK_STATS markers moved with it.)
+            scripts/build_stack.py, so edit the stats, tabs, counts, and
+            panels below directly. Do NOT run build_stack.py — it would
+            overwrite this section with stale figures. The STACK_STATS /
+            STACK_TABS / STACK_PANELS markers are kept only as anchors in
+            case guide generation is ever restored.
           -->
+          <!-- STACK_STATS:START -->
+          <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
+            <li class="stack-stat"><strong>65</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>287</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>426</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>67</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>400</strong><span>templates</span></li>
+          </ul>
+          <!-- STACK_STATS:END -->
+
           <!-- STACK_TABS:START -->
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">

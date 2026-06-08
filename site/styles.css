@@ -543,9 +543,6 @@ h1, h2, h3 {
   letter-spacing: 0.01em;
   line-height: 1.4;
 }
-/* Marketplace stats reuse the .stack-stats panel inside the top .stats strip;
-   drop its trailing margin so the band stays vertically balanced. */
-.stats__marketplace .stack-stats { margin-bottom: 0; }
 /* Founder KPIs reused inside the About section (above the credentials grid),
    without the full-width .stats strip chrome — give it breathing room below. */
 .stats__list--about { margin: 4px 0 clamp(28px, 4vw, 48px); }
