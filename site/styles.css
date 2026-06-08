@@ -543,6 +543,9 @@ h1, h2, h3 {
   letter-spacing: 0.01em;
   line-height: 1.4;
 }
+/* Marketplace stats reuse the .stack-stats panel inside the top .stats strip;
+   drop its trailing margin so the band stays vertically balanced. */
+.stats__marketplace .stack-stats { margin-bottom: 0; }
 
 /* ---------- Capabilities ---------- */
 .caps {
