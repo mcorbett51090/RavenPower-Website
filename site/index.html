@@ -512,7 +512,7 @@
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
           <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
           <p class="section__lede">
-            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 65-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
+            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 99-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
           </p>
         </header>
 
@@ -529,7 +529,7 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>65</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>99</strong><span>plugins</span></li>
             <li class="stack-stat"><strong>287</strong><span>agents</span></li>
             <li class="stack-stat"><strong>426</strong><span>skills</span></li>
             <li class="stack-stat"><strong>67</strong><span>hooks</span></li>
@@ -541,11 +541,11 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.126.1</span>
+              <span class="stack-tab__ver">v0.148.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
-              <span class="stack-tab__ver">v0.26.3</span>
+              <span class="stack-tab__ver">v0.31.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
               <span class="stack-tab__name">finance</span>
@@ -557,7 +557,7 @@
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-web-design" id="stack-tab-web-design" data-stack-tab="web-design">
               <span class="stack-tab__name">web-design</span>
-              <span class="stack-tab__ver">v0.12.0</span>
+              <span class="stack-tab__ver">v0.13.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-edtech-partner-success" id="stack-tab-edtech-partner-success" data-stack-tab="edtech-partner-success">
               <span class="stack-tab__name">edtech-partner-success</span>
@@ -565,7 +565,7 @@
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-data-platform" id="stack-tab-data-platform" data-stack-tab="data-platform">
               <span class="stack-tab__name">data-platform</span>
-              <span class="stack-tab__ver">v0.12.0</span>
+              <span class="stack-tab__ver">v0.13.0</span>
             </button>
           </div>
           <!-- STACK_TABS:END -->
@@ -573,12 +573,12 @@
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 14 specialist agents, 35 skills, team-lead dispatch playbook, comfort-posture dashboard, opt-in command-review tribunal (the Thing), hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 14 specialist agents, 40 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>14</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>35</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>8</strong> Hooks</button></li>
-                <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>4</strong> Rules</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>40</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
+                <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
@@ -631,6 +631,11 @@
                 <li data-kind="skill"><code>thing</code><span>Command review (the Thing) — opt-in command-review tribunal that votes ALLOW/EDIT/DENY on shell commands before execution; Saga-logged audit trail.</span></li>
                 <li data-kind="skill"><code>wall-handling</code><span>When an agent hits a wall (same tool + same error 3+ times, an impossible TypeScript fix, a missing dependency), structured escalation instead of looping.</span></li>
                 <li data-kind="skill"><code>webfetch-hardening</code><span>Deterministic sanitizer floor for WebFetch return envelopes — strip injection-shaped blocks before any agent acts on fetched content.</span></li>
+                <li data-kind="skill"><code>rc-deep-research</code><span>Multi-source deep research with adversarial claim verification, synthesized into a cited report with confidence rankings.</span></li>
+                <li data-kind="skill"><code>scout</code><span>Discover great-but-low-visibility ideas — map clusters around fringe excellence that mainstream search buries under popularity.</span></li>
+                <li data-kind="skill"><code>two-panel-plan-review</code><span>Two independent expert panels review a strategic plan, fill its gaps, author a tactical build plan, then cold-review with P0/P1 recommendations.</span></li>
+                <li data-kind="skill"><code>update-ravenclaude</code><span>Refresh a RavenClaude installation so newly shipped skills, agents, and changes take effect in the current session.</span></li>
+                <li data-kind="skill"><code>visual-feedback-loop</code><span>Iterative visual critique loop — agent renders a visual surface, inspects its own output against objective signals, and iterates toward correctness.</span></li>
                 <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
                 <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash and tool calls — blocks obviously destructive commands.</span></li>
@@ -641,10 +646,17 @@
                 <li data-kind="hook"><code>dod-gate.sh</code><span>dod-gate.sh Stop hook — definition-of-done gate; blocks the stop until the configured gate command (tests/build/lint) passes.</span></li>
                 <li data-kind="hook"><code>remind-tests.sh</code><span>remind-tests.sh Stop hook — advisory fallback when no dod-gate command is configured.</span></li>
                 <li data-kind="hook"><code>reapply-posture.sh</code><span>reapply-posture.sh SessionStart hook — regenerates comfort-posture permission rules at session start so dashboard-composed postures persist on Claude Code on the web.</span></li>
+                <li data-kind="hook"><code>route-decision-review.sh</code><span>route-decision-review.sh PreToolUse hook — routes binary yes/no decisions to a tribunal for automatic resolution, preventing user interruption for rule-derivable decisions.</span></li>
+                <li data-kind="hook"><code>capability-orientation.sh</code><span>capability-orientation.sh SessionStart hook — injects a capability banner so the agent knows what external surfaces, credentials, and permissions are available.</span></li>
+                <li data-kind="hook"><code>claim-grounding-lint.sh</code><span>claim-grounding-lint.sh PostToolUse hook for Edit | Write | MultiEdit — advisory warning when absolute capability claims are written without inline provenance markers.</span></li>
+                <li data-kind="hook"><code>copilot-hook-adapter.sh</code><span>copilot-hook-adapter.sh — translates Copilot CLI payloads to Claude hook stdin; preserves real deny reasons; exports CLAUDE_SESSION_ID and THING_HOST.</span></li>
+                <li data-kind="hook"><code>ensure-default-mode.sh</code><span>ensure-default-mode.sh SessionStart hook — detects bypass/acceptEdits modes and warns that configured permission rules are being ignored.</span></li>
+                <li data-kind="hook"><code>regen-on-manifest-change.sh</code><span>regen-on-manifest-change.sh PostToolUse hook for Edit | Write | MultiEdit on plugin.json/marketplace.json — regenerates downstream artifacts when a plugin version field changes.</span></li>
                 <li data-kind="rule"><code>agent-collaboration</code><span>Rule: Agent Collaboration Protocol</span></li>
                 <li data-kind="rule"><code>coding-standards</code><span>Rule: Coding Standards (long form)</span></li>
                 <li data-kind="rule"><code>git-workflow</code><span>Rule: Git Workflow (long form)</span></li>
                 <li data-kind="rule"><code>security</code><span>Rule: Security (long form)</span></li>
+                <li data-kind="rule"><code>terminal-copy-to-tempfile</code><span>Rule: Terminal copy-me text writes to a temp .md file (never inline) — clipboard copy is not functional in CLI terminal sessions.</span></li>
                 <li data-kind="template"><code>activity-log.md</code><span>Activity Log — *&lt;Project Name&gt;*</span></li>
                 <li data-kind="template"><code>agent-brief.md</code><span>Agent Brief Template</span></li>
                 <li data-kind="template"><code>agent-definition-template.md</code><span>Agent Definition Template</span></li>
@@ -672,8 +684,8 @@
               <p class="stack-panel__desc">Microsoft Power Platform specialist team — 11 specialists (Test Studio + DAX + pac solution check tester, PBIP-git + DAX + ADO power-bi-engineer, canvas/Power Fx, Power Automate + connectors, Dataverse modeling, model-driven apps, pac CLI + ALM, tenant governance/DLP, PCF…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>11</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>18</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>21</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>3</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>3</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
@@ -698,6 +710,7 @@
                 <li data-kind="skill"><code>dlp-policy-design</code><span>Design tenant Data Loss Prevention policies for Power Platform — business / non-business / blocked classification, environment-scoped vs tenant-wide policies, exemption process, common-connector pitfalls (HTTP, SharePoint, Dataverse, custom connectors), and the "every flow gets re-evaluated on policy change" implication.</span></li>
                 <li data-kind="skill"><code>grounding-protocol</code><span>Reduce confident-but-incorrect "I can't do that" claims by forcing agents to verify capabilities before refusing scope.</span></li>
                 <li data-kind="skill"><code>maintainability-review</code><span>Forward-looking maintainability + evolvability review of a Power Platform solution — understandability, modifiability, testability, evolution readiness, ownership.</span></li>
+                <li data-kind="skill"><code>pbir-ref-integrity</code><span>Report-wide referential-integrity validator for a PBIR Enhanced report's definition/ tree — catches dangling cross-file references before deployment.</span></li>
                 <li data-kind="skill"><code>pcf-controls</code><span>Use when building, deploying, or using PowerApps Component Framework (PCF) controls.</span></li>
                 <li data-kind="skill"><code>plan-with-team</code><span>Spawns an Agent Team to collaboratively plan Power Platform / Dataverse applications.</span></li>
                 <li data-kind="skill"><code>power-apps-code-apps</code><span>Use when building, scaffolding, debugging, or deploying Microsoft Power Apps Code Apps using React, Vue, or TypeScript in VS Code.</span></li>
@@ -705,8 +718,12 @@
                 <li data-kind="skill"><code>power-bi</code><span>Veteran-level reference for Power BI — PBIP project structure + git, semantic model design, DAX patterns + performance, deployment pipelines, refresh / gateway troubleshooting, integration with Power Platform solutions / ALM.</span></li>
                 <li data-kind="skill"><code>power-pages-permissions</code><span>Design table permissions, web roles, and authentication for Power Pages — anonymous vs authenticated patterns, B2C / Entra-External-ID auth, table-permission scoping (global / contact / account / parental / self), record ownership, and the "row I can see in MDA but not in Pages" debugging playbook.</span></li>
                 <li data-kind="skill"><code>record-screen</code><span>Record a Chrome browser tab to video via CLI.</span></li>
+                <li data-kind="skill"><code>report-visualization-design</code><span>Design Power BI reports with a checklist-driven method: question-first, 3-30-300 visual hierarchy, question-type visual selection, 8-point grid layout.</span></li>
+                <li data-kind="skill"><code>update-model-driven-app</code><span>Use when programmatically updating an existing model-driven Power Apps app (including custom pages) in a real environment via service principal.</span></li>
                 <li data-kind="skill"><code>visual-qa</code><span>AI-powered visual QA testing that walks through an app in the browser, records every action with annotated captions (what was done, what should happen), captures screenshots/GIFs, and sends the evidence to Gemini for automated review.</span></li>
                 <li data-kind="hook"><code>check-house-opinions.sh</code><span>check-house-opinions.sh PostToolUse hook for Edit | Write | MultiEdit on Power Platform source files.</span></li>
+                <li data-kind="hook"><code>validate-flow-action-names.sh</code><span>validate-flow-action-names.sh PostToolUse hook for Edit | Write | MultiEdit — warns when Power Automate cloud-flow JSON contains auto-generated action names like 'Compose_2'.</span></li>
+                <li data-kind="hook"><code>validate-tmdl-measure-metadata.sh</code><span>validate-tmdl-measure-metadata.sh PostToolUse hook for Edit | Write | MultiEdit on TMDL files — validates Power BI measures include description, formatString, and displayFolder.</span></li>
                 <li data-kind="template"><code>maintainability-review-template.md</code><span>Maintainability Review Template</span></li>
                 <li data-kind="template"><code>power-bi-copilot-ai-instructions.md</code><span>Power BI Copilot AI instructions — custom AI instructions for Copilot in Power BI</span></li>
                 <li data-kind="template"><code>power-bi-copilot-readiness-worked-example.md</code><span>Power BI Copilot readiness — worked example and readiness checklist</span></li>
