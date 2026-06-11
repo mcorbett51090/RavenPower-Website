@@ -512,7 +512,7 @@
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
           <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
           <p class="section__lede">
-            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 99-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
+            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 100-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
           </p>
         </header>
 
@@ -529,11 +529,11 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>99</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>287</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>426</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>67</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>400</strong><span>templates</span></li>
+            <li class="stack-stat"><strong>100</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>292</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>433</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>68</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>404</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
 
@@ -541,11 +541,11 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.148.0</span>
+              <span class="stack-tab__ver">v0.153.1</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
-              <span class="stack-tab__ver">v0.31.0</span>
+              <span class="stack-tab__ver">v0.38.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
               <span class="stack-tab__name">finance</span>
@@ -567,16 +567,20 @@
               <span class="stack-tab__name">data-platform</span>
               <span class="stack-tab__ver">v0.13.0</span>
             </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-engineering-management" id="stack-tab-engineering-management" data-stack-tab="engineering-management">
+              <span class="stack-tab__name">engineering-management</span>
+              <span class="stack-tab__ver">v0.1.0</span>
+            </button>
           </div>
           <!-- STACK_TABS:END -->
 
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 14 specialist agents, 40 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 42 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>14</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>40</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>42</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
@@ -596,6 +600,7 @@
                 <li data-kind="agent"><code>prompt-engineer</code><span>Use this agent to author, critique, refine, or refactor agent definitions, skill files, and prompt patterns across RavenClaude and any Expert repo (PowerPlatformExpert, SalesforceExpert, etc.).</span></li>
                 <li data-kind="agent"><code>security-reviewer</code><span>Use this agent whenever a diff touches authentication, authorization, cryptography, secrets, sessions, untrusted input parsing, file uploads, deserialization, SQL, shell, network egress, or third-party integrations.</span></li>
                 <li data-kind="agent"><code>tester-qa</code><span>Use this agent to design test plans, hunt flakes, plug coverage gaps, or harden tests around a new feature.</span></li>
+                <li data-kind="agent"><code>viz-spec-reviewer</code><span>Audit Vega-Lite, Vega, and SVG visualization specs before rendering — security gate against injection surfaces, remote data sources, and malicious handlers; classifies findings as BLOCKER/NEEDS-CHANGES/NOTE and blocks deployment on unresolved violations.</span></li>
                 <li data-kind="skill"><code>adaptive-run-classifier</code><span>Substrate-neutral pre-execution classifier — a single Haiku call emits a run_config JSON block so the right model runs at the right cost tier.</span></li>
                 <li data-kind="skill"><code>agent-dispatch-evaluator</code><span>Universal pre-dispatch model right-sizer — evaluates subagent type, task, and context to recommend the optimal model before spawning.</span></li>
                 <li data-kind="skill"><code>agent-quality-rubric</code><span>Score and improve an agent file against a 6-dimension rubric — Mission clarity, Scope sharpness, Capability Grounding alignment, Output-Contract completeness, Escalation paths, Example scenarios.</span></li>
@@ -608,6 +613,7 @@
                 <li data-kind="skill"><code>create-pr</code><span>Open a pull request for the current branch using the project's standard template.</span></li>
                 <li data-kind="skill"><code>cross-platform-determinism</code><span>For any script that produces a file the repo COMMITS and CI DIFFS — generated HTML, lockfiles, JSON snapshots, fixture files, documentation rendered from source.</span></li>
                 <li data-kind="skill"><code>decision-review</code><span>Route a yes/no decision through the command-review tribunal (the Thing) for a binding verdict instead of interrupting the human.</span></li>
+                <li data-kind="skill"><code>declarative-visualization</code><span>Author or validate a Vega-Lite, Vega, Deneb, or SVG visualization spec for any platform (web, Power BI, Tableau) — ensures the chart spec passes security and rendering checks before deployment.</span></li>
                 <li data-kind="skill"><code>diff-budget</code><span>Enforces a per-PR file-count and LoC budget — PRs touching &gt;5 files or &gt;400 LoC route to architectural review before merge.</span></li>
                 <li data-kind="skill"><code>draft-agent-brief</code><span>Use this skill when the user wants to create a new agent and has a clear business goal but isn't fluent in the agent's target domain.</span></li>
                 <li data-kind="skill"><code>environment-discovery</code><span>Auto-discover the consumer's environment posture by probing installed CLIs (pac / az / aws / gcloud / gh) with read-only commands at session start, decoding JWTs for role/scope claims, and assembling a draft `.ravenclaude/environment-context.md` for save/edit/skip.</span></li>
@@ -628,6 +634,7 @@
                 <li data-kind="skill"><code>spawn-team</code><span>Team Lead dispatch playbook.</span></li>
                 <li data-kind="skill"><code>spec-reread-ritual</code><span>Before writing any code for a task in a multi-task build, the agent MUST re-read the relevant spec section — closing the spec-drift hallucination gap.</span></li>
                 <li data-kind="skill"><code>structured-output</code><span>Enforce the Structured Output Protocol — every sub-agent handoff ends with a `---RESULT_START--- ...</span></li>
+                <li data-kind="skill"><code>svg-report-lint</code><span>Validate a standalone SVG file intended for reports or dashboards — checks geometry soundness, readability standards, and security vulnerabilities like script injection before deployment.</span></li>
                 <li data-kind="skill"><code>thing</code><span>Command review (the Thing) — opt-in command-review tribunal that votes ALLOW/EDIT/DENY on shell commands before execution; Saga-logged audit trail.</span></li>
                 <li data-kind="skill"><code>wall-handling</code><span>When an agent hits a wall (same tool + same error 3+ times, an impossible TypeScript fix, a missing dependency), structured escalation instead of looping.</span></li>
                 <li data-kind="skill"><code>webfetch-hardening</code><span>Deterministic sanitizer floor for WebFetch return envelopes — strip injection-shaped blocks before any agent acts on fetched content.</span></li>
@@ -945,6 +952,32 @@
                 <li data-kind="template"><code>rls-cross-tenant-test.sql</code><span>RLS cross-tenant denial test suite</span></li>
                 <li data-kind="template"><code>stack-decision-record.md</code><span>Stack decision record — {{Engagement / Client Name}}</span></li>
                 <li data-kind="template"><code>superset-embed-iframe.tsx.md</code><span>Superset embed (React iframe component) — seam-marked stub</span></li>
+              </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
+            </div>
+            <div class="stack-panel" role="tabpanel" id="stack-panel-engineering-management" aria-labelledby="stack-tab-engineering-management" data-stack-panel="engineering-management" hidden>
+              <p class="stack-panel__desc">Engineering management team — 4 specialist agents covering the EM lead, people and growth, delivery and execution, and technical health lanes. Built for solo EMs and consultants managing small engineering teams with structured 1:1s, evidence-based performance reviews, hiring loops, flow diagnostics, and tech-debt decisions.</p>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>5</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>4</strong> Templates</button></li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li data-kind="agent"><code>engineering-manager-lead</code><span>Use this agent to diagnose whether a team's core challenge stems from people growth, delivery execution, or technical health — maps the first moves with owners and dates.</span></li>
+                <li data-kind="agent"><code>people-and-growth-manager</code><span>Use this agent for 1:1 meetings beyond status updates, evidence-based performance reviews, and underperformance diagnosis — examines system factors before drawing conclusions about a person.</span></li>
+                <li data-kind="agent"><code>delivery-and-execution-manager</code><span>Use this agent to diagnose flow problems, interpret DORA metrics as system signals, and address unsustainable on-call practices — always fixing the system rather than pressuring people.</span></li>
+                <li data-kind="agent"><code>technical-health-manager</code><span>Use this agent to evaluate tech-debt paydown as a sized carrying cost against roadmap priorities, or diagnose whether codebase slowness is felt pain or measured degradation.</span></li>
+                <li data-kind="skill"><code>decide-tech-debt</code><span>Decide whether to pay down specific tech-debt by quantifying its business impact and payback period against roadmap priorities — produces a structured memo with numbered recommendations and capacity slices.</span></li>
+                <li data-kind="skill"><code>design-hiring-loop</code><span>Design a structured hiring loop — rubric, consistent interview questions, evidence-based scoring, and a debrief that surfaces dissent over a vibe-based process.</span></li>
+                <li data-kind="skill"><code>improve-team-flow</code><span>Diagnose unpredictable delivery by measuring lead time and WIP to identify system constraints — applies sustainable fixes rather than velocity pressure.</span></li>
+                <li data-kind="skill"><code>run-one-on-one</code><span>Conduct a meaningful 1:1 meeting focused on the engineer's priorities rather than status updates — agenda scaffolds, talking-point prompts, and note-taking.</span></li>
+                <li data-kind="skill"><code>write-performance-review</code><span>Draft a performance review using concrete, dated behavioral evidence — bias-checked and growth-oriented, designed as a management tool rather than a final verdict.</span></li>
+                <li data-kind="hook"><code>flag-engineering-management-antipatterns.sh</code><span>flag-engineering-management-antipatterns.sh PostToolUse advisory hook — flags anti-patterns in engineering management deliverables.</span></li>
+                <li data-kind="template"><code>growth-plan.md</code><span>Engineer growth plan template</span></li>
+                <li data-kind="template"><code>one-on-one-agenda.md</code><span>1:1 meeting agenda template</span></li>
+                <li data-kind="template"><code>performance-review.md</code><span>Performance review template</span></li>
+                <li data-kind="template"><code>tech-debt-decision-memo.md</code><span>Tech-debt decision memo template</span></li>
               </ul>
               <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
