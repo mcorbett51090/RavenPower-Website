@@ -541,7 +541,7 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.155.0</span>
+              <span class="stack-tab__ver">v0.157.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
@@ -577,10 +577,10 @@
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 42 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 43 skills, team-lead dispatch playbook, Capability Grounding Protocol, Structured Output Protocol, comfort-posture dashboard, orchestrator knob (route team dispatch through Claude from Copilot/GPT/Grok), opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, declarative-visualization (Vega-Lite/Deneb/SVG + Gate 101/103 linters), hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>42</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>43</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
@@ -607,6 +607,7 @@
                 <li data-kind="skill"><code>audit-ci-gates</code><span>For any consumer project where a CI workflow is meant to *enforce* a property (lint, format, security scan, manifest validation, version pin, layout allow-list, etc.).</span></li>
                 <li data-kind="skill"><code>branch-archive</code><span>Safely retire a local branch by tagging its tip first — the sanctioned escape hatch for stale branches without losing work.</span></li>
                 <li data-kind="skill"><code>brand-extraction</code><span>Point at a website home page and extract every logo variant plus the brand schema (design tokens — colors, type, spacing) for on-brand HTML reports.</span></li>
+                <li data-kind="skill"><code>claude-orchestrate</code><span>One-off Claude orchestration — route this task through Claude's brain even when the host CLI is Copilot/GPT/Grok. The `orchestrator:` knob in comfort-posture.yaml sets the always-on default; this skill is for on-demand invocation.</span></li>
                 <li data-kind="skill"><code>cleanup-worktrees</code><span>Remove finished agent worktrees, prune their branches, and surface anything still in flight.</span></li>
                 <li data-kind="skill"><code>codex-onboarding</code><span>Onboards a non-Claude-Code agent (GitHub Copilot CLI / Cursor / Aider / Codex / Devin) to this repo's norms and toolchain.</span></li>
                 <li data-kind="skill"><code>contribute-finding</code><span>For Claude sessions running in a consumer project (any project where ravenclaude-core is installed).</span></li>
