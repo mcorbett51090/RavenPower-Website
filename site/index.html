@@ -529,11 +529,11 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>100</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>292</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>433</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>68</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>404</strong><span>templates</span></li>
+            <li class="stack-stat"><strong>101</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>296</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>439</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>69</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>408</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
 
@@ -541,7 +541,7 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.155.0</span>
+              <span class="stack-tab__ver">v0.157.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
@@ -571,16 +571,20 @@
               <span class="stack-tab__name">engineering-management</span>
               <span class="stack-tab__ver">v0.1.0</span>
             </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-desktop-app-engineering" id="stack-tab-desktop-app-engineering" data-stack-tab="desktop-app-engineering">
+              <span class="stack-tab__name">desktop-app-engineering</span>
+              <span class="stack-tab__ver">v0.1.0</span>
+            </button>
           </div>
           <!-- STACK_TABS:END -->
 
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 42 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 43 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, Claude orchestrator escape hatch (/claude-orchestrate), hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>42</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>43</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
@@ -643,6 +647,7 @@
                 <li data-kind="skill"><code>two-panel-plan-review</code><span>Two independent expert panels review a strategic plan, fill its gaps, author a tactical build plan, then cold-review with P0/P1 recommendations.</span></li>
                 <li data-kind="skill"><code>update-ravenclaude</code><span>Refresh a RavenClaude installation so newly shipped skills, agents, and changes take effect in the current session.</span></li>
                 <li data-kind="skill"><code>visual-feedback-loop</code><span>Iterative visual critique loop — agent renders a visual surface, inspects its own output against objective signals, and iterates toward correctness.</span></li>
+                <li data-kind="skill"><code>claude-orchestrate</code><span>One-off Claude brain escape hatch — invoke the Claude orchestrator for a single task without touching the always-on comfort-posture setting; cost-tracked, recursion-guarded, with a fail-safe fallback to host orchestration.</span></li>
                 <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
                 <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash and tool calls — blocks obviously destructive commands.</span></li>
@@ -978,6 +983,32 @@
                 <li data-kind="template"><code>one-on-one-agenda.md</code><span>1:1 meeting agenda template</span></li>
                 <li data-kind="template"><code>performance-review.md</code><span>Performance review template</span></li>
                 <li data-kind="template"><code>tech-debt-decision-memo.md</code><span>Tech-debt decision memo template</span></li>
+              </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
+            </div>
+            <div class="stack-panel" role="tabpanel" id="stack-panel-desktop-app-engineering" aria-labelledby="stack-tab-desktop-app-engineering" data-stack-panel="desktop-app-engineering" hidden>
+              <p class="stack-panel__desc">Desktop app-engineering team — 4 specialist agents for cross-platform desktop apps covering the Electron-vs-Tauri-vs-native-vs-PWA decision, hardened process/IPC security models, reproducible packaging, code-signing and notarization on Windows and macOS, safe auto-update, and native OS integration (tray, menus, notifications, deep links).</p>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>5</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>4</strong> Templates</button></li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li data-kind="agent"><code>desktop-architect</code><span>Use this agent for the framework-choice decision (Electron vs Tauri vs native vs PWA), cross-platform architecture, and desktop engineering plan — maps the security model, packaging strategy, and seam boundaries before implementation begins.</span></li>
+                <li data-kind="agent"><code>electron-engineer</code><span>Use this agent to implement Electron apps with a hardened process model — contextIsolation, IPC allow-lists, preload script isolation, CSP, and renderer security constraints.</span></li>
+                <li data-kind="agent"><code>tauri-engineer</code><span>Use this agent to implement Tauri 2 apps — capabilities/permissions JSON, Rust command handlers, the plugin ecosystem, and the process security model.</span></li>
+                <li data-kind="agent"><code>desktop-platform-engineer</code><span>Use this agent for packaging, code-signing, notarization (Windows + macOS), safe auto-update (electron-updater / Tauri updater), and native OS integration (tray, menus, notifications, file associations, deep links, secure on-device storage).</span></li>
+                <li data-kind="skill"><code>desktop-framework-choice</code><span>Choose between Electron, Tauri, native (Qt/WxWidgets), and PWA — structured decision tree with scored tradeoffs and a recommendation memo.</span></li>
+                <li data-kind="skill"><code>electron-security-hardening</code><span>Audit and harden an Electron app's security posture — contextIsolation, nodeIntegration, IPC allow-lists, CSP, and sandboxing checks with a remediation priority queue.</span></li>
+                <li data-kind="skill"><code>native-os-integration</code><span>Implement native OS features in a desktop app — system tray, menus, notifications, file associations, protocol handlers, and deep links across Windows, macOS, and Linux.</span></li>
+                <li data-kind="skill"><code>packaging-signing-and-updates</code><span>Set up reproducible packaging, code-signing and notarization for Windows and macOS, and a safe auto-update flow using electron-updater or Tauri's updater.</span></li>
+                <li data-kind="skill"><code>tauri-capabilities-and-commands</code><span>Define Tauri 2 capabilities JSON, author Rust command handlers, wire the frontend invoke() bridge, and scope permissions to the minimum required surface.</span></li>
+                <li data-kind="hook"><code>check-desktop-engineering-anti-patterns.sh</code><span>check-desktop-engineering-anti-patterns.sh PostToolUse advisory hook — flags desktop anti-patterns (disabling contextIsolation, nodeIntegration:true, overly broad IPC exposure).</span></li>
+                <li data-kind="template"><code>framework-decision.md</code><span>Desktop framework decision memo template</span></li>
+                <li data-kind="template"><code>ipc-security-review.md</code><span>IPC security review checklist template</span></li>
+                <li data-kind="template"><code>native-integration-plan.md</code><span>Native OS integration plan template</span></li>
+                <li data-kind="template"><code>release-signing-checklist.md</code><span>Release signing and notarization checklist template</span></li>
               </ul>
               <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
