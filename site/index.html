@@ -512,7 +512,7 @@
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
           <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
           <p class="section__lede">
-            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 100-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
+            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 101-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
           </p>
         </header>
 
@@ -529,11 +529,11 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>100</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>292</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>433</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>68</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>404</strong><span>templates</span></li>
+            <li class="stack-stat"><strong>101</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>296</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>439</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>69</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>408</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
 
@@ -541,7 +541,7 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.155.0</span>
+              <span class="stack-tab__ver">v0.157.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
@@ -571,16 +571,20 @@
               <span class="stack-tab__name">engineering-management</span>
               <span class="stack-tab__ver">v0.1.0</span>
             </button>
+            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-desktop-app-engineering" id="stack-tab-desktop-app-engineering" data-stack-tab="desktop-app-engineering">
+              <span class="stack-tab__name">desktop-app-engineering</span>
+              <span class="stack-tab__ver">v0.1.0</span>
+            </button>
           </div>
           <!-- STACK_TABS:END -->
 
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 42 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 43 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>42</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>43</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
@@ -608,6 +612,7 @@
                 <li data-kind="skill"><code>branch-archive</code><span>Safely retire a local branch by tagging its tip first — the sanctioned escape hatch for stale branches without losing work.</span></li>
                 <li data-kind="skill"><code>brand-extraction</code><span>Point at a website home page and extract every logo variant plus the brand schema (design tokens — colors, type, spacing) for on-brand HTML reports.</span></li>
                 <li data-kind="skill"><code>cleanup-worktrees</code><span>Remove finished agent worktrees, prune their branches, and surface anything still in flight.</span></li>
+                <li data-kind="skill"><code>claude-orchestrate</code><span>Run a one-off Claude-to-Claude orchestration pass without touching the comfort-posture orchestrator knob — wraps claude-orchestrate.sh for single-shot use when the always-on orchestrator is off.</span></li>
                 <li data-kind="skill"><code>codex-onboarding</code><span>Onboards a non-Claude-Code agent (GitHub Copilot CLI / Cursor / Aider / Codex / Devin) to this repo's norms and toolchain.</span></li>
                 <li data-kind="skill"><code>contribute-finding</code><span>For Claude sessions running in a consumer project (any project where ravenclaude-core is installed).</span></li>
                 <li data-kind="skill"><code>create-pr</code><span>Open a pull request for the current branch using the project's standard template.</span></li>
@@ -978,6 +983,32 @@
                 <li data-kind="template"><code>one-on-one-agenda.md</code><span>1:1 meeting agenda template</span></li>
                 <li data-kind="template"><code>performance-review.md</code><span>Performance review template</span></li>
                 <li data-kind="template"><code>tech-debt-decision-memo.md</code><span>Tech-debt decision memo template</span></li>
+              </ul>
+              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
+            </div>
+            <div class="stack-panel" role="tabpanel" id="stack-panel-desktop-app-engineering" aria-labelledby="stack-tab-desktop-app-engineering" data-stack-panel="desktop-app-engineering" hidden>
+              <p class="stack-panel__desc">Desktop-app-engineering team — 4 agents covering the Electron-vs-Tauri-vs-native-vs-PWA decision, a hardened process/security model, reproducible packaging, code-signing + notarization on Windows and macOS, safe auto-update, and native OS integration (tray, menus, notifications, file associations, deep links, secure on-device storage). 5 skills, 12 best-practices, 4 templates, 1 advisory hook.</p>
+              <ul class="stack-counts" role="list" aria-label="Filter by kind">
+                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>5</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
+                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>4</strong> Templates</button></li>
+              </ul>
+              <ul class="stack-items" role="list">
+                <li data-kind="agent"><code>desktop-architect</code><span>Use for desktop architecture: the Electron-vs-Tauri-vs-native-vs-PWA decision by the app's real needs (bundle size, native depth, team, security), the process/security model, the update + distribution strategy, and where the line sits between the renderer UI and the privileged backend.</span></li>
+                <li data-kind="agent"><code>electron-engineer</code><span>Use for Electron implementation: the main/preload/renderer model, the hardened baseline (contextIsolation on, nodeIntegration off, sandbox, strict CSP), a narrow contextBridge + validated ipcMain handlers, window/lifecycle, and the build (electron-builder/Forge).</span></li>
+                <li data-kind="agent"><code>tauri-engineer</code><span>Use for Tauri implementation: the Rust core + system-webview model, #[tauri::command] handlers with validated input, the capabilities/permissions allow-list (v2) scoping what the frontend can call, state management, sidecars, and the small-bundle/secure-by-default posture Tauri rewards.</span></li>
+                <li data-kind="agent"><code>desktop-platform-engineer</code><span>Use for the desktop platform layer: code-signing + notarization (Windows Authenticode/EV; macOS Developer ID + notarytool + staple), safe signed auto-update (channels, staged rollout, rollback, version floor), and native OS integration (tray, menus, notifications, deep links, secure storage).</span></li>
+                <li data-kind="skill"><code>desktop-framework-choice</code><span>Select the right desktop framework via the decision tree — Electron vs Tauri vs native vs PWA, scored by bundle size, native-API depth, team skills, security surface, and update needs.</span></li>
+                <li data-kind="skill"><code>electron-security-hardening</code><span>Harden an Electron app's security baseline: contextIsolation on, nodeIntegration off, sandbox enabled, strict CSP, a narrow contextBridge + validated ipcMain allow-list, webSecurity enforced.</span></li>
+                <li data-kind="skill"><code>native-os-integration</code><span>Wire system-tray icons, application menus, desktop notifications, file associations, and deep links per each OS's conventions, routed through the single-instance layer.</span></li>
+                <li data-kind="skill"><code>packaging-signing-and-updates</code><span>Reproducible packaging, code-signing + notarization for Windows (Authenticode/EV) and macOS (Developer ID + notarytool + staple), and a safe signed auto-update channel with staged rollout and rollback.</span></li>
+                <li data-kind="skill"><code>tauri-capabilities-and-commands</code><span>Author Tauri capabilities/permissions allow-list (v2) and #[tauri::command] handlers with validated input — least-privilege by default, no wildcard fs/shell access.</span></li>
+                <li data-kind="hook"><code>check-desktop-engineering-anti-patterns.sh</code><span>Advisory PreToolUse hook — flags insecure Electron webPreferences (nodeIntegration on, contextIsolation off), wildcard Tauri capabilities, plaintext secrets in config, and deprecated altool usage.</span></li>
+                <li data-kind="template"><code>framework-decision.md</code><span>Desktop framework decision record</span></li>
+                <li data-kind="template"><code>ipc-security-review.md</code><span>IPC security review template</span></li>
+                <li data-kind="template"><code>native-integration-plan.md</code><span>Native OS integration plan template</span></li>
+                <li data-kind="template"><code>release-signing-checklist.md</code><span>Release signing + notarization checklist</span></li>
               </ul>
               <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
             </div>
