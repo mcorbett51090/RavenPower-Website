@@ -1,1280 +1,368 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="dark" />
-
-  <title>Raven Power — Agentic AI consulting · Remote, worldwide</title>
-  <meta name="description" content="Raven Power LLC — agentic AI consulting that ships fast and stands up to audit. Claude, Power Platform, Power BI, and Microsoft Fabric." />
-  <meta name="author" content="Matt Corbett" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Raven Power" />
-  <meta property="og:title" content="Raven Power — Agentic AI, shipped with regulator-grade rigor" />
-  <meta property="og:description" content="An independent consultancy pairing financial-regulatory discipline with Claude, Power Platform, and Microsoft Fabric." />
-  <meta property="og:url" content="https://ravenpower.net/" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:image" content="https://ravenpower.net/assets/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Raven Power — Agentic AI consulting · stylized raven mark with gold lightning bolt" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Raven Power — Agentic AI, shipped with regulator-grade rigor" />
-  <meta name="twitter:description" content="An independent consultancy pairing financial-regulatory discipline with Claude, Power Platform, and Microsoft Fabric." />
-  <meta name="twitter:image" content="https://ravenpower.net/assets/og-image.png" />
-
-  <link rel="canonical" href="https://ravenpower.net/" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-
-  <!-- Type: Inter + Space Grotesk via Google Fonts.
-       Preload-as-style + onload swap so the stylesheet doesn't render-block.
-       Plain <link rel="stylesheet"> kept inside <noscript> as a fallback. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raven Power LLC — Microsoft Platform &amp; AI Engineering</title>
+  <meta name="description" content="Matt Corbett · Microsoft Power Platform, Power BI, Azure &amp; AI engineering for mid-market and enterprise teams." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  </noscript>
-
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=DM+Serif+Display&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=DM+Serif+Display&amp;display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- JSON-LD: Organization / ProfessionalService -->
-  <!--
-    LOCATION CAVEAT — confirm with Matt before publishing.
-    LinkedIn lists the Raven Power role as Jacksonville, FL (Remote) but
-    his profile location is Hamilton, Bermuda. Until that's settled, the
-    site presents as Remote / worldwide. Update addressLocality and
-    addressCountry below to the registered LLC jurisdiction once confirmed.
-  -->
-  <!--
-    JSON-LD: using Organization (not ProfessionalService) until the LLC's
-    registered postal address is finalised. ProfessionalService requires
-    `address`; Organization does not. Switch back once the registration
-    jurisdiction is confirmed and a real PostalAddress can be supplied.
-  -->
+  <link rel="canonical" href="https://ravenpower.net/" />
+  <meta property="og:title" content="Raven Power LLC — Microsoft Platform &amp; AI Engineering" />
+  <meta property="og:description" content="Matt Corbett · Microsoft Power Platform, Power BI, Azure &amp; AI engineering for mid-market and enterprise teams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ravenpower.net/" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Raven Power LLC",
-    "alternateName": "Raven Power",
-    "description": "Independent consultancy pairing financial-regulatory discipline with agentic AI — Claude, Microsoft Power Platform, Power BI, and Microsoft Fabric.",
-    "slogan": "Agentic AI, shipped with regulator-grade rigor.",
-    "url": "https://ravenpower.net/",
-    "logo": "https://ravenpower.net/assets/raven-mark-dark.png",
-    "image": "https://ravenpower.net/assets/og-image.png",
-    "email": "matt@ravenpower.net",
-    "sameAs": [
-      "https://www.linkedin.com/in/matthewlcorbett"
-    ],
+    "url": "https://ravenpower.net",
+    "logo": "https://ravenpower.net/assets/raven-mark.svg",
+    "image": "https://ravenpower.net/assets/raven-mark.svg",
+    "slogan": "Microsoft Platform &amp; AI Engineering",
+    "description": "Independent consultancy specializing in Microsoft Power Platform, Power BI, Azure, and AI engineering.",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "United States"
+    },
     "founder": {
       "@type": "Person",
       "name": "Matt Corbett",
-      "jobTitle": "Founder",
+      "jobTitle": "Principal Engineer",
+      "knowsAbout": ["Power Platform", "Power BI", "Azure", "Microsoft Fabric", "Dataverse", "DAX", "Power Automate", "AI Engineering"],
       "sameAs": [
-        "https://www.linkedin.com/in/matthewlcorbett"
+        "https://www.linkedin.com/in/mattcorbett",
+        "https://github.com/mcorbett51090"
       ]
     },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Worldwide"
-    },
-    "knowsAbout": [
-      "Agentic AI",
-      "Anthropic Claude",
-      "Microsoft Power Platform",
-      "Microsoft Power Automate",
-      "Microsoft Power BI",
-      "Microsoft Fabric",
-      "Dataverse",
-      "DAX",
-      "Regulatory reporting",
-      "Data analytics"
+    "sameAs": [
+      "https://www.linkedin.com/company/raven-power-llc",
+      "https://github.com/mcorbett51090"
     ]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="nav" id="nav" role="banner">
-    <div class="container nav__inner">
-      <a href="#top" class="nav__brand" aria-label="Raven Power — home">
-        <img class="nav__mark" src="assets/raven-mark-dark.png" width="32" height="33" alt="" aria-hidden="true" />
-        <span class="nav__wordmark">Raven Power</span>
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="/" aria-label="Raven Power home">
+        <img class="nav__mark" src="assets/raven-mark.svg" alt="" width="28" height="28" />
+        <span class="nav__name">Raven Power</span>
       </a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav__cta">Contact</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="#capabilities">Capabilities</a></li>
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#stack">Stack</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__cta btn btn--primary" href="#contact">Let's talk</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+          </svg>
+        </button>
       </nav>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    <div class="nav__mobile" id="nav-mobile" hidden>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <ul class="mobile-nav__links" role="list">
+        <li><a class="mobile-nav__link" href="#capabilities">Capabilities</a></li>
+        <li><a class="mobile-nav__link" href="#work">Work</a></li>
+        <li><a class="mobile-nav__link" href="#stack">Stack</a></li>
+        <li><a class="mobile-nav__link" href="#about">About</a></li>
+        <li><a class="mobile-nav__link" href="#contact">Let's talk</a></li>
+      </ul>
     </div>
   </header>
 
-  <main id="main">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero__glow" aria-hidden="true"></div>
-      <img class="hero__mark" src="assets/raven-mark-dark.png" width="760" height="760" loading="lazy" decoding="async" alt="" aria-hidden="true" />
-      <div class="container hero__inner">
-        <p class="eyebrow reveal" data-reveal>
-          <span class="eyebrow__dot" aria-hidden="true"></span>
-          <!-- LOCATION CAVEAT: HQ jurisdiction pending confirmation (Bermuda vs. Florida) — leaving neutral until Matt confirms. -->
-          Raven Power LLC · Remote — working with clients worldwide
-        </p>
-        <h1 class="hero__title reveal" data-reveal data-reveal-delay="60">
-          <span class="accent">Agentic AI,</span> shipped with regulator-grade rigor.
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Independent consultancy</p>
+        <h1 class="hero__title" id="hero-heading">
+          Microsoft Platform
+          <em class="hero__em">&amp;</em> AI Engineering
         </h1>
-        <p class="hero__sub reveal" data-reveal data-reveal-delay="140">
-          Claude, Power Platform, and Microsoft Fabric — built with the precision of a financial regulator, shipped at startup pace.
+        <p class="hero__sub">
+          Power Platform · Power BI · Azure · Fabric · AI
         </p>
-        <div class="hero__actions reveal" data-reveal data-reveal-delay="220">
-          <a href="#contact" class="btn btn--primary">
-            Start a project
-            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-              <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-          <a href="#capabilities" class="btn btn--ghost">See capabilities</a>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#contact">Start a conversation</a>
+          <a class="btn btn--ghost" href="#work">See the work</a>
         </div>
       </div>
-      <a href="#capabilities" class="hero__scroll" aria-label="Scroll to capabilities">
-        <span></span>
-      </a>
-    </section>
-
-    <!-- ============ CAPABILITIES ============ -->
-    <section class="section section--grid" id="capabilities" aria-labelledby="capabilities-heading">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Capabilities</p>
-          <h2 class="section__title" id="capabilities-heading">Four disciplines. One outcome — software that moves the business.</h2>
-        </header>
-
-        <ul class="caps" role="list">
-          <li class="cap cap--ai reveal" data-reveal data-reveal-delay="0">
-            <div class="cap__icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <circle cx="16" cy="16" r="3" fill="currentColor"/>
-                <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
-                <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity=".25"/>
-                <circle cx="16" cy="2" r="1.6" fill="currentColor"/>
-                <circle cx="30" cy="16" r="1.6" fill="currentColor"/>
-                <circle cx="16" cy="30" r="1.6" fill="currentColor"/>
-                <circle cx="2" cy="16" r="1.6" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3 class="cap__title">Agentic AI with Claude</h3>
-            <p class="cap__copy">Production-grade agent workflows that read documents, call tools, and hand work back to humans at the right moment — built on Anthropic's Claude.</p>
-            <p class="cap__detail">Tool use · retrieval · evals · audit trails</p>
-          </li>
-
-          <li class="cap cap--pp reveal" data-reveal data-reveal-delay="80">
-            <div class="cap__icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="3" y="3" width="11" height="11" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <rect x="18" y="3" width="11" height="11" rx="1" fill="currentColor"/>
-                <rect x="3" y="18" width="11" height="11" rx="1" fill="currentColor" opacity=".55"/>
-                <rect x="18" y="18" width="11" height="11" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/>
-              </svg>
-            </div>
-            <h3 class="cap__title">Microsoft Power Platform</h3>
-            <p class="cap__copy">Custom Power Apps and Power Automate workflows that replace manual handoffs with auditable approvals — Dataverse-backed, with row-level security and app-security models built in from day one.</p>
-            <p class="cap__detail">Canvas &amp; model-driven apps · flows · Dataverse · RLS</p>
-          </li>
-
-          <li class="cap cap--bi reveal" data-reveal data-reveal-delay="160">
-            <div class="cap__icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="3" y="18" width="5" height="11" fill="currentColor" opacity=".55"/>
-                <rect x="11" y="11" width="5" height="18" fill="currentColor" opacity=".8"/>
-                <rect x="19" y="3" width="5" height="26" fill="currentColor"/>
-                <path d="M3 9 L13 4 L23 8 L29 3" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".75"/>
-              </svg>
-            </div>
-            <h3 class="cap__title">Power BI &amp; Microsoft Fabric</h3>
-            <p class="cap__copy">DirectQuery and DirectLake semantic models, KPI scorecards, and executive dashboards over Dataverse and Fabric lakehouses — board-ready insight on a pipeline that stays fresh.</p>
-            <p class="cap__detail">DirectQuery · DirectLake · semantic models · DAX · RLS</p>
-          </li>
-
-          <li class="cap cap--web reveal" data-reveal data-reveal-delay="240">
-            <div class="cap__icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="3" y="5" width="26" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M3 11 H29" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
-                <circle cx="6.5" cy="8" r=".9" fill="currentColor"/>
-                <circle cx="9.5" cy="8" r=".9" fill="currentColor"/>
-                <circle cx="12.5" cy="8" r=".9" fill="currentColor"/>
-                <path d="M9 17 L13 21 L9 25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16 25 H22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="cap__title">Web design &amp; build</h3>
-            <p class="cap__copy">Static-first marketing sites and internal tools — no CMS tax, hand-coded, accessible, and editable in plain HTML by the founder.</p>
-            <p class="cap__detail">Static-first · accessible · founder-editable</p>
-          </li>
-        </ul>
+      <div class="hero__mark" aria-hidden="true">
+        <img src="assets/raven-mark.svg" alt="" width="260" height="260" loading="lazy" decoding="async" />
       </div>
-    </section>
-
-    <!-- ============ WORK ============ -->
-    <!--
-      WORK SECTION — placeholder projects.
-      Each <article class="proj"> below is a self-contained card with a
-      tag-keyed SVG motif (.proj__motif) and an outcome-metric slot
-      (.proj__metric). To swap in a real engagement:
-        - edit <h3>, <p>, and the data-tag value
-        - update the placeholder figures inside .proj__metric, or remove
-          the block entirely if you don't have a number yet
-      Do NOT add client names or identifying details without Matt's go-ahead.
-    -->
-    <section class="section section--alt" id="work" aria-labelledby="work-heading">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Selected work</p>
-          <h2 class="section__title" id="work-heading">Representative engagements.</h2>
-          <p class="section__lede">A sample of the kind of work Raven Power takes on. Names and details are generalized to respect client confidentiality.</p>
-        </header>
-
-        <!-- ============ WORK CONTROLS — tag filter + live search ============ -->
-        <div class="work-controls" role="group" aria-label="Filter work">
-          <div class="work-filters" role="tablist" aria-label="Filter by discipline">
-            <button type="button" class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-            <button type="button" class="chip" data-filter="ai" role="tab" aria-selected="false">Agentic AI</button>
-            <button type="button" class="chip" data-filter="pp" role="tab" aria-selected="false">Power Platform</button>
-            <button type="button" class="chip" data-filter="bi" role="tab" aria-selected="false">Power BI / Fabric</button>
-            <button type="button" class="chip" data-filter="web" role="tab" aria-selected="false">Web</button>
-          </div>
-          <label class="work-search">
-            <span class="visually-hidden">Search engagements</span>
-            <svg class="work-search__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-              <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
-              <path d="M10.5 10.5 L14 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-            </svg>
-            <input id="work-search" type="search" placeholder="Search engagements…" autocomplete="off" />
-          </label>
-        </div>
-        <p class="work-empty" id="work-empty" hidden role="status">No engagements match that filter.</p>
-
-        <ul class="grid" id="work-grid" role="list">
-          <li>
-            <article class="proj reveal" data-reveal>
-              <div class="proj__motif" data-tag="ai" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <radialGradient id="m-ai" cx="30%" cy="40%" r="60%">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".55"/>
-                      <stop offset="60%" stop-color="currentColor" stop-opacity=".05"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </radialGradient>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-ai)"/>
-                  <g fill="none" stroke="currentColor" stroke-width=".5" opacity=".55">
-                    <circle cx="60" cy="50" r="20"/>
-                    <circle cx="60" cy="50" r="32"/>
-                    <circle cx="60" cy="50" r="46"/>
-                  </g>
-                  <g fill="currentColor">
-                    <circle cx="60" cy="50" r="2.4"/>
-                    <circle cx="80" cy="50" r="1.4" opacity=".8"/>
-                    <circle cx="60" cy="30" r="1.4" opacity=".8"/>
-                    <circle cx="40" cy="50" r="1.4" opacity=".8"/>
-                    <circle cx="60" cy="70" r="1.4" opacity=".8"/>
-                    <circle cx="130" cy="35" r="1" opacity=".5"/>
-                    <circle cx="155" cy="60" r="1" opacity=".5"/>
-                    <circle cx="175" cy="25" r="1" opacity=".5"/>
-                  </g>
-                  <g stroke="currentColor" stroke-width=".4" opacity=".35">
-                    <path d="M60 50 L130 35"/>
-                    <path d="M130 35 L155 60"/>
-                    <path d="M155 60 L175 25"/>
-                  </g>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="ai">Agentic AI</span>
-              <h3 class="proj__title">Agentic Compliance Reviewer</h3>
-              <p class="proj__copy">A Claude-powered agent that triages incoming regulatory filings, drafts exception notes, and routes edge cases to a human reviewer with citations attached.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">14d</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">3d</span><span class="proj__metric-label">filing review cycle</span></p>
-            </article>
-          </li>
-          <li>
-            <article class="proj reveal" data-reveal data-reveal-delay="60">
-              <div class="proj__motif" data-tag="bi" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <linearGradient id="m-bi" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".4"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-bi)"/>
-                  <g fill="currentColor">
-                    <rect x="16" y="58" width="12" height="30" opacity=".55"/>
-                    <rect x="36" y="44" width="12" height="44" opacity=".75"/>
-                    <rect x="56" y="28" width="12" height="60" opacity=".95"/>
-                    <rect x="76" y="50" width="12" height="38" opacity=".65"/>
-                    <rect x="96" y="36" width="12" height="52" opacity=".85"/>
-                    <rect x="116" y="22" width="12" height="66"/>
-                    <rect x="136" y="40" width="12" height="48" opacity=".7"/>
-                  </g>
-                  <path d="M22 60 L42 50 L62 32 L82 48 L102 38 L122 26 L142 42 L168 30" fill="none" stroke="#fff" stroke-width=".8" opacity=".45"/>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="bi">Power BI / Fabric</span>
-              <h3 class="proj__title">Executive Performance Dashboard</h3>
-              <p class="proj__copy">A unified Fabric semantic model behind a Power BI executive view — twelve disparate source systems condensed into a single, board-ready view.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">12</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">1</span><span class="proj__metric-label">source systems unified</span></p>
-            </article>
-          </li>
-          <li>
-            <article class="proj reveal" data-reveal data-reveal-delay="120">
-              <div class="proj__motif" data-tag="pp" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <linearGradient id="m-pp" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".25"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-pp)"/>
-                  <g stroke="currentColor" stroke-width=".6" fill="none" opacity=".55">
-                    <rect x="18" y="34" width="28" height="20" rx="2"/>
-                    <rect x="70" y="22" width="28" height="20" rx="2" fill="currentColor" fill-opacity=".18"/>
-                    <rect x="70" y="58" width="28" height="20" rx="2"/>
-                    <rect x="122" y="34" width="28" height="20" rx="2"/>
-                  </g>
-                  <g stroke="currentColor" stroke-width=".5" opacity=".7" fill="none">
-                    <path d="M46 44 L70 32"/>
-                    <path d="M46 44 L70 68"/>
-                    <path d="M98 32 L122 44"/>
-                    <path d="M98 68 L122 44"/>
-                  </g>
-                  <g fill="currentColor">
-                    <circle cx="70" cy="32" r="1.4"/>
-                    <circle cx="70" cy="68" r="1.4"/>
-                    <circle cx="98" cy="32" r="1.4"/>
-                    <circle cx="98" cy="68" r="1.4"/>
-                    <circle cx="122" cy="44" r="1.4"/>
-                    <circle cx="46" cy="44" r="1.4"/>
-                  </g>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="pp">Power Platform</span>
-              <h3 class="proj__title">Submissions Pipeline Automation</h3>
-              <p class="proj__copy">Power Automate flows and a custom Power App that replaced a manual email-and-spreadsheet process with auditable approvals and a clean handoff to downstream systems.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">8h</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">20m</span><span class="proj__metric-label">per submission</span></p>
-            </article>
-          </li>
-          <li>
-            <article class="proj reveal" data-reveal data-reveal-delay="180">
-              <div class="proj__motif" data-tag="fabric" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <linearGradient id="m-fab" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".35"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </linearGradient>
-                    <pattern id="weave" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-                      <path d="M0 7 L14 7 M7 0 L7 14" stroke="currentColor" stroke-width=".4" opacity=".4"/>
-                      <circle cx="7" cy="7" r=".8" fill="currentColor" opacity=".55"/>
-                    </pattern>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-fab)"/>
-                  <rect width="200" height="100" fill="url(#weave)"/>
-                  <g stroke="currentColor" stroke-width=".6" fill="none" opacity=".6">
-                    <path d="M0 28 Q 50 18 100 28 T 200 28"/>
-                    <path d="M0 56 Q 50 46 100 56 T 200 56"/>
-                    <path d="M0 84 Q 50 74 100 84 T 200 84"/>
-                  </g>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="bi">Power BI / Fabric</span>
-              <h3 class="proj__title">Regulatory Reporting Workbench</h3>
-              <p class="proj__copy">Fabric notebooks plus a curated lakehouse that turn a quarterly regulatory return from a fortnight of spreadsheets into a repeatable, governed pipeline.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">2 wk</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">1 day</span><span class="proj__metric-label">quarterly return</span></p>
-            </article>
-          </li>
-          <li>
-            <article class="proj reveal" data-reveal data-reveal-delay="240">
-              <div class="proj__motif" data-tag="ai" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <radialGradient id="m-ka" cx="70%" cy="50%" r="65%">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".45"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </radialGradient>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-ka)"/>
-                  <g fill="none" stroke="currentColor" stroke-width=".5">
-                    <path d="M40 20 L40 80 M40 30 L80 30 M40 50 L70 50 M40 70 L85 70" opacity=".55"/>
-                  </g>
-                  <g fill="currentColor" opacity=".75">
-                    <rect x="83" y="27" width="3" height="6"/>
-                    <rect x="73" y="47" width="3" height="6"/>
-                    <rect x="88" y="67" width="3" height="6"/>
-                  </g>
-                  <g fill="none" stroke="currentColor" stroke-width=".4" opacity=".5">
-                    <path d="M100 30 Q 130 30 140 50 Q 150 70 180 70"/>
-                    <path d="M100 50 Q 130 50 145 50"/>
-                    <path d="M100 70 Q 130 70 140 50"/>
-                  </g>
-                  <circle cx="180" cy="70" r="6" fill="currentColor" opacity=".25"/>
-                  <circle cx="180" cy="70" r="2.4" fill="currentColor"/>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="ai">Agentic AI</span>
-              <h3 class="proj__title">Internal Knowledge Assistant</h3>
-              <p class="proj__copy">A retrieval-augmented Claude agent that answers internal policy questions in plain English — every answer linked back to the source paragraph for audit.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">~30m</span><span class="proj__metric-arrow" aria-hidden="true">→</span><span class="proj__metric-to">~30s</span><span class="proj__metric-label">to a sourced answer</span></p>
-            </article>
-          </li>
-          <li>
-            <article class="proj reveal" data-reveal data-reveal-delay="300">
-              <div class="proj__motif" data-tag="web" aria-hidden="true">
-                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <linearGradient id="m-web" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stop-color="currentColor" stop-opacity=".3"/>
-                      <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
-                    </linearGradient>
-                    <pattern id="grid-pat" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-                      <path d="M16 0 L0 0 0 16" fill="none" stroke="currentColor" stroke-width=".3" opacity=".4"/>
-                    </pattern>
-                  </defs>
-                  <rect width="200" height="100" fill="url(#m-web)"/>
-                  <rect width="200" height="100" fill="url(#grid-pat)"/>
-                  <g fill="none" stroke="currentColor" stroke-width=".7" opacity=".8">
-                    <rect x="22" y="22" width="46" height="56" rx="2"/>
-                    <rect x="78" y="22" width="46" height="26" rx="2"/>
-                    <rect x="78" y="56" width="46" height="22" rx="2"/>
-                    <rect x="134" y="22" width="44" height="56" rx="2"/>
-                  </g>
-                  <g fill="currentColor" opacity=".6">
-                    <rect x="28" y="30" width="22" height="3"/>
-                    <rect x="28" y="38" width="34" height="2"/>
-                    <rect x="28" y="44" width="30" height="2"/>
-                    <rect x="84" y="30" width="20" height="3"/>
-                    <rect x="84" y="38" width="32" height="2"/>
-                    <rect x="84" y="62" width="24" height="3"/>
-                    <rect x="84" y="70" width="30" height="2"/>
-                    <rect x="140" y="30" width="22" height="3"/>
-                    <rect x="140" y="38" width="32" height="2"/>
-                    <rect x="140" y="44" width="28" height="2"/>
-                  </g>
-                </svg>
-              </div>
-              <span class="proj__tag" data-tag="web">Web</span>
-              <h3 class="proj__title">Boutique Advisory Website</h3>
-              <p class="proj__copy">A hand-coded marketing site for a Bermuda-based advisory — dark, restrained, fast, and built to be edited by the founder, not a CMS.</p>
-              <!-- TODO: replace metric numbers with real figures, or delete the block entirely -->
-              <p class="proj__metric"><span class="proj__metric-from">98</span><span class="proj__metric-arrow" aria-hidden="true">·</span><span class="proj__metric-to">100</span><span class="proj__metric-label">Lighthouse perf · a11y</span></p>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ STACK ============ -->
-    <!--
-      STACK SECTION — interactive showcase of the RavenClaude marketplace
-      (Matt's open methodology / agent library that powers every engagement).
-      Tabs + count pills mirror the interaction pattern of repo-guide.html.
-      Tab data is hand-curated from the live guide; full breakdown lives at
-      /repo-guide.html.
-    -->
-    <section class="section section--grid" id="stack" aria-labelledby="stack-heading">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
-          <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
-          <p class="section__lede">
-            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 101-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
-          </p>
-        </header>
-
-        <div class="stack-wrap">
-          <!--
-            STACK SECTION — HAND-MAINTAINED.
-            site/repo-guide.html is stale (upstream generation was removed
-            in the RavenClaude portal redesign) and CI no longer runs
-            scripts/build_stack.py, so edit the stats, tabs, counts, and
-            panels below directly. Do NOT run build_stack.py — it would
-            overwrite this section with stale figures. The STACK_STATS /
-            STACK_TABS / STACK_PANELS markers are kept only as anchors in
-            case guide generation is ever restored.
-          -->
-          <!-- STACK_STATS:START -->
-          <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>101</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>296</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>439</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>69</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>408</strong><span>templates</span></li>
-          </ul>
-          <!-- STACK_STATS:END -->
-
-          <!-- STACK_TABS:START -->
-          <div class="stack-tabs" role="tablist" aria-label="Plugins">
-            <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
-              <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.157.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
-              <span class="stack-tab__name">power-platform</span>
-              <span class="stack-tab__ver">v0.40.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
-              <span class="stack-tab__name">finance</span>
-              <span class="stack-tab__ver">v0.14.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-regulatory-compliance" id="stack-tab-regulatory-compliance" data-stack-tab="regulatory-compliance">
-              <span class="stack-tab__name">regulatory-compliance</span>
-              <span class="stack-tab__ver">v0.12.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-web-design" id="stack-tab-web-design" data-stack-tab="web-design">
-              <span class="stack-tab__name">web-design</span>
-              <span class="stack-tab__ver">v0.13.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-edtech-partner-success" id="stack-tab-edtech-partner-success" data-stack-tab="edtech-partner-success">
-              <span class="stack-tab__name">edtech-partner-success</span>
-              <span class="stack-tab__ver">v0.12.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-data-platform" id="stack-tab-data-platform" data-stack-tab="data-platform">
-              <span class="stack-tab__name">data-platform</span>
-              <span class="stack-tab__ver">v0.13.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-engineering-management" id="stack-tab-engineering-management" data-stack-tab="engineering-management">
-              <span class="stack-tab__name">engineering-management</span>
-              <span class="stack-tab__ver">v0.1.0</span>
-            </button>
-            <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-desktop-app-engineering" id="stack-tab-desktop-app-engineering" data-stack-tab="desktop-app-engineering">
-              <span class="stack-tab__name">desktop-app-engineering</span>
-              <span class="stack-tab__ver">v0.1.0</span>
-            </button>
-          </div>
-          <!-- STACK_TABS:END -->
-
-          <!-- STACK_PANELS:START -->
-          <div class="stack-panels">
-            <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 43 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>43</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
-                <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>architect</code><span>Use this agent as the technical conscience across the entire software lifecycle — design, build, test, review, iterate.</span></li>
-                <li data-kind="agent"><code>backend-coder</code><span>Use this agent to implement server-side code — API handlers, business logic, database queries, background jobs, integrations.</span></li>
-                <li data-kind="agent"><code>code-reviewer</code><span>Use this agent for pre-merge review of any non-trivial diff.</span></li>
-                <li data-kind="agent"><code>data-engineer</code><span>Use this agent for data-shaped work that isn't tied to a specific domain plugin — pipeline design, data modeling, ETL/ELT, warehouse and lake schemas, query performance, data quality, lineage, ingestion connectors, and analytics-engineering style transformations (dbt-flavored or hand-rolled).</span></li>
-                <li data-kind="agent"><code>deep-researcher</code><span>Use this agent for rigorous, multi-source research — troubleshooting unfamiliar errors, comparing tools/libraries, verifying claims, or going deeper than a single web search.</span></li>
-                <li data-kind="agent"><code>designer</code><span>Use this agent for UX direction and visual design — wireframes, user flows, screen layouts, design specs, accessibility checks, visual hierarchy.</span></li>
-                <li data-kind="agent"><code>documentarian</code><span>Use this agent for stakeholder-facing written deliverables — executive summaries, decision memos, variance commentary, partner briefs, runbooks, SOPs, release notes, READMEs, onboarding guides, long-form writeups.</span></li>
-                <li data-kind="agent"><code>frontend-coder</code><span>Use this agent to implement UI work — components, pages, client-side state, styling, accessibility, browser-side integrations.</span></li>
-                <li data-kind="agent"><code>fullstack-coder</code><span>Use this agent only for changes that genuinely cross the client/server boundary in one cohesive unit (e.g., a new endpoint plus the UI that calls it).</span></li>
-                <li data-kind="agent"><code>partner-success-manager</code><span>Use this agent for any Partner Success Manager work — maintaining partner profiles, success plans, QBRs, health scores, onboarding checklists, touchpoint logs, and the team's growing AI workflow library.</span></li>
-                <li data-kind="agent"><code>project-manager</code><span>Use this agent for any project hygiene work — maintaining the RAID log, task list, weekly status report, activity log, or stakeholder register.</span></li>
-                <li data-kind="agent"><code>prompt-engineer</code><span>Use this agent to author, critique, refine, or refactor agent definitions, skill files, and prompt patterns across RavenClaude and any Expert repo (PowerPlatformExpert, SalesforceExpert, etc.).</span></li>
-                <li data-kind="agent"><code>security-reviewer</code><span>Use this agent whenever a diff touches authentication, authorization, cryptography, secrets, sessions, untrusted input parsing, file uploads, deserialization, SQL, shell, network egress, or third-party integrations.</span></li>
-                <li data-kind="agent"><code>tester-qa</code><span>Use this agent to design test plans, hunt flakes, plug coverage gaps, or harden tests around a new feature.</span></li>
-                <li data-kind="agent"><code>viz-spec-reviewer</code><span>Audit Vega-Lite, Vega, and SVG visualization specs before rendering — security gate against injection surfaces, remote data sources, and malicious handlers; classifies findings as BLOCKER/NEEDS-CHANGES/NOTE and blocks deployment on unresolved violations.</span></li>
-                <li data-kind="skill"><code>adaptive-run-classifier</code><span>Substrate-neutral pre-execution classifier — a single Haiku call emits a run_config JSON block so the right model runs at the right cost tier.</span></li>
-                <li data-kind="skill"><code>agent-dispatch-evaluator</code><span>Universal pre-dispatch model right-sizer — evaluates subagent type, task, and context to recommend the optimal model before spawning.</span></li>
-                <li data-kind="skill"><code>agent-quality-rubric</code><span>Score and improve an agent file against a 6-dimension rubric — Mission clarity, Scope sharpness, Capability Grounding alignment, Output-Contract completeness, Escalation paths, Example scenarios.</span></li>
-                <li data-kind="skill"><code>audit-ci-gates</code><span>For any consumer project where a CI workflow is meant to *enforce* a property (lint, format, security scan, manifest validation, version pin, layout allow-list, etc.).</span></li>
-                <li data-kind="skill"><code>branch-archive</code><span>Safely retire a local branch by tagging its tip first — the sanctioned escape hatch for stale branches without losing work.</span></li>
-                <li data-kind="skill"><code>brand-extraction</code><span>Point at a website home page and extract every logo variant plus the brand schema (design tokens — colors, type, spacing) for on-brand HTML reports.</span></li>
-                <li data-kind="skill"><code>claude-orchestrate</code><span>One-off Claude orchestration — route this task through Claude's brain even when the host CLI is Copilot/GPT/Grok.</span></li>
-                <li data-kind="skill"><code>cleanup-worktrees</code><span>Remove finished agent worktrees, prune their branches, and surface anything still in flight.</span></li>
-                <li data-kind="skill"><code>codex-onboarding</code><span>Onboards a non-Claude-Code agent (GitHub Copilot CLI / Cursor / Aider / Codex / Devin) to this repo's norms and toolchain.</span></li>
-                <li data-kind="skill"><code>contribute-finding</code><span>For Claude sessions running in a consumer project (any project where ravenclaude-core is installed).</span></li>
-                <li data-kind="skill"><code>create-pr</code><span>Open a pull request for the current branch using the project's standard template.</span></li>
-                <li data-kind="skill"><code>cross-platform-determinism</code><span>For any script that produces a file the repo COMMITS and CI DIFFS — generated HTML, lockfiles, JSON snapshots, fixture files, documentation rendered from source.</span></li>
-                <li data-kind="skill"><code>decision-review</code><span>Route a yes/no decision through the command-review tribunal (the Thing) for a binding verdict instead of interrupting the human.</span></li>
-                <li data-kind="skill"><code>declarative-visualization</code><span>Author or validate a Vega-Lite, Vega, Deneb, or SVG visualization spec for any platform (web, Power BI, Tableau) — ensures the chart spec passes security and rendering checks before deployment.</span></li>
-                <li data-kind="skill"><code>diff-budget</code><span>Enforces a per-PR file-count and LoC budget — PRs touching &gt;5 files or &gt;400 LoC route to architectural review before merge.</span></li>
-                <li data-kind="skill"><code>draft-agent-brief</code><span>Use this skill when the user wants to create a new agent and has a clear business goal but isn't fluent in the agent's target domain.</span></li>
-                <li data-kind="skill"><code>environment-discovery</code><span>Auto-discover the consumer's environment posture by probing installed CLIs (pac / az / aws / gcloud / gh) with read-only commands at session start, decoding JWTs for role/scope claims, and assembling a draft `.ravenclaude/environment-context.md` for save/edit/skip.</span></li>
-                <li data-kind="skill"><code>forge-pipeline</code><span>The FORGE gated-planning pipeline — depth-scaled gates that turn any idea into a two-panel-reviewed, ready-to-execute plan.</span></li>
-                <li data-kind="skill"><code>knowledge-file-staleness-sweep</code><span>Run a periodic staleness sweep over all `plugins/&lt;plugin&gt;/knowledge/*.md` files and any decision-tree sections — flag entries past their `last-verified` window, categorize by re-verification effort (Tier 1-5 per Researcher schema), produce a remediation queue with named re-verifiers.</span></li>
-                <li data-kind="skill"><code>knowledge-health</code><span>Surface knowledge-file staleness across all plugins as a Structured Output block — wraps the knowledge-health.py script for use in any session.</span></li>
-                <li data-kind="skill"><code>mimir</code><span>Claude Code session-state surfacing contract for the Mímir dashboard tab — documents the five reachable state surfaces and their read paths.</span></li>
-                <li data-kind="skill"><code>new-worktree</code><span>Create an isolated git worktree under .claude/worktrees/ for a sub-agent to work in.</span></li>
-                <li data-kind="skill"><code>pbir-layout-engine</code><span>Deterministic layout-arithmetic linter for dashboard/report page definitions — runs seven checks covering overlaps, oversized items, and anchor drift.</span></li>
-                <li data-kind="skill"><code>permission-hygiene</code><span>Diagnose and improve a Claude Code project's permission setup — the `.claude/settings.json` allow/ask/deny tiers, comfort-posture alignment, and the security floor invariant.</span></li>
-                <li data-kind="skill"><code>plugin-release-checklist</code><span>Pre-release checklist for shipping any plugin update through this marketplace — plugin.json + marketplace.json + architecture.md version-mirror discipline, .repo-layout.json glob coverage for new dirs, CLAUDE.md skill / template tables synced, JSON validation, prettier check, audit-gates meta-test, and the consumer migration-note rule.</span></li>
-                <li data-kind="skill"><code>prompt-pattern-library</code><span>Curated, applied prompt-pattern catalog used across this marketplace — decision-tree traversal pre-action prior, alternate-methods-before-blocked, Structured Output Protocol `---RESULT_START---` block, scenario-retrieval inline prior, escalation-by-mandatory-phrasing, citation-aware research, environment-context preamble, orchestrator-worker reinforcement, agent-scenario-authoring frontmatter.</span></li>
-                <li data-kind="skill"><code>researcher</code><span>Meta-skill that keeps all agents, skills, and knowledge files current and honest — Daily Quick Check + Weekly Deep Research modes.</span></li>
-                <li data-kind="skill"><code>review-staged-contributions</code><span>For the RavenClaude marketplace maintainer.</span></li>
-                <li data-kind="skill"><code>run-full-test-suite</code><span>Run the project's full quality gate — format check, lint, typecheck, unit tests, integration tests — in order, fail fast, summarize.</span></li>
-                <li data-kind="skill"><code>scenario-retrieval</code><span>Consult the unverified scenarios bank (`plugins/&lt;plugin&gt;/scenarios/*.md`) before answering plugin-domain questions.</span></li>
-                <li data-kind="skill"><code>set-posture</code><span>Translate `.ravenclaude/comfort-posture.yaml` into `.claude/settings.json` permission rules — owns the project-layer allow/ask/deny generation.</span></li>
-                <li data-kind="skill"><code>spawn-team</code><span>Team Lead dispatch playbook.</span></li>
-                <li data-kind="skill"><code>spec-reread-ritual</code><span>Before writing any code for a task in a multi-task build, the agent MUST re-read the relevant spec section — closing the spec-drift hallucination gap.</span></li>
-                <li data-kind="skill"><code>structured-output</code><span>Enforce the Structured Output Protocol — every sub-agent handoff ends with a `---RESULT_START--- ...</span></li>
-                <li data-kind="skill"><code>svg-report-lint</code><span>Validate a standalone SVG file intended for reports or dashboards — checks geometry soundness, readability standards, and security vulnerabilities like script injection before deployment.</span></li>
-                <li data-kind="skill"><code>thing</code><span>Command review (the Thing) — opt-in command-review tribunal that votes ALLOW/EDIT/DENY on shell commands before execution; Saga-logged audit trail.</span></li>
-                <li data-kind="skill"><code>wall-handling</code><span>When an agent hits a wall (same tool + same error 3+ times, an impossible TypeScript fix, a missing dependency), structured escalation instead of looping.</span></li>
-                <li data-kind="skill"><code>webfetch-hardening</code><span>Deterministic sanitizer floor for WebFetch return envelopes — strip injection-shaped blocks before any agent acts on fetched content.</span></li>
-                <li data-kind="skill"><code>rc-deep-research</code><span>Multi-source deep research with adversarial claim verification, synthesized into a cited report with confidence rankings.</span></li>
-                <li data-kind="skill"><code>scout</code><span>Discover great-but-low-visibility ideas — map clusters around fringe excellence that mainstream search buries under popularity.</span></li>
-                <li data-kind="skill"><code>two-panel-plan-review</code><span>Two independent expert panels review a strategic plan, fill its gaps, author a tactical build plan, then cold-review with P0/P1 recommendations.</span></li>
-                <li data-kind="skill"><code>update-ravenclaude</code><span>Refresh a RavenClaude installation so newly shipped skills, agents, and changes take effect in the current session.</span></li>
-                <li data-kind="skill"><code>visual-feedback-loop</code><span>Iterative visual critique loop — agent renders a visual surface, inspects its own output against objective signals, and iterates toward correctness.</span></li>
-                <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
-                <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
-                <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash and tool calls — blocks obviously destructive commands.</span></li>
-                <li data-kind="hook"><code>guard-recursive-spawn.sh</code><span>guard-recursive-spawn.sh PostToolUse hook for Edit | Write | MultiEdit on agent definition files (plugins/*/agents/*.md).</span></li>
-                <li data-kind="hook"><code>thing-orchestrator.sh</code><span>thing-orchestrator.sh PreToolUse hook — T3 panel tribunal; no-ops unless a category has `thing: on` in comfort-posture.yaml.</span></li>
-                <li data-kind="hook"><code>runaway-brake.sh</code><span>runaway-brake.sh PreToolUse hook — blocks when the agent thrashes (8 byte-identical calls in a row) or exceeds a generous tool-call ceiling.</span></li>
-                <li data-kind="hook"><code>guard-web-access.sh</code><span>guard-web-access.sh PreToolUse hook for WebFetch — allow/deny enforcement from `.ravenclaude/web-access.yaml`.</span></li>
-                <li data-kind="hook"><code>dod-gate.sh</code><span>dod-gate.sh Stop hook — definition-of-done gate; blocks the stop until the configured gate command (tests/build/lint) passes.</span></li>
-                <li data-kind="hook"><code>remind-tests.sh</code><span>remind-tests.sh Stop hook — advisory fallback when no dod-gate command is configured.</span></li>
-                <li data-kind="hook"><code>reapply-posture.sh</code><span>reapply-posture.sh SessionStart hook — regenerates comfort-posture permission rules at session start so dashboard-composed postures persist on Claude Code on the web.</span></li>
-                <li data-kind="hook"><code>route-decision-review.sh</code><span>route-decision-review.sh PreToolUse hook — routes binary yes/no decisions to a tribunal for automatic resolution, preventing user interruption for rule-derivable decisions.</span></li>
-                <li data-kind="hook"><code>capability-orientation.sh</code><span>capability-orientation.sh SessionStart hook — injects a capability banner so the agent knows what external surfaces, credentials, and permissions are available.</span></li>
-                <li data-kind="hook"><code>claim-grounding-lint.sh</code><span>claim-grounding-lint.sh PostToolUse hook for Edit | Write | MultiEdit — advisory warning when absolute capability claims are written without inline provenance markers.</span></li>
-                <li data-kind="hook"><code>copilot-hook-adapter.sh</code><span>copilot-hook-adapter.sh — translates Copilot CLI payloads to Claude hook stdin; preserves real deny reasons; exports CLAUDE_SESSION_ID and THING_HOST.</span></li>
-                <li data-kind="hook"><code>ensure-default-mode.sh</code><span>ensure-default-mode.sh SessionStart hook — detects bypass/acceptEdits modes and warns that configured permission rules are being ignored.</span></li>
-                <li data-kind="hook"><code>regen-on-manifest-change.sh</code><span>regen-on-manifest-change.sh PostToolUse hook for Edit | Write | MultiEdit on plugin.json/marketplace.json — regenerates downstream artifacts when a plugin version field changes.</span></li>
-                <li data-kind="rule"><code>agent-collaboration</code><span>Rule: Agent Collaboration Protocol</span></li>
-                <li data-kind="rule"><code>coding-standards</code><span>Rule: Coding Standards (long form)</span></li>
-                <li data-kind="rule"><code>git-workflow</code><span>Rule: Git Workflow (long form)</span></li>
-                <li data-kind="rule"><code>security</code><span>Rule: Security (long form)</span></li>
-                <li data-kind="rule"><code>terminal-copy-to-tempfile</code><span>Rule: Terminal copy-me text writes to a temp .md file (never inline) — clipboard copy is not functional in CLI terminal sessions.</span></li>
-                <li data-kind="template"><code>activity-log.md</code><span>Activity Log — *&lt;Project Name&gt;*</span></li>
-                <li data-kind="template"><code>agent-brief.md</code><span>Agent Brief Template</span></li>
-                <li data-kind="template"><code>agent-definition-template.md</code><span>Agent Definition Template</span></li>
-                <li data-kind="template"><code>agent-ready-repo/</code><span>(template folder)</span></li>
-                <li data-kind="template"><code>codespace-copilot/</code><span>(template folder — Codespaces + Copilot devcontainer setup)</span></li>
-                <li data-kind="template"><code>comfort-posture-balanced.yaml</code><span>Balanced comfort-posture preset — starting point for /set-posture</span></li>
-                <li data-kind="template"><code>dashboard-launcher/</code><span>(template folder — VS Code tasks.json + launcher for the comfort-posture dashboard)</span></li>
-                <li data-kind="template"><code>deliverables/</code><span>(template folder)</span></li>
-                <li data-kind="template"><code>design/</code><span>(template folder)</span></li>
-                <li data-kind="template"><code>environment-context.md</code><span>Environment Context — `&lt;engagement_name&gt;`</span></li>
-                <li data-kind="template"><code>partner-success/</code><span>(template folder)</span></li>
-                <li data-kind="template"><code>raid-log.md</code><span>RAID Log — *&lt;Project Name&gt;*</span></li>
-                <li data-kind="template"><code>research-report-template.md</code><span>Research Report Template</span></li>
-                <li data-kind="template"><code>run-artifacts/</code><span>(template folder)</span></li>
-                <li data-kind="template"><code>stakeholder-register.md</code><span>Stakeholder Register — *&lt;Project Name&gt;*</span></li>
-                <li data-kind="template"><code>status-report.md</code><span>Status Report — *&lt;Project Name&gt;*</span></li>
-                <li data-kind="template"><code>task-list.md</code><span>Task List — *&lt;Project Name&gt;*</span></li>
-                <li data-kind="template"><code>task-scope.json</code><span>Task Scope — structured scope definition for a single agent task</span></li>
-                <li data-kind="template"><code>thing.yaml</code><span>Command-review tribunal (the Thing) configuration template</span></li>
-                <li data-kind="template"><code>web-access.yaml</code><span>Web-access allow/deny list configuration template</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-power-platform" aria-labelledby="stack-tab-power-platform" data-stack-panel="power-platform" hidden>
-              <p class="stack-panel__desc">Microsoft Power Platform specialist team — 11 specialists (Test Studio + DAX + pac solution check tester, PBIP-git + DAX + ADO power-bi-engineer, canvas/Power Fx, Power Automate + connectors, Dataverse modeling, model-driven apps, pac CLI + ALM, tenant governance/DLP, PCF…</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>11</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>21</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>3</strong> Hooks</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>3</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>copilot-studio-engineer</code><span>Use this agent for Copilot Studio (formerly Power Virtual Agents) bot design and AI Builder integration — topics, generative answers, knowledge sources, prompts in flows, custom and prebuilt AI Builder models, AI Credit budgeting, bot channels (Teams/web/Direct Line).</span></li>
-                <li data-kind="agent"><code>dataverse-architect</code><span>Use this agent for Dataverse data modeling, security model design, plug-ins, and business rules.</span></li>
-                <li data-kind="agent"><code>flow-engineer</code><span>Use this agent for Power Automate work — cloud flows, desktop flows (RPA), and custom connectors.</span></li>
-                <li data-kind="agent"><code>model-driven-engineer</code><span>Use this agent for model-driven app construction — site maps, app modules, forms (main/quick create/quick view), views, dashboards, charts, business process flows, command bar customization, JS web resources, form scripting via Xrm/formContext APIs.</span></li>
-                <li data-kind="agent"><code>pcf-developer</code><span>Use this agent for Power Apps Component Framework (PCF) custom controls — TypeScript, manifest, lifecycle, build, package, register.</span></li>
-                <li data-kind="agent"><code>power-bi-engineer</code><span>Use this agent for Power BI semantic models, DAX authoring/review, reports, dataflows, PBIP project source control, git integration with Azure DevOps / Azure Repos, deployment strategies (Deployment Pipelines vs ADO pipelines), refresh/gateway troubleshooting, and bridging Power BI artifacts with Power Platform solutions/ALM.</span></li>
-                <li data-kind="agent"><code>power-fx-engineer</code><span>Use this agent for canvas Power App work — screen architecture, Power Fx formulas, components and component libraries, delegation, performance, theming, accessibility, Test Studio, Monitor.</span></li>
-                <li data-kind="agent"><code>power-pages-engineer</code><span>Use this agent for Power Pages (formerly Power Apps Portals) — external-facing sites for anonymous or B2C users.</span></li>
-                <li data-kind="agent"><code>power-platform-admin</code><span>Use this agent for tenant-level Power Platform admin work — environment strategy (Default avoidance, Production / Sandbox / Developer / Trial / Teams), managed environments, environment groups, DLP policies at tenant + environment scope, CoE Starter Kit, licensing audits, capacity reporting (Dataverse storage, API entitlements, Power Automate request limits), tenant-level analytics, sharing limits, weekly digest.</span></li>
-                <li data-kind="agent"><code>power-platform-tester</code><span>Use this agent for Power Platform-specific testing — Power Fx unit/integration tests in Test Studio, canvas-app monitor traces, Power Automate flow tests (`Test → Manually`, telemetry-driven assertions), Dataverse data validation, model-driven app form/business-rule testing, DAX measure correctness and performance, Power BI semantic model VertiPaq diagnostics, and `pac solution check`.</span></li>
-                <li data-kind="agent"><code>solution-alm-engineer</code><span>Use this agent for Power Platform Application Lifecycle Management — pac CLI mastery, source control of unpacked solutions, environment variables, connection references, environment strategy at the solution level (dev/test/prod promotion), and ALM pipelines (in-product Power Platform Pipelines, Azure DevOps + Power Platform Build Tools, GitHub Actions for Power Platform).</span></li>
-                <li data-kind="skill"><code>alm-pipeline-design</code><span>Design end-to-end ALM pipelines for Power Platform solutions — pac CLI primitives, Azure DevOps multi-stage pipelines, source-control unpacked solutions, env-var + connection-reference promotion across DEV → TEST → UAT → PROD, managed-vs-unmanaged discipline.</span></li>
-                <li data-kind="skill"><code>canvas-app-performance</code><span>Diagnose and fix Power Fx canvas app performance — delegation as a P1 design constraint, lazy-load patterns, Concurrent() vs sequential, ClearCollect vs collection growth, OnStart vs OnVisible, screen-transition cost, control-count budgets per screen, and the connector-call audit via Monitor.</span></li>
-                <li data-kind="skill"><code>code-review</code><span>Deep code audit that finds dead wiring, silent failures, unfinished features, placeholder stubs, bloated files, and unnecessary complexity.</span></li>
-                <li data-kind="skill"><code>copilot-studio-bot-design</code><span>Design Copilot Studio bots — topic vs generative-answers boundaries, knowledge-source hygiene, trigger-phrase design, slot-filling patterns, escalation-to-human criteria, AI Builder vs prompt-flow vs direct Azure OpenAI decisions, and the test-set discipline that catches regressions on every authoring change.</span></li>
-                <li data-kind="skill"><code>dataverse-plugins</code><span>Use when developing, registering, or deploying Dataverse plugins (C# server-side extensions).</span></li>
-                <li data-kind="skill"><code>dataverse-web-api</code><span>Use when programmatically creating, modifying, or querying Dataverse schema and metadata via the Web API (OData v4.0).</span></li>
-                <li data-kind="skill"><code>dataverse-web-resources</code><span>Use when creating, deploying, or managing Dataverse web resources for model-driven apps.</span></li>
-                <li data-kind="skill"><code>dlp-policy-design</code><span>Design tenant Data Loss Prevention policies for Power Platform — business / non-business / blocked classification, environment-scoped vs tenant-wide policies, exemption process, common-connector pitfalls (HTTP, SharePoint, Dataverse, custom connectors), and the "every flow gets re-evaluated on policy change" implication.</span></li>
-                <li data-kind="skill"><code>grounding-protocol</code><span>Reduce confident-but-incorrect "I can't do that" claims by forcing agents to verify capabilities before refusing scope.</span></li>
-                <li data-kind="skill"><code>maintainability-review</code><span>Forward-looking maintainability + evolvability review of a Power Platform solution — understandability, modifiability, testability, evolution readiness, ownership.</span></li>
-                <li data-kind="skill"><code>pbir-ref-integrity</code><span>Report-wide referential-integrity validator for a PBIR Enhanced report's definition/ tree — catches dangling cross-file references before deployment.</span></li>
-                <li data-kind="skill"><code>pcf-controls</code><span>Use when building, deploying, or using PowerApps Component Framework (PCF) controls.</span></li>
-                <li data-kind="skill"><code>plan-with-team</code><span>Spawns an Agent Team to collaboratively plan Power Platform / Dataverse applications.</span></li>
-                <li data-kind="skill"><code>power-apps-code-apps</code><span>Use when building, scaffolding, debugging, or deploying Microsoft Power Apps Code Apps using React, Vue, or TypeScript in VS Code.</span></li>
-                <li data-kind="skill"><code>power-automate</code><span>Veteran-level reference for Power Automate work — expressions, error handling + scopes, child flows, solution-aware flows + connection references, Dataverse triggers, throttling, approvals, performance patterns.</span></li>
-                <li data-kind="skill"><code>power-bi</code><span>Veteran-level reference for Power BI — PBIP project structure + git, semantic model design, DAX patterns + performance, deployment pipelines, refresh / gateway troubleshooting, integration with Power Platform solutions / ALM.</span></li>
-                <li data-kind="skill"><code>power-pages-permissions</code><span>Design table permissions, web roles, and authentication for Power Pages — anonymous vs authenticated patterns, B2C / Entra-External-ID auth, table-permission scoping (global / contact / account / parental / self), record ownership, and the "row I can see in MDA but not in Pages" debugging playbook.</span></li>
-                <li data-kind="skill"><code>record-screen</code><span>Record a Chrome browser tab to video via CLI.</span></li>
-                <li data-kind="skill"><code>report-visualization-design</code><span>Design Power BI reports with a checklist-driven method: question-first, 3-30-300 visual hierarchy, question-type visual selection, 8-point grid layout.</span></li>
-                <li data-kind="skill"><code>update-model-driven-app</code><span>Use when programmatically updating an existing model-driven Power Apps app (including custom pages) in a real environment via service principal.</span></li>
-                <li data-kind="skill"><code>visual-qa</code><span>AI-powered visual QA testing that walks through an app in the browser, records every action with annotated captions (what was done, what should happen), captures screenshots/GIFs, and sends the evidence to Gemini for automated review.</span></li>
-                <li data-kind="hook"><code>check-house-opinions.sh</code><span>check-house-opinions.sh PostToolUse hook for Edit | Write | MultiEdit on Power Platform source files.</span></li>
-                <li data-kind="hook"><code>validate-flow-action-names.sh</code><span>validate-flow-action-names.sh PostToolUse hook for Edit | Write | MultiEdit — warns when Power Automate cloud-flow JSON contains auto-generated action names like 'Compose_2'.</span></li>
-                <li data-kind="hook"><code>validate-tmdl-measure-metadata.sh</code><span>validate-tmdl-measure-metadata.sh PostToolUse hook for Edit | Write | MultiEdit on TMDL files — validates Power BI measures include description, formatString, and displayFolder.</span></li>
-                <li data-kind="template"><code>maintainability-review-template.md</code><span>Maintainability Review Template</span></li>
-                <li data-kind="template"><code>power-bi-copilot-ai-instructions.md</code><span>Power BI Copilot AI instructions — custom AI instructions for Copilot in Power BI</span></li>
-                <li data-kind="template"><code>power-bi-copilot-readiness-worked-example.md</code><span>Power BI Copilot readiness — worked example and readiness checklist</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-finance" aria-labelledby="stack-tab-finance" data-stack-panel="finance" hidden>
-              <p class="stack-panel__desc">Corporate finance &amp; FP&amp;A specialist team — FP&amp;A analyst (budgets, forecasts, variance commentary), financial modeler (3-statement, DCF, scenarios), controller (close, JEs, reconciliations), treasury analyst (cash, covenants, FX), valuation analyst…</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>9</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>audit-prep-specialist</code><span>Use this agent for audit readiness — PBC (provided-by-client) list management, walkthrough documentation, SOC1 / SOC2 control narratives, deficiency remediation, examiner walkthrough rehearsals.</span></li>
-                <li data-kind="agent"><code>board-pack-composer</code><span>Use this agent for board / investor / lender reporting packs — narrative-first composition, section sequencing, KPI selection, executive-summary patterns.</span></li>
-                <li data-kind="agent"><code>controller</code><span>Use this agent for month-end / quarter-end close work — JE design and review, account reconciliations, accruals, intercompany, close-calendar mechanics, deferred revenue / prepaids / fixed-asset rolls.</span></li>
-                <li data-kind="agent"><code>financial-modeler</code><span>Use this agent for financial-model work — three-statement models, DCF, scenario / sensitivity, model architecture, model documentation.</span></li>
-                <li data-kind="agent"><code>fpa-analyst</code><span>Use this agent for FP&amp;A work — budgeting, rolling forecasts, KPI commentary, variance walks, scenario modeling at the P&amp;L level, headcount and opex planning.</span></li>
-                <li data-kind="agent"><code>treasury-analyst</code><span>Use this agent for treasury and cash-management work — 13-week direct cash forecasts, working-capital optimization, debt covenant compliance, FX exposure and hedging, banking operations, debt-schedule mechanics.</span></li>
-                <li data-kind="agent"><code>valuation-analyst</code><span>Use this agent for valuation work — business valuation (DCF + comparable companies + precedent transactions), 409A valuations, fairness-opinion support, valuation methodology defense, ESOP / RSU strike-price refreshes.</span></li>
-                <li data-kind="skill"><code>board-pack-composition</code><span>Compose narrative-first board / investor / lender reporting packs — section sequencing, KPI selection, executive-summary patterns.</span></li>
-                <li data-kind="skill"><code>dcf-valuation</code><span>Run a defensible discounted-cash-flow valuation — explicit projection period, terminal value (Gordon vs exit-multiple), WACC build, sensitivities, scenario weighting, and the cross-check against trading / precedent multiples.</span></li>
-                <li data-kind="skill"><code>driver-based-forecasting</code><span>Build and refresh a driver-based rolling forecast that survives FP&amp;A review — driver tree from revenue volume × price, opex by category-driver, working-capital roll, capex schedule, scenario layer.</span></li>
-                <li data-kind="skill"><code>kpi-definition</code><span>Define KPIs that survive cross-team disagreement — single owner, single formula, single source of truth, decay-tested, documented in a KPI dictionary.</span></li>
-                <li data-kind="skill"><code>model-review</code><span>7-pass review of financial models — assumptions, mechanics, integrity (BS balances, CF reconciles), hardcodes, error-checks, scenarios, documentation.</span></li>
-                <li data-kind="skill"><code>month-end-close</code><span>Run a clean month-end / quarter-end close — close-calendar mechanics, JE buckets, reconciliation checklist, exception-triage playbook.</span></li>
-                <li data-kind="skill"><code>soc-control-walkthrough</code><span>Document a SOC 1 / SOC 2 control walkthrough — control description, test of design vs test of operating effectiveness, evidence-of-control patterns, sampling, exception triage, deficiency severity classification (control deficiency / significant deficiency / material weakness).</span></li>
-                <li data-kind="skill"><code>thirteen-week-cash-forecast</code><span>Build and operate a 13-week direct-method cash forecast — receipts by source, disbursements by category, week-by-week roll, variance-to-prior-forecast cadence, covenant headroom view, and the trigger thresholds for management action.</span></li>
-                <li data-kind="skill"><code>variance-commentary</code><span>Write variance commentary that tells a story instead of restating a table — templates for revenue, GM, opex, EBITDA, FCF with named drivers + materiality threshold applied.</span></li>
-                <li data-kind="hook"><code>flag-finance-anti-patterns.sh</code><span>flag-finance-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on finance-conventional files.</span></li>
-                <li data-kind="template"><code>account-reconciliation.md</code><span>Account reconciliation — [Account name] / [GL #]</span></li>
-                <li data-kind="template"><code>audit-pbc-tracker.md</code><span>Audit PBC tracker — [Audit / Period]</span></li>
-                <li data-kind="template"><code>board-pack-outline.md</code><span>Board pack outline — [Entity] [Period]</span></li>
-                <li data-kind="template"><code>cash-flow-forecast.md</code><span>13-week direct cash forecast — [Entity]</span></li>
-                <li data-kind="template"><code>kpi-pack-template.md</code><span>KPI pack — [Entity] [Period]</span></li>
-                <li data-kind="template"><code>model-documentation.md</code><span>Model documentation — [Model name]</span></li>
-                <li data-kind="template"><code>month-end-close-calendar.md</code><span>Month-end close calendar — [Entity] [Period]</span></li>
-                <li data-kind="template"><code>variance-commentary.md</code><span>Variance commentary — [Entity] [Period]</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-regulatory-compliance" aria-labelledby="stack-tab-regulatory-compliance" data-stack-panel="regulatory-compliance" hidden>
-              <p class="stack-panel__desc">Financial-regulatory &amp; compliance specialist team — 12 jurisdiction specialists covering BMA, Bahamas (4 regulators + FIU), Channel Islands (JFSC/GFSC), Cayman (CIMA), UK PRA, and US federal/state regulators, plus AML/KYC analyst, regulatory-reporting analyst, examination-prep specialist, risk-and-controls specialist, policy &amp; procedure writer…</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>12</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>10</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>11</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>aml-kyc-analyst</code><span>Use this agent for AML / KYC / sanctions / financial-crime work — customer-onboarding KYC, sanctions screening / hit clearing, EDD (enhanced due diligence), SAR / STR narrative drafting, transaction-monitoring rule tuning.</span></li>
-                <li data-kind="agent"><code>bahamas-financial-services-specialist</code><span>Use this agent for The Bahamas financial-services work across its four statutory regulators + FIU — Central Bank of The Bahamas, SCB, Insurance Commission, Gaming Board, and the FIU.</span></li>
-                <li data-kind="agent"><code>bermuda-insurance-specialist</code><span>Use this agent for Bermuda-domiciled insurance work — BMA Insurance Act 1978 + Rules / Codes, captives (Class 1 / 2 / 3 / 3A / 3B), commercial insurers (Class 4 / 3A / IIGB), long-term insurers (Class A-E), reinsurers, ILS / SPI, SAC, BSCR / ECR / MCR, EBS, CISSA, Solvency II equivalence, BMA filings.</span></li>
-                <li data-kind="agent"><code>bma-financial-institutions-specialist</code><span>Use this agent for Bermuda Monetary Authority (BMA) non-insurance financial-institution work — banking &amp; deposit-taking, investment business, digital-asset business, money-service businesses.</span></li>
-                <li data-kind="agent"><code>channel-islands-specialist</code><span>Use this agent for Channel Islands financial-services work — Jersey (JFSC) and Guernsey (GFSC) across banking, funds, trust, insurance, and AML/CFT frameworks.</span></li>
-                <li data-kind="agent"><code>cima-cayman-specialist</code><span>Use this agent for Cayman Islands Monetary Authority (CIMA) work across all sectors — banking, funds, trust companies, insurance, money-service businesses, and virtual-asset providers.</span></li>
-                <li data-kind="agent"><code>examination-prep-specialist</code><span>Use this agent for regulator examination readiness — PBC list management for exam, walkthrough rehearsals, mock examiner interviews, examiner Q&amp;A drafting, MRA / MRIA / management-letter responses, remediation tracking.</span></li>
-                <li data-kind="agent"><code>policy-and-procedure-writer</code><span>Use this agent for compliance manual / policy / procedure authoring — new policy drafting, P&amp;P refreshes, gap analysis against new regulation, regulator-facing documentation, jurisdictional adaptation of an existing policy.</span></li>
-                <li data-kind="agent"><code>regulatory-reporting-analyst</code><span>Use this agent for regulatory filings — FATCA, CRS, supervisory returns, Solvency II QRTs, BMA EBS, US RBC, statutory financial statements, supervisory reports, capital adequacy calculations.</span></li>
-                <li data-kind="agent"><code>risk-and-controls-specialist</code><span>Use this agent for enterprise risk management — risk-framework design, three lines of defense, risk-appetite statements, risk registers, KRI design, control self-assessment, ORM / ERM.</span></li>
-                <li data-kind="agent"><code>uk-pra-specialist</code><span>Use this agent for UK prudential-regulation work — the Prudential Regulation Authority (PRA, part of the Bank of England) rules for banks, building societies, insurers (Solvency UK), and internationally-active firms.</span></li>
-                <li data-kind="agent"><code>us-financial-regulation-specialist</code><span>Use this agent for United States financial-regulatory work across the fragmented federal + state alphabet soup — Federal Reserve, OCC, FDIC, CFPB, SEC, CFTC, FinCEN, and state banking/insurance regulators.</span></li>
-                <li data-kind="skill"><code>aml-program-review</code><span>Structured review of an AML program against FATF / FFIEC expectations — the 5 pillars, common findings, regulatory citations with primary sources.</span></li>
-                <li data-kind="skill"><code>bma-licensing-classification</code><span>Classify a Bermuda (non-insurance) entity into its BMA sector + licence class and resolve its AML/ATF position before an application or regulatory change.</span></li>
-                <li data-kind="skill"><code>control-testing</code><span>Compliance / second-line control testing rubric — design adequacy + operating effectiveness for compliance controls (KYC quality, monitoring rule tuning, training coverage, regulatory-mapping freshness).</span></li>
-                <li data-kind="skill"><code>examination-readiness</code><span>Pre-exam playbook for regulator examinations — PBC tracker, walkthrough rehearsal, mock interviews, exam-week posture, MRA / MRIA / management-letter response patterns.</span></li>
-                <li data-kind="skill"><code>kyc-edd-review</code><span>KYC file + EDD review playbook — risk-rating logic, BOI / UBO verification, source-of-wealth vs source-of-funds, EDD trigger conditions, file completeness checklist, sign-off chain.</span></li>
-                <li data-kind="skill"><code>regulatory-mapping</code><span>Map internal controls / policies / procedures to specific regulatory citations (regulator + section + paragraph).</span></li>
-                <li data-kind="skill"><code>risk-register-build</code><span>Build / refresh an enterprise risk register that survives audit committee scrutiny — three lines of defense assignment, inherent + residual rating math, KRI design, risk-appetite mapping, control coverage, and the half-yearly refresh cadence.</span></li>
-                <li data-kind="skill"><code>sanctions-hit-disposition</code><span>Disposition framework for sanctions screening alerts — true-match vs false-positive triage, secondary-match evidence chain, escalation criteria, documented-rationale template, list-version capture, and the audit-trail requirements that survive examiner review.</span></li>
-                <li data-kind="skill"><code>sar-narrative-drafting</code><span>Draft SAR / STR narratives that survive regulator review — typology + the W's + what to omit + reviewer sign-off chain.</span></li>
-                <li data-kind="skill"><code>supervisory-return-prep</code><span>Period-end supervisory / regulatory return preparation playbook — data lineage, maker-checker, materiality / threshold definitions, common return families (FATCA, CRS, BMA EBS, Solvency II, supervisory returns, capital adequacy / RBC), late-filing protocols.</span></li>
-                <li data-kind="hook"><code>scrub-confidential-pre-write.sh</code><span>scrub-confidential-pre-write.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
-                <li data-kind="template"><code>aml-program-outline.md</code><span>AML program outline — [Entity]</span></li>
-                <li data-kind="template"><code>bma-aml-risk-assessment.md</code><span>BMA AML/ATF risk assessment — [Entity]</span></li>
-                <li data-kind="template"><code>bma-change-of-control-notification.md</code><span>BMA change-of-control notification template</span></li>
-                <li data-kind="template"><code>bma-licensing-classification-workpaper.md</code><span>BMA licensing classification workpaper — [Entity]</span></li>
-                <li data-kind="template"><code>control-narrative.md</code><span>Control narrative — [Control ID] [Control name]</span></li>
-                <li data-kind="template"><code>examination-response-tracker.md</code><span>Examination response tracker — [Regulator] [Exam type] [Period]</span></li>
-                <li data-kind="template"><code>kyc-edd-workpaper.md</code><span>KYC / EDD workpaper — [Customer ID]</span></li>
-                <li data-kind="template"><code>policy-template.md</code><span>[Policy Name]</span></li>
-                <li data-kind="template"><code>risk-register.md</code><span>Risk register — [Entity / Domain]</span></li>
-                <li data-kind="template"><code>sar-narrative-template.md</code><span>SAR / STR narrative — [Case ID]</span></li>
-                <li data-kind="template"><code>supervisory-return-checklist.md</code><span>Pre-submission checklist — [Return name] [Period]</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-web-design" aria-labelledby="stack-tab-web-design" data-stack-panel="web-design" hidden>
-              <p class="stack-panel__desc">Web design &amp; build specialist team — web architect (IA, stack, hosting), UX designer (wireframes, flows, conversion), visual designer (brand, typography, tokens), frontend implementer (HTML/CSS/JS, React, Astro, Next), content strategist (copy, microcopy, SEO content)…</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>7</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>11</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>8</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>accessibility-auditor</code><span>Use this agent for accessibility work — WCAG 2.2 AA / AAA audits, ARIA review, keyboard-navigation review, screen-reader testing, color-contrast checks, focus management, reduced-motion / reduced-data accommodation.</span></li>
-                <li data-kind="agent"><code>content-strategist</code><span>Use this agent for content / copy work — site copy, content hierarchy, microcopy, SEO content, content style guide, content audit, content modeling for headless CMS.</span></li>
-                <li data-kind="agent"><code>frontend-implementer</code><span>Use this agent for web frontend implementation — HTML, CSS, vanilla JS, React, Astro, Next, component-library work, responsive patterns, design-token wiring, build integration.</span></li>
-                <li data-kind="agent"><code>performance-engineer</code><span>Use this agent for web performance work — Core Web Vitals (LCP / CLS / INP) diagnosis and tuning, image / font / JS optimization, CDN strategy, caching, third-party hygiene, performance budgets.</span></li>
-                <li data-kind="agent"><code>ux-designer</code><span>Use this agent for UX work — wireframes, user flows, screen-level layouts, conversion design, interaction design, usability heuristics.</span></li>
-                <li data-kind="agent"><code>visual-designer</code><span>Use this agent for visual / brand work — brand systems, typography, color, layout grids, design tokens, component visual style, theming, dark-mode, motion design.</span></li>
-                <li data-kind="agent"><code>web-architect</code><span>Use this agent for web architecture decisions — site architecture, information architecture, tech-stack selection, hosting / CDN, build pipeline, repo structure, content modeling for headless CMS, technical SEO foundations.</span></li>
-                <li data-kind="skill"><code>accessibility-review</code><span>WCAG 2.2-aligned accessibility audit — semantics, ARIA, keyboard navigation, color contrast, focus management, motion preferences.</span></li>
-                <li data-kind="skill"><code>content-audit</code><span>Audit existing site content — full inventory (URL × type × intent × last-updated × owner), scoring against business / user-need / SEO criteria, remediation queue (keep / consolidate / rewrite / retire), and the migration plan when re-platforming.</span></li>
-                <li data-kind="skill"><code>conversion-design</code><span>Design and audit conversion-focused screens — funnel definition, friction-vs-trust balance, form field selection (every field is a cost), one CTA per screen discipline, social-proof placement, microcopy patterns, and the conversion-rate measurement plan.</span></li>
-                <li data-kind="skill"><code>core-web-vitals-tuning</code><span>Diagnose and improve Core Web Vitals (LCP / CLS / INP).</span></li>
-                <li data-kind="skill"><code>design-system-audit</code><span>Audit an existing brand / design system for consistency, completeness, token coverage, dark-mode readiness.</span></li>
-                <li data-kind="skill"><code>design-tokens-scaffolding</code><span>Scaffold a token system from brand spec to token JSON to CSS variables to framework theme (Tailwind / Shadcn / CSS-in-JS / Theme UI).</span></li>
-                <li data-kind="skill"><code>information-architecture</code><span>Design site information architecture — sitemap, URL taxonomy, navigation patterns (primary / utility / footer / contextual), card-sort discipline, content model that the IA implies, and the URL-to-template mapping.</span></li>
-                <li data-kind="skill"><code>card-tile-ui</code><span>Design and implement an Intercom-style card / tile UI — discrete soft-shadowed rounded surfaces on a neutral base with dual-accent theming.</span></li>
-                <li data-kind="skill"><code>fluent-react-implementation</code><span>Implement a Fluent UI v9 + React website end-to-end — set up FluentProvider, turn a brand color into a Fluent palette, scaffold pages with FluentProvider theme tokens.</span></li>
-                <li data-kind="skill"><code>seo-technical-audit</code><span>Technical SEO sweep — crawlability, indexability, schema markup, sitemaps, OG / Twitter Card metadata, hreflang, structured data.</span></li>
-                <li data-kind="skill"><code>third-party-script-hygiene</code><span>Catalogue and hygiene-audit third-party scripts on a marketing site — performance budget by category (analytics / chat / A/B / fonts / video / social), async-defer patterns, consent-gating (GDPR / CCPA / consent-mode v2), CSP implications, and the periodic re-audit cadence.</span></li>
-                <li data-kind="hook"><code>check-web-anti-patterns.sh</code><span>check-web-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on web-conventional files.</span></li>
-                <li data-kind="template"><code>accessibility-audit-report.md</code><span>Accessibility audit report — [Site / scope]</span></li>
-                <li data-kind="template"><code>content-style-guide.md</code><span>Content style guide — [Brand / site]</span></li>
-                <li data-kind="template"><code>design-brief.md</code><span>Design brief — [Project name]</span></li>
-                <li data-kind="template"><code>design-system-spec.md</code><span>Design system spec — [System name] [Version]</span></li>
-                <li data-kind="template"><code>launch-checklist.md</code><span>Launch checklist — [Site / project] [Launch date]</span></li>
-                <li data-kind="template"><code>performance-budget.md</code><span>Performance budget — [Site / page-type]</span></li>
-                <li data-kind="template"><code>seo-audit-report.md</code><span>SEO audit report — [Site]</span></li>
-                <li data-kind="template"><code>site-architecture.md</code><span>Site architecture — [Site name]</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-edtech-partner-success" aria-labelledby="stack-tab-edtech-partner-success" data-stack-panel="edtech-partner-success" hidden>
-              <p class="stack-panel__desc">EdTech-flavored Partner Success Manager team — 6 specialist agents anchored on the PSM lane, plus a centralized CS dashboard integration layer (Planhat/Gainsight/Totango connectors, Power BI / HTML portfolio reports, dbt models).</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>6</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>16</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>38</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>ferpa-comms-translator</code><span>Use this agent for FERPA-aware (and segment-equivalent data-privacy) multilingual, multi-audience partner &amp; end-user communication.</span></li>
-                <li data-kind="agent"><code>learning-analytics-analyst</code><span>Use this agent for partner-engagement signal design, health-score architecture, dashboard specs, and metric interpretation.</span></li>
-                <li data-kind="agent"><code>partner-profile-curator</code><span>Use this agent to maintain the durable partner record — the context that outlives any one PSM seat.</span></li>
-                <li data-kind="agent"><code>partner-success-manager</code><span>Use this agent for EdTech-specialized PSM work — onboarding, adoption, ongoing pulse, day-to-day partner-facing work.</span></li>
-                <li data-kind="agent"><code>qbr-composer</code><span>Use this agent for Quarterly Business Review materials end-to-end — data pull plan → narrative → deck → talk track → followup tracker.</span></li>
-                <li data-kind="agent"><code>success-playbook-designer</code><span>Use this agent to design or refresh PSM plays — renewal plays, expansion plays, recovery (red-flag intervention) plays, advocacy plays.</span></li>
-                <li data-kind="skill"><code>adoption-sequencing-k12</code><span>Sequence K-12 partner adoption activities by stage (newly-implemented / first-year-sustaining / multi-year-mature / pre-renewal) with school-year-phase overlay.</span></li>
-                <li data-kind="skill"><code>advocacy-program-design</code><span>Design a structured EdTech advocacy program with 5-tier ladder (logo → quote → case study → speaker → peer call).</span></li>
-                <li data-kind="skill"><code>cs-platform-integration</code><span>Back-end integration contract for a centralized EdTech customer success dashboard sitting on top of Planhat, Gainsight, or Totango connectors.</span></li>
-                <li data-kind="skill"><code>daily-action-queue</code><span>Compute "today's top N accounts" for a K-12 EdTech PSM as a ranked list with next-best-action + confidence + rationale.</span></li>
-                <li data-kind="skill"><code>executive-sponsor-mapping</code><span>Map the partner's buying committee — economic buyer, champion, technical buyer / IT, user-champion, blocker, executive sponsor — across segments (K-12 / higher-ed / corp L&amp;D).</span></li>
-                <li data-kind="skill"><code>expansion-play-design</code><span>Design expansion motions that fire only when the partner has earned value — 3-gate eligibility (top-quartile health + demonstrable adoption + organizational readiness), value-trigger taxonomy, seat / module / department land-and-expand patterns, internal-champion-armament, ROI-storytelling format, and the "don't sell to bottom-quartile" discipline.</span></li>
-                <li data-kind="skill"><code>implementation-90-day-arc</code><span>Run the 90-day technical-onboarding arc for a newly-contracted EdTech partner — discovery (weeks 1-2) → integration setup (3-4) → train-the-trainer (5-6) → go-live + Day-30 measurement (7-8) → stabilization + PSM handoff (9-12).</span></li>
-                <li data-kind="skill"><code>health-report-dashboard</code><span>Build a self-contained, Power-BI/Tableau-style HTML portfolio report from partner-health data — KPI cards, sparklines, heatmaps, and a per-partner drill view.</span></li>
-                <li data-kind="skill"><code>partner-health-scoring</code><span>Design and maintain a partner health score that actually predicts renewal / churn for EdTech partners.</span></li>
-                <li data-kind="skill"><code>partner-training-program-design</code><span>Design partner-facing training programs for EdTech — train-the-trainer is the only model that scales in K-12.</span></li>
-                <li data-kind="skill"><code>psm-dashboard-build</code><span>Codex's master roadmap for executing the Partner Success Command Center build — data model, API layer, UI tiers, acceptance tests.</span></li>
-                <li data-kind="skill"><code>qbr-composition</code><span>Compose a Quarterly Business Review end-to-end — data pull plan, narrative arc, deck outline, talk track, post-QBR commitment tracker.</span></li>
-                <li data-kind="skill"><code>recovery-play-design</code><span>Design red-flag intervention sequences — root-cause diagnostic before remedy (4 parallel hypotheses), time-bound recovery plan with measurable 30/60/90-day signal targets, escalation criteria (PSM → success leadership → exec sponsor → counsel → churn-prep), the "is this recoverable?" rule, churn-prep workflow when not, and the post-recovery learning capture.</span></li>
-                <li data-kind="skill"><code>renewal-play-design</code><span>Design renewal motions that earn the renewal instead of negotiating it — T-180/T-120/T-90/T-60/T-30/T-0 sequence, sponsor-confirmation arc, value-evidence pack, multi-thread the buying committee, decision-memo support, expand/maintain/contract decision rule, and segment-specific overlays (K-12 budget cycle, higher-ed academic calendar, corp L&amp;D fiscal year).</span></li>
-                <li data-kind="skill"><code>rostering-data-quality</code><span>Diagnose rostering / SIS / LMS data-sync issues in EdTech contexts — K-12 (Clever, ClassLink, OneRoster), higher-ed (SIS/LMS), corporate L&amp;D (HRIS/LMS).</span></li>
-                <li data-kind="skill"><code>success-plan-authoring</code><span>Author a 30/60/90 day or quarterly success plan for an EdTech partner that has measurable success criteria, named owners, and a defensible cadence.</span></li>
-                <li data-kind="hook"><code>flag-psm-anti-patterns.sh</code><span>flag-psm-anti-patterns.sh PostToolUse hook for Edit | Write | MultiEdit on EdTech-PSM artifact files.</span></li>
-                <li data-kind="template"><code>adoption-diagnostic-worksheet.md</code><span>Adoption diagnostic worksheet — `&lt;partner_name&gt;`</span></li>
-                <li data-kind="template"><code>annual-partner-review.md</code><span>Annual Partner Review — `&lt;Partner Name&gt;` — `&lt;Year&gt;`</span></li>
-                <li data-kind="template"><code>case-study-draft.md</code><span>Case study draft — `&lt;partner_name | "Anonymized Partner"&gt;`</span></li>
-                <li data-kind="template"><code>cross-functional-partnership-map.md</code><span>Cross-functional partnership map — `&lt;partner_name | vendor_name&gt;`</span></li>
-                <li data-kind="template"><code>dashboard-evidence-reference/</code><span>(template folder — Evidence.dev partner health dashboard reference implementation)</span></li>
-                <li data-kind="template"><code>dashboard-streamlit-reference/</code><span>(template folder — Streamlit partner health dashboard reference implementation)</span></li>
-                <li data-kind="template"><code>dashboard-tier-0.5-reference/</code><span>(template folder — Snowflake + dbt + dynamic-tables partner success pipeline reference)</span></li>
-                <li data-kind="template"><code>escalation-memo.md</code><span>Escalation Memo — `&lt;Partner Name&gt;` — `&lt;short risk description&gt;`</span></li>
-                <li data-kind="template"><code>health-score-dashboard.md</code><span>Health-Score Dashboard — Spec</span></li>
-                <li data-kind="template"><code>implementation-90-day-plan.md</code><span>Implementation 90-day plan — `&lt;partner_name&gt;`</span></li>
-                <li data-kind="template"><code>onboarding-checklist.md</code><span>Onboarding Checklist — First 90 Days — `&lt;Partner Name&gt;`</span></li>
-                <li data-kind="template"><code>partner-pickup-brief.md</code><span>Partner pickup brief — `&lt;partner_name&gt;`</span></li>
-                <li data-kind="template"><code>partner-profile.md</code><span>Partner Profile — `&lt;Partner Name&gt;`</span></li>
-                <li data-kind="template"><code>qbr-deck-outline.md</code><span>QBR Deck Outline — `&lt;Partner Name&gt;` — `&lt;Quarter&gt;`</span></li>
-                <li data-kind="template"><code>reference-pipeline-tracker.md</code><span>Reference customer pipeline tracker</span></li>
-                <li data-kind="template"><code>renewal-decision-memo.md</code><span>Renewal decision memo — `&lt;partner_name&gt;`</span></li>
-                <li data-kind="template"><code>success-plan.md</code><span>Success Plan — `&lt;Partner Name&gt;`</span></li>
-                <li data-kind="template"><code>touchpoint-log.md</code><span>Touchpoint Log — `&lt;Partner Name&gt;`</span></li>
-                <li data-kind="template"><code>train-the-trainer-curriculum.md</code><span>Train-the-trainer curriculum — `&lt;partner_name&gt;`</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-data-platform" aria-labelledby="stack-tab-data-platform" data-stack-panel="data-platform" hidden>
-              <p class="stack-panel__desc">Data-platform team — 4 specialist agents (database-setup-guide, etl-pipeline-engineer, dashboard-builder, connector-developer) that guide cloud-database setup, ELT pipelines, embedded dashboards, multi-tenant RLS, and identity resolution…</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>13</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>18</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>connector-developer</code><span>Use this agent for custom Airbyte connector authoring when an ELT vendor doesn't ship a connector for the source the engagement needs.</span></li>
-                <li data-kind="agent"><code>dashboard-builder</code><span>Use this agent for interactive dashboard front-end generation — Evidence.dev (marketing-site portfolio), Apache Superset / Metabase OSS (client deliverable), Cube + Next.js + Tremor + Recharts + shadcn/ui (productized SaaS), Power BI Embedded F-SKU (Microsoft-stack engagements).</span></li>
-                <li data-kind="agent"><code>database-setup-guide</code><span>Use this agent for cloud-database setup guidance — Supabase, Neon, RDS, Azure SQL, Fabric, DuckDB, MotherDuck, Snowflake, Databricks, Turso.</span></li>
-                <li data-kind="agent"><code>etl-pipeline-engineer</code><span>Use this agent for ELT pipeline design and configuration — Airbyte, Fivetran, n8n, custom integrations.</span></li>
-                <li data-kind="skill"><code>cloud-database-comparison</code><span>Compare cloud databases (Supabase, Neon, RDS, Azure SQL, Fabric, DuckDB, MotherDuck, Snowflake, Databricks, Turso) for an SMB consulting engagement — pricing tables with retrieval dates, setup-complexity matrix, when-to-pick guidance.</span></li>
-                <li data-kind="skill"><code>connector-configuration</code><span>Connector-specific configuration patterns for ELT pipelines — QuickBooks OAuth + rate-limit handling, Stripe webhook + batch hybrid, Salesforce Bulk API 2.0, HubSpot API v3, GA4 BigQuery export, Shopify GraphQL Admin API.</span></li>
-                <li data-kind="skill"><code>cross-system-identity-resolution</code><span>Stitch the same real-world entity across multiple source systems into one canonical customer record — deterministic + probabilistic matching, survivorship rules, confidence scoring.</span></li>
-                <li data-kind="skill"><code>cube-schema-scaffolding</code><span>Scaffold Cube semantic-layer schemas with mandatory `securityContext` baked in for multi-tenant customer-facing dashboards.</span></li>
-                <li data-kind="skill"><code>dashboard-performance-tuning</code><span>Tune interactive-dashboard performance against a per-widget-class budget — Cube pre-aggregation design, Postgres / DuckDB materialized views, cache layers (Cube + Redis + browser TanStack Query), the per-widget profile loop (measure → identify the slow stage → fix at the lowest-cost layer).</span></li>
-                <li data-kind="skill"><code>data-quality-tests</code><span>Design data-quality tests that catch real bugs — uniqueness / not-null / referential integrity / freshness / row-count drift / value-range / cross-source reconciliation.</span></li>
-                <li data-kind="skill"><code>dbt-project-scaffolding</code><span>Scaffold a dbt project that ships — sources → staging → intermediate → marts → metrics layer discipline, generic + custom tests, doc-blocks for every model, exposure tracking, RLS-safe role separation (build-role vs query-role), CI shape (`dbt build` on PR), and a dev/prod env-promotion shape.</span></li>
-                <li data-kind="skill"><code>embed-csp-and-iframe-sandboxing</code><span>Configure CSP `frame-ancestors`, iframe `sandbox` attributes, postMessage origin checks, and web-component shadow-DOM boundaries for embedded dashboards.</span></li>
-                <li data-kind="skill"><code>jwt-embed-issuance</code><span>Canonical 2026 JWT-embed flow for dashboard embedding — required claims (`sub`, `tenant_id`, `iat`, `exp`, `iss`, `aud`, `nonce`), tool-specific verification (Superset guest tokens, Metabase JWT URLs, Cube Authorization Bearer, Power BI MSAL-via-AAD), 5-15 min expiration policy, cross-boundary denial test contract.</span></li>
-                <li data-kind="skill"><code>multi-tenant-migration</code><span>Migrate a single-tenant database / dashboard stack to multi-tenant — `tenant_id` column propagation + backfill, RLS / semantic-layer scope rules introduced post-hoc, JWT-claim shape migration, embed-token cutover plan with parallel + backout window, and the mandatory cross-boundary denial test before flipping the switch.</span></li>
-                <li data-kind="skill"><code>rls-policy-authoring</code><span>Author Postgres Row Level Security policies (force-on, CI-deployed, denial-tested) for multi-tenant dashboards.</span></li>
-                <li data-kind="skill"><code>stack-selection</code><span>Select a dashboard-engagement stack via the Case A/B/C/D Mermaid decision tree (Portfolio / Per-client / Productized SaaS / Pipes-only) — surfaces the per-viewer-pricing-trap heuristic, recognizes the EdTech LMS connector-gap, returns a populated `stack-decision-record.md`.</span></li>
-                <li data-kind="skill"><code>support-ticket-normalization</code><span>Take vendor-specific raw support-ticket tables (Zendesk, Freshdesk, Intercom) and normalize to a canonical ticket schema for cross-platform analytics.</span></li>
-                <li data-kind="hook"><code>flag-data-platform-smells.sh</code><span>flag-data-platform-smells.sh PreToolUse hook for Edit | Write | MultiEdit on data-platform artifact files.</span></li>
-                <li data-kind="template"><code>airbyte-source-config.yaml</code><span>Airbyte source configuration starter</span></li>
-                <li data-kind="template"><code>cube-schema-starter.yml</code><span>Cube schema starter — multi-tenant analytics</span></li>
-                <li data-kind="template"><code>dashboard-engagement-checklist.md</code><span>Dashboard engagement checklist — {{Engagement / Client Name}}</span></li>
-                <li data-kind="template"><code>database-schema-starter.sql</code><span>Multi-tenant database schema starter</span></li>
-                <li data-kind="template"><code>dbt-project-starter/</code><span>(template folder — dbt project scaffold: sources, staging, marts, tests, profiles)</span></li>
-                <li data-kind="template"><code>evidence-portfolio-page.md</code><span>{{Case Study Title}}</span></li>
-                <li data-kind="template"><code>jwt-issuer.ts</code><span>JWT embed token issuer — canonical 2026 implementation</span></li>
-                <li data-kind="template"><code>metabase-interactive-embed.tsx.md</code><span>Metabase Interactive Embedding (React component) — seam-marked stub</span></li>
-                <li data-kind="template"><code>power-bi-embedded-react.tsx.md</code><span>Power BI Embedded App-Owns-Data (React component) — seam-marked stub</span></li>
-                <li data-kind="template"><code>rls-cross-tenant-test.sql</code><span>RLS cross-tenant denial test suite</span></li>
-                <li data-kind="template"><code>stack-decision-record.md</code><span>Stack decision record — {{Engagement / Client Name}}</span></li>
-                <li data-kind="template"><code>superset-embed-iframe.tsx.md</code><span>Superset embed (React iframe component) — seam-marked stub</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-engineering-management" aria-labelledby="stack-tab-engineering-management" data-stack-panel="engineering-management" hidden>
-              <p class="stack-panel__desc">Engineering management team — 4 specialist agents covering the EM lead, people and growth, delivery and execution, and technical health lanes. Built for solo EMs and consultants managing small engineering teams with structured 1:1s, evidence-based performance reviews, hiring loops, flow diagnostics, and tech-debt decisions.</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>5</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>4</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>engineering-manager-lead</code><span>Use this agent to diagnose whether a team's core challenge stems from people growth, delivery execution, or technical health — maps the first moves with owners and dates.</span></li>
-                <li data-kind="agent"><code>people-and-growth-manager</code><span>Use this agent for 1:1 meetings beyond status updates, evidence-based performance reviews, and underperformance diagnosis — examines system factors before drawing conclusions about a person.</span></li>
-                <li data-kind="agent"><code>delivery-and-execution-manager</code><span>Use this agent to diagnose flow problems, interpret DORA metrics as system signals, and address unsustainable on-call practices — always fixing the system rather than pressuring people.</span></li>
-                <li data-kind="agent"><code>technical-health-manager</code><span>Use this agent to evaluate tech-debt paydown as a sized carrying cost against roadmap priorities, or diagnose whether codebase slowness is felt pain or measured degradation.</span></li>
-                <li data-kind="skill"><code>decide-tech-debt</code><span>Decide whether to pay down specific tech-debt by quantifying its business impact and payback period against roadmap priorities — produces a structured memo with numbered recommendations and capacity slices.</span></li>
-                <li data-kind="skill"><code>design-hiring-loop</code><span>Design a structured hiring loop — rubric, consistent interview questions, evidence-based scoring, and a debrief that surfaces dissent over a vibe-based process.</span></li>
-                <li data-kind="skill"><code>improve-team-flow</code><span>Diagnose unpredictable delivery by measuring lead time and WIP to identify system constraints — applies sustainable fixes rather than velocity pressure.</span></li>
-                <li data-kind="skill"><code>run-one-on-one</code><span>Conduct a meaningful 1:1 meeting focused on the engineer's priorities rather than status updates — agenda scaffolds, talking-point prompts, and note-taking.</span></li>
-                <li data-kind="skill"><code>write-performance-review</code><span>Draft a performance review using concrete, dated behavioral evidence — bias-checked and growth-oriented, designed as a management tool rather than a final verdict.</span></li>
-                <li data-kind="hook"><code>flag-engineering-management-antipatterns.sh</code><span>flag-engineering-management-antipatterns.sh PostToolUse advisory hook — flags anti-patterns in engineering management deliverables.</span></li>
-                <li data-kind="template"><code>growth-plan.md</code><span>Engineer growth plan template</span></li>
-                <li data-kind="template"><code>one-on-one-agenda.md</code><span>1:1 meeting agenda template</span></li>
-                <li data-kind="template"><code>performance-review.md</code><span>Performance review template</span></li>
-                <li data-kind="template"><code>tech-debt-decision-memo.md</code><span>Tech-debt decision memo template</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-            <div class="stack-panel" role="tabpanel" id="stack-panel-desktop-app-engineering" aria-labelledby="stack-tab-desktop-app-engineering" data-stack-panel="desktop-app-engineering" hidden>
-              <p class="stack-panel__desc">Desktop-app-engineering team — 4 specialists covering architecture (Electron vs Tauri vs native vs PWA, process/security model, distribution), Electron implementation (hardened baseline, contextBridge IPC), Tauri implementation (Rust core, capabilities allow-list), and the platform layer (code-signing, notarization, safe auto-update, native OS integration).</p>
-              <ul class="stack-counts" role="list" aria-label="Filter by kind">
-                <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>4</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>5</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>1</strong> Hook</button></li>
-                <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>4</strong> Templates</button></li>
-              </ul>
-              <ul class="stack-items" role="list">
-                <li data-kind="agent"><code>desktop-architect</code><span>Use for desktop architecture: the Electron-vs-Tauri-vs-native-vs-PWA decision by the app's real needs (bundle size, native depth, team, security), the process/security model, the update + distribution strategy, and where the line sits between the renderer UI and the privileged backend.</span></li>
-                <li data-kind="agent"><code>desktop-platform-engineer</code><span>Use for the desktop platform layer: code-signing + notarization (Windows Authenticode/EV; macOS Developer ID + notarytool + staple), safe signed auto-update (channels, staged rollout, rollback, version floor), and native OS integration (tray, menus, notifications, deep links, secure storage).</span></li>
-                <li data-kind="agent"><code>electron-engineer</code><span>Use for Electron implementation: the main/preload/renderer model, the hardened baseline (contextIsolation on, nodeIntegration off, sandbox, strict CSP), a narrow contextBridge + validated ipcMain handlers, window/lifecycle, and the build (electron-builder/Forge).</span></li>
-                <li data-kind="agent"><code>tauri-engineer</code><span>Use for Tauri implementation: the Rust core + system-webview model, #[tauri::command] handlers with validated input, the capabilities/permissions allow-list (v2) scoping what the frontend can call, state management, sidecars, and the small-bundle/secure-by-default posture Tauri rewards.</span></li>
-                <li data-kind="skill"><code>desktop-framework-choice</code><span>Decide Electron vs Tauri vs native vs PWA by the app's real needs (bundle size, native-API depth, team skills, security surface, update needs), then set the process/security model and the renderer/backend boundary.</span></li>
-                <li data-kind="skill"><code>electron-security-hardening</code><span>Harden an Electron app to the secure baseline — contextIsolation on, nodeIntegration off, sandbox on, a strict CSP, no remote module — and bridge to the OS through a narrow typed contextBridge backed by validated ipcMain handlers.</span></li>
-                <li data-kind="skill"><code>native-os-integration</code><span>Wire native OS integration the way each platform expects — tray/menu-bar, application menus, notifications, file associations, custom-scheme deep links routed through a single-instance lock, and secrets in the OS credential store.</span></li>
-                <li data-kind="skill"><code>packaging-signing-and-updates</code><span>Package, code-sign, and notarize a desktop app for Windows (Authenticode/EV) and macOS (Developer ID + notarytool + staple), and ship a safe signed auto-update (signature verified before apply, channels, staged rollout, rollback, version floor).</span></li>
-                <li data-kind="skill"><code>tauri-capabilities-and-commands</code><span>Expose native capability in Tauri through #[tauri::command] handlers with validated input, authorized by a least-privilege capabilities/permissions allow-list (v2) scoped to the windows that need it — no wildcard fs/shell scopes.</span></li>
-                <li data-kind="hook"><code>check-desktop-engineering-anti-patterns.sh</code><span>check-desktop-engineering-anti-patterns.sh PostToolUse advisory hook — flags anti-patterns in desktop app engineering (unsafe Electron settings, wildcard Tauri capabilities, unsigned build artifacts).</span></li>
-                <li data-kind="template"><code>framework-decision.md</code><span>Desktop framework decision template</span></li>
-                <li data-kind="template"><code>ipc-security-review.md</code><span>IPC security review template</span></li>
-                <li data-kind="template"><code>native-integration-plan.md</code><span>Native OS integration plan template</span></li>
-                <li data-kind="template"><code>release-signing-checklist.md</code><span>Release signing and notarization checklist template</span></li>
-              </ul>
-              <p class="stack-empty" hidden role="status">No items match that filter in this plugin.</p>
-            </div>
-          </div>
-          <!-- STACK_PANELS:END -->
-
-          <div class="stack-cta">
-            <a class="btn btn--primary" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">
-              Explore on GitHub
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ REFERENCES ============ -->
-    <section class="section testimonial" aria-labelledby="references-heading">
-      <div class="container">
-        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>References</p>
-        <h2 class="visually-hidden" id="references-heading">Client references</h2>
-        <p class="references__line">
-          Case studies under NDA — references available on request.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <!--
-      ABOUT BIO — built from Matt's verified LinkedIn record.
-      Career arc: finance professional (King & Prince, Adecco, Soliant,
-      SGS) → senior data analyst inside the Bermuda Monetary Authority
-      (Jan 2024 – Nov 2025) → Raven Power LLC, since Nov 2025.
-      Education: MBA & BS Finance, University of South Alabama.
-      Certs: Power BI Data Analyst Associate, Fabric Analytics Engineer
-      Associate, Power Platform Fundamentals, BIS/FSI-IMF SROC.
-      HEADSHOT: drop a 600x600 image at assets/matt.jpg and uncomment the
-      <img> below; the placeholder ring stays until then.
-    -->
-    <section class="section section--grid" id="about" aria-labelledby="about-heading">
-      <div class="container about">
-        <header class="section__head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>About</p>
-          <h2 class="section__title" id="about-heading">Founded by Matt Corbett.</h2>
-        </header>
-
-        <!--
-          BY THE NUMBERS — VERIFIED figures from Matt's career record.
-            - 13+ years: career span across corporate finance and data
-              analytics (King & Prince Seafood 2015 → present), rounded
-              conservatively.
-            - 2 years: tenure as Senior Data Analyst at the Bermuda
-              Monetary Authority (Jan 2024 – Nov 2025).
-            - 4 active certifications: Power BI Data Analyst Associate,
-              Fabric Analytics Engineer Associate, Power Platform
-              Fundamentals, plus the BIS / FSI-IMF SROC banking-supervision
-              course (2025).
-          Adjust here when a stat moves. Don't claim what isn't true.
-        -->
-        <ul class="stats__list stats__list--about" role="list" aria-label="Raven Power by the numbers">
-          <li class="stat reveal" data-reveal>
-            <strong class="stat__num">13<span class="stat__plus">+</span></strong>
-            <span class="stat__label">Years across finance &amp; data analytics</span>
-          </li>
-          <li class="stat reveal" data-reveal data-reveal-delay="60">
-            <strong class="stat__num">2</strong>
-            <span class="stat__label">Years inside a financial regulator</span>
-          </li>
-          <li class="stat reveal" data-reveal data-reveal-delay="120">
-            <strong class="stat__num">4</strong>
-            <span class="stat__label">Active professional certifications</span>
-          </li>
-          <li class="stat reveal" data-reveal data-reveal-delay="180">
-            <strong class="stat__num">1</strong>
-            <span class="stat__label">Founder. Direct line, no handoffs.</span>
-          </li>
-        </ul>
-
-        <div class="about__grid">
-          <div class="about__body">
-            <div class="about__portrait">
-              <img src="assets/matt.jpg" alt="" />
-            </div>
-            <p>
-              Raven Power LLC is the consulting practice of Matt Corbett — thirteen-plus years across corporate finance and data analytics, most of it spent turning operational data into systems the business actually runs on.
-            </p>
-            <p>
-              The last two of those years were spent as a Senior Data Analyst inside the Bermuda Monetary Authority — Bermuda's financial-services regulator — building production Power Platform and Power BI / Microsoft Fabric solutions over Dataverse: DirectQuery and DirectLake semantic models, custom Power Apps, Power Automate workflows, row-level security, KPI scorecards, and the app-security and governance models behind them. The standard there is precision, auditability, and a clear paper trail. There is no other kind of work to do.
-            </p>
-            <p>
-              Raven Power brings that regulator-grade discipline to every engagement, now extended with agentic AI built on Anthropic's Claude. Matt holds an MBA and a BS in Finance from the University of South Alabama and is Microsoft-certified across the Power BI, Fabric, and Power Platform stack. <a class="link" href="https://www.linkedin.com/in/matthewlcorbett" rel="me noopener" target="_blank">Connect on LinkedIn</a>.
-            </p>
-          </div>
-
-          <aside class="about__aside" aria-label="Credentials">
-            <dl class="facts">
-              <div class="fact">
-                <dt>Experience</dt>
-                <dd>13+ years · finance &amp; data analytics</dd>
-              </div>
-              <div class="fact">
-                <dt>Most recently</dt>
-                <dd>Senior Data Analyst · Bermuda Monetary Authority (2024–2025)</dd>
-              </div>
-              <div class="fact">
-                <dt>Education</dt>
-                <dd>
-                  <span class="cred cred--strong">MBA · University of South Alabama</span>
-                  <span class="cred">BS Finance · University of South Alabama</span>
-                </dd>
-              </div>
-              <div class="fact">
-                <dt>Certifications</dt>
-                <dd>
-                  <span class="cred cred--strong">Microsoft Certified — Power BI Data Analyst Associate</span>
-                  <span class="cred cred--strong">Microsoft Certified — Fabric Analytics Engineer Associate</span>
-                  <span class="cred">Microsoft Power Platform Fundamentals</span>
-                  <span class="cred">BIS / FSI-IMF — Supervisory and Regulatory Online Course (SROC), Banking Supervision</span>
-                </dd>
-              </div>
-              <div class="fact">
-                <dt>Online</dt>
-                <dd><a class="link" href="https://www.linkedin.com/in/matthewlcorbett" rel="me noopener" target="_blank">linkedin.com/in/matthewlcorbett</a></dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section section--alt" id="contact" aria-labelledby="contact-heading">
-      <div class="container contact">
-        <header class="section__head">
-          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Contact</p>
-          <h2 class="section__title" id="contact-heading">Start a project.</h2>
-          <p class="section__lede">
-            Engagements typically run 4&ndash;8 weeks, fixed-scope, in the $25&ndash;50k range &mdash; solo, with specialist agents pulled in as the work demands. Tell me about what you're trying to do, or write directly to
-            <a href="mailto:matt@ravenpower.net" class="link">matt@ravenpower.net</a>.
-          </p>
-          <!--
-            BOOKING LINK — TODO.
-            Replace href="#" with your Cal.com or Calendly URL when ready
-            (e.g. https://cal.com/matt-corbett/intro). The button is wired
-            as the primary CTA; the form below remains the secondary path.
-          -->
-          <p class="contact__cta">
-            <a class="btn btn--primary" href="#" data-todo="booking-url">
-              Book a 30-min call
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-            <span class="contact__cta-or">or send a message below</span>
-          </p>
-        </header>
-
-        <div class="contact__grid">
-          <!--
-            FORM BACKEND — READY TO ACTIVATE.
-            This form ships in a graceful-fallback state: if no endpoint is
-            set, submissions open the visitor's email client pre-filled to
-            matt@ravenpower.net (handled in script.js).
-
-            TO GO LIVE WITH FORMSPREE (≈2 min):
-              1. Sign up at https://formspree.io and create a new form.
-                 You'll get an endpoint URL like:
-                   https://formspree.io/f/XXXXXXXX
-              2. Paste it as the data-endpoint value below — replace
-                 the empty string with your URL.
-              3. Save & deploy. JS will POST JSON to that endpoint and
-                 fall back to mailto only if the request fails.
-
-            Other providers (Basin, Web3Forms, Netlify Forms) work the same
-            way — paste the endpoint URL into data-endpoint.
-          -->
-          <form class="form" id="contact-form" novalidate data-endpoint="">
-            <p class="form__direct">
-              Prefer email? Write to
-              <a class="link" href="mailto:matt@ravenpower.net">matt@ravenpower.net</a>.
-            </p>
-            <div class="form__row">
-              <label class="field">
-                <span class="field__label">Name</span>
-                <input type="text" name="name" autocomplete="name" required />
-              </label>
-              <label class="field">
-                <span class="field__label">Email</span>
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-            </div>
-            <label class="field">
-              <span class="field__label">Company <span class="field__opt">(optional)</span></span>
-              <input type="text" name="company" autocomplete="organization" />
-            </label>
-            <label class="field">
-              <span class="field__label">What can we help with?</span>
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <div class="form__actions">
-              <button type="submit" class="btn btn--primary">
-                Send message
-                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                  <path d="M3 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-              <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-            </div>
-          </form>
-
-          <aside class="contact__aside">
-            <dl class="facts">
-              <div class="fact">
-                <dt>Email</dt>
-                <dd><a class="link" href="mailto:matt@ravenpower.net">matt@ravenpower.net</a></dd>
-              </div>
-              <div class="fact">
-                <dt>LinkedIn</dt>
-                <dd><a class="link" href="https://www.linkedin.com/in/matthewlcorbett" rel="me noopener" target="_blank">/in/matthewlcorbett</a></dd>
-              </div>
-              <div class="fact">
-                <dt>Location</dt>
-                <!-- LOCATION CAVEAT: LinkedIn lists role as Jacksonville, FL (Remote) but profile is Hamilton, Bermuda. Leaving remote/worldwide until Matt confirms HQ jurisdiction. -->
-                <dd>Remote · working with clients worldwide</dd>
-              </div>
-              <div class="fact">
-                <dt>Response time</dt>
-                <dd>Usually within one business day.</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img class="footer__mark" src="assets/raven-mark-dark.png" width="24" height="25" alt="" aria-hidden="true" />
-        <span>Raven Power LLC</span>
-      </div>
-      <p class="footer__meta">
-        <!-- LOCATION CAVEAT: HQ jurisdiction pending Matt's confirmation (Bermuda vs. Florida). Update copy + registration line once known. -->
-        <span>&copy; <span id="year">2026</span> Raven Power LLC · Remote, worldwide</span>
-        <!--
-          Registration line hidden until Matt confirms the LLC's jurisdiction and number.
-          To restore: unwrap the span.footer__reg block below and drop a real value into
-          .footer__reg-num, then add the surrounding `·` separators back in.
-          <span class="footer__sep" aria-hidden="true">·</span>
-          <span class="footer__reg">LLC Reg. No. <span class="footer__reg-num">[pending]</span></span>
-        -->
-        <span class="footer__sep" aria-hidden="true">·</span>
-        <a class="link" href="mailto:matt@ravenpower.net">matt@ravenpower.net</a>
-        <span class="footer__sep" aria-hidden="true">·</span>
-        <a class="link" href="https://www.linkedin.com/in/matthewlcorbett" rel="me noopener" target="_blank">LinkedIn</a>
-      </p>
-      <a href="#top" class="footer__top">
-        Back to top
-        <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13 V3 M4 7 L8 3 L12 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+  <!-- CAPABILITIES -->
+  <section class="section section--alt" id="capabilities" aria-labelledby="cap-heading">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>What I do</p>
+        <h2 class="section__title" id="cap-heading">Platform mastery, delivered end-to-end.</h2>
+        <p class="section__lede">From data model to deployed solution. Every engagement is hands-on, senior-level work — no juniors, no handoffs.</p>
+      </header>
+      <ul class="cap__grid" role="list">
+        <li class="cap__card">
+          <div class="cap__detail cap__detail--purple">
+            <svg class="cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="cap__title">Power Platform</h3>
+          <p class="cap__body">Complex model-driven apps, custom pages, PCF controls. Multi-environment ALM pipelines. Dataverse schema design with row-level and column-level security.</p>
+          <ul class="cap__tags" role="list">
+            <li class="cap__tag">Dataverse</li>
+            <li class="cap__tag">Canvas apps</li>
+            <li class="cap__tag">Model-driven</li>
+            <li class="cap__tag">PCF</li>
+            <li class="cap__tag">ALM</li>
+          </ul>
+        </li>
+        <li class="cap__card">
+          <div class="cap__detail cap__detail--teal">
+            <svg class="cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="cap__title">Power BI &amp; Analytics</h3>
+          <p class="cap__body">Enterprise-grade semantic models, advanced DAX, and board-ready dashboards. Full lifecycle — from raw source to starred dataset to published app.</p>
+          <ul class="cap__tags" role="list">
+            <li class="cap__tag">Power BI</li>
+            <li class="cap__tag">DAX</li>
+            <li class="cap__tag">Fabric</li>
+            <li class="cap__tag">Lakehouse</li>
+            <li class="cap__tag">Semantic models</li>
+          </ul>
+        </li>
+        <li class="cap__card">
+          <div class="cap__detail cap__detail--copper">
+            <svg class="cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="cap__title">Azure &amp; AI Engineering</h3>
+          <p class="cap__body">Serverless event-driven pipelines, Azure OpenAI integrations, and agent-based automation at scale. Infrastructure that's observable and cost-efficient from day one.</p>
+          <ul class="cap__tags" role="list">
+            <li class="cap__tag">Azure Functions</li>
+            <li class="cap__tag">OpenAI</li>
+            <li class="cap__tag">Event Grid</li>
+            <li class="cap__tag">Cosmos DB</li>
+            <li class="cap__tag">AI agents</li>
+          </ul>
+        </li>
+        <li class="cap__card">
+          <div class="cap__detail cap__detail--lavender">
+            <svg class="cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="cap__title">Web &amp; Full-Stack</h3>
+          <p class="cap__body">React frontends, REST/GraphQL APIs, and modern CI/CD pipelines. Ship fast, test well, and keep the codebase maintainable for the team that inherits it.</p>
+          <ul class="cap__tags" role="list">
+            <li class="cap__tag">React</li>
+            <li class="cap__tag">TypeScript</li>
+            <li class="cap__tag">Node.js</li>
+            <li class="cap__tag">GraphQL</li>
+            <li class="cap__tag">GitHub Actions</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Selected work</p>
+        <h2 class="section__title" id="work-heading">Proof, not slides.</h2>
+        <p class="section__lede">Representative engagements. Case studies under NDA — references available on request.</p>
+      </header>
+
+      <!-- FILTERS -->
+      <div class="work-filters" role="group" aria-label="Filter by discipline">
+        <button class="chip chip--active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="ai" aria-pressed="false">AI</button>
+        <button class="chip" data-filter="power-platform" aria-pressed="false">Power Platform</button>
+        <button class="chip" data-filter="power-bi" aria-pressed="false">Power BI</button>
+        <button class="chip" data-filter="web" aria-pressed="false">Web</button>
+        <label class="work-search__label" for="work-search">Search</label>
+        <input class="work-search" id="work-search" type="search" placeholder="Search projects…" aria-label="Search projects" />
+      </div>
+
+      <ul class="work__grid" role="list">
+        <!-- PROJECT 1 -->
+        <li class="proj" data-tags="ai power-platform">
+          <div class="proj__motif proj__motif--purple" aria-hidden="true">
+            <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="32" stroke="currentColor" stroke-width="1.5" opacity=".4"/><path d="M28 40h24M40 28v24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="proj__body">
+            <ul class="proj__tags" role="list">
+              <li class="proj__tag">AI</li>
+              <li class="proj__tag">Power Platform</li>
+            </ul>
+            <h3 class="proj__title">AI-Powered Permit Routing Engine</h3>
+            <p class="proj__desc">Built a document-classification and routing system on Azure OpenAI + Dataverse for a regional utility. Reduced manual triage from 3 days to under 4 hours and eliminated 90 % of mis-routes.</p>
+            <dl class="proj__metrics">
+              <div class="proj__metric">
+                <dt>Triage time</dt>
+                <dd><span class="proj__from">3 days</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">4 h</span></dd>
+              </div>
+              <div class="proj__metric">
+                <dt>Mis-routes</dt>
+                <dd><span class="proj__from">~12/wk</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">~1/wk</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <!-- PROJECT 2 -->
+        <li class="proj" data-tags="power-bi">
+          <div class="proj__motif proj__motif--teal" aria-hidden="true">
+            <svg viewBox="0 0 80 80" fill="none"><rect x="16" y="44" width="10" height="20" rx="2" fill="currentColor" opacity=".3"/><rect x="30" y="32" width="10" height="32" rx="2" fill="currentColor" opacity=".5"/><rect x="44" y="20" width="10" height="44" rx="2" fill="currentColor" opacity=".7"/><rect x="58" y="28" width="10" height="36" rx="2" fill="currentColor" opacity=".9"/></svg>
+          </div>
+          <div class="proj__body">
+            <ul class="proj__tags" role="list">
+              <li class="proj__tag">Power BI</li>
+            </ul>
+            <h3 class="proj__title">Enterprise KPI Suite — 40-Table Semantic Model</h3>
+            <p class="proj__desc">Designed and delivered a star-schema semantic model for a 600-seat manufacturer. Replaced 14 disconnected spreadsheets with a single source of truth; end-to-end load time dropped from 45 min to under 90 s.</p>
+            <dl class="proj__metrics">
+              <div class="proj__metric">
+                <dt>Data sources consolidated</dt>
+                <dd><span class="proj__from">14</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">1</span></dd>
+              </div>
+              <div class="proj__metric">
+                <dt>Load time</dt>
+                <dd><span class="proj__from">45 min</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">&lt;90 s</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <!-- PROJECT 3 -->
+        <li class="proj" data-tags="power-platform ai">
+          <div class="proj__motif proj__motif--copper" aria-hidden="true">
+            <svg viewBox="0 0 80 80" fill="none"><path d="M20 60 L40 20 L60 60" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/><circle cx="40" cy="20" r="4" fill="currentColor" opacity=".8"/><circle cx="20" cy="60" r="4" fill="currentColor" opacity=".8"/><circle cx="60" cy="60" r="4" fill="currentColor" opacity=".8"/></svg>
+          </div>
+          <div class="proj__body">
+            <ul class="proj__tags" role="list">
+              <li class="proj__tag">Power Platform</li>
+              <li class="proj__tag">AI</li>
+            </ul>
+            <h3 class="proj__title">Field-Service Dispatch Automation</h3>
+            <p class="proj__desc">Replaced a paper-and-email dispatch workflow with a model-driven app + Power Automate flows for a regional HVAC firm. Technician utilisation rose 22 % in 60 days; back-office headcount freed up for higher-value work.</p>
+            <dl class="proj__metrics">
+              <div class="proj__metric">
+                <dt>Utilisation</dt>
+                <dd><span class="proj__from">61%</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">83%</span></dd>
+              </div>
+              <div class="proj__metric">
+                <dt>Dispatch errors</dt>
+                <dd><span class="proj__from">~8/wk</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">~1/wk</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+        <!-- PROJECT 4 -->
+        <li class="proj" data-tags="web ai">
+          <div class="proj__motif proj__motif--lavender" aria-hidden="true">
+            <svg viewBox="0 0 80 80" fill="none"><rect x="12" y="18" width="56" height="44" rx="4" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M12 30h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><circle cx="22" cy="24" r="2.5" fill="currentColor" opacity=".6"/><circle cx="31" cy="24" r="2.5" fill="currentColor" opacity=".6"/></svg>
+          </div>
+          <div class="proj__body">
+            <ul class="proj__tags" role="list">
+              <li class="proj__tag">Web</li>
+              <li class="proj__tag">AI</li>
+            </ul>
+            <h3 class="proj__title">AI-Assisted Compliance Portal</h3>
+            <p class="proj__desc">Built a React + Node.js portal for an InsurTech startup: policy-document ingestion, GPT-4 summarisation, and a rules-engine that flags non-compliant clauses before underwriter review.</p>
+            <dl class="proj__metrics">
+              <div class="proj__metric">
+                <dt>Review time / policy</dt>
+                <dd><span class="proj__from">~2 h</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">18 min</span></dd>
+              </div>
+              <div class="proj__metric">
+                <dt>Missed flags</dt>
+                <dd><span class="proj__from">~6%</span><span class="proj__arrow" aria-hidden="true">→</span><span class="proj__to">&lt;0.5%</span></dd>
+              </div>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <!--
+    Full RavenClaude operator portal and repo guide omitted from this public site;
+    full breakdown lives at
+    /repo-guide.html.
+  -->
+  <section class="section section--grid" id="stack" aria-labelledby="stack-heading">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
+        <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
+        <p class="section__lede">
+          Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 117-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
+        </p>
+      </header>
+
+      <div class="stack-wrap">
+        <!--
+          STACK SECTION — HAND-MAINTAINED.
+          site/index.html is the source of truth for the Stack section.
+          Do NOT run scripts/build_stack.py against this file —
+          STACK_STATS / STACK_TABS / STACK_PANELS markers are kept only as anchors in
+          case guide generation is ever restored.
+        -->
+        <!-- STACK_STATS:START -->
+        <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
+          <li class="stack-stat"><strong>117</strong><span>plugins</span></li>
+          <li class="stack-stat"><strong>469</strong><span>agents</span></li>
+          <li class="stack-stat"><strong>662</strong><span>skills</span></li>
+          <li class="stack-stat"><strong>140</strong><span>hooks</span></li>
+          <li class="stack-stat"><strong>408</strong><span>templates</span></li>
+        </ul>
+        <!-- STACK_STATS:END -->
+
+        <!-- STACK_TABS:START -->
+        <div class="stack-tabs" role="tablist" aria-label="Plugins">
+          <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
+            <span class="stack-tab__name">ravenclaude-core</span>
+            <span class="stack-tab__ver">v0.161.3</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
+            <span class="stack-tab__name">power-platform</span>
+            <span class="stack-tab__ver">v0.41.1</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
+            <span class="stack-tab__name">finance</span>
+            <span class="stack-tab__ver">v0.14.2</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-regulatory-compliance" id="stack-tab-regulatory-compliance" data-stack-tab="regulatory-compliance">
+            <span class="stack-tab__name">regulatory-compliance</span>
+            <span class="stack-tab__ver">v0.12.1</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-web-design" id="stack-tab-web-design" data-stack-tab="web-design">
+            <span class="stack-tab__name">web-design</span>
+            <span class="stack-tab__ver">v0.13.0</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-edtech-partner-success" id="stack-tab-edtech-partner-success" data-stack-tab="edtech-partner-success">
+            <span class="stack-tab__name">edtech-partner-success</span>
+            <span class="stack-tab__ver">v0.12.2</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-data-platform" id="stack-tab-data-platform" data-stack-tab="data-platform">
+            <span class="stack-tab__name">data-platform</span>
+            <span class="stack-tab__ver">v0.13.2</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-engineering-management" id="stack-tab-engineering-management" data-stack-tab="engineering-management">
+            <span class="stack-tab__name">engineering-management</span>
+            <span class="stack-tab__ver">v0.1.0</span>
+          </button>
+          <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-desktop-app-engineering" id="stack-tab-desktop-app-engineering" data-stack-tab="desktop-app-engineering">
+            <span class="stack-tab__name">desktop-app-engineering</span>
+            <span class="stack-tab__ver">v0.1.0</span>
+          </button>
+        </div>
+        <!-- STACK_TABS:END -->
