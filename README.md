@@ -1,6 +1,6 @@
 # Raven Power Website
 
-[Open Website](site/index.html)
+<a href="https://ravenpower.net/" target="_blank">Open Website</a>
 
 **Raven Power Website Design System** — Specialized agents for building high-quality websites for small businesses and professional services.
 
