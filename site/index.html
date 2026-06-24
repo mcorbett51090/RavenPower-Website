@@ -530,8 +530,8 @@
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
             <li class="stack-stat"><strong>117</strong><span>plugins</span></li>
             <li class="stack-stat"><strong>469</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>662</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>140</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>663</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>142</strong><span>hooks</span></li>
             <li class="stack-stat"><strong>408</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
@@ -540,7 +540,7 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.161.3</span>
+              <span class="stack-tab__ver">v0.171.1</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
@@ -580,11 +580,11 @@
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code plugin: 15 specialist agents, 43 skills, team-lead dispatch playbook, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, hooks, templates. Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code foundation: 15 specialist agents, 44 skills, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, Agentic Work-Streams (`rc streams` — session classifier, active-stream tracking, crash-resume), Convergence Engine (`rc converge` / `refine-to-rubric` — iterate any artifact to a bounded rubric with cross-model judge). Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`, `/stream`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>43</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>16</strong> Hooks</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>44</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>19</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
               </ul>
@@ -647,6 +647,7 @@
                 <li data-kind="skill"><code>two-panel-plan-review</code><span>Two independent expert panels review a strategic plan, fill its gaps, author a tactical build plan, then cold-review with P0/P1 recommendations.</span></li>
                 <li data-kind="skill"><code>update-ravenclaude</code><span>Refresh a RavenClaude installation so newly shipped skills, agents, and changes take effect in the current session.</span></li>
                 <li data-kind="skill"><code>visual-feedback-loop</code><span>Iterative visual critique loop — agent renders a visual surface, inspects its own output against objective signals, and iterates toward correctness.</span></li>
+                <li data-kind="skill"><code>refine-to-rubric</code><span>Convergence Engine — iterate any artifact (code, prose, visual report, agent file) until it measurably passes a bounded rubric. Objective/deterministic gates run first, a cross-model judge (never self-grade) scores second, stop is a model-free predicate, and the best iteration ships. Never claims perfect — verdicts are rubric-pass | capped | plateaued | budget-exhausted with an honest residual-gaps list.</span></li>
                 <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
                 <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash and tool calls — blocks obviously destructive commands.</span></li>
@@ -660,7 +661,10 @@
                 <li data-kind="hook"><code>route-decision-review.sh</code><span>route-decision-review.sh PreToolUse hook — routes binary yes/no decisions to a tribunal for automatic resolution, preventing user interruption for rule-derivable decisions.</span></li>
                 <li data-kind="hook"><code>capability-orientation.sh</code><span>capability-orientation.sh SessionStart hook — injects a capability banner so the agent knows what external surfaces, credentials, and permissions are available.</span></li>
                 <li data-kind="hook"><code>claim-grounding-lint.sh</code><span>claim-grounding-lint.sh PostToolUse hook for Edit | Write | MultiEdit — advisory warning when absolute capability claims are written without inline provenance markers.</span></li>
-                <li data-kind="hook"><code>copilot-hook-adapter.sh</code><span>copilot-hook-adapter.sh — translates Copilot CLI payloads to Claude hook stdin; preserves real deny reasons; exports CLAUDE_SESSION_ID and THING_HOST.</span></li>
+                <li data-kind="hook"><code>mark-web-domain-seen.sh</code><span>mark-web-domain-seen.sh PostToolUse hook for WebFetch — records the per-session first-use 'seen' marker for a YAML-whitelisted domain after the WebFetch proceeds; the consent-ordering complement to guard-web-access.sh.</span></li>
+                <li data-kind="hook"><code>stream-session-close.sh</code><span>stream-session-close.sh Stop hook (Agentic Work-Streams P1) — on session end, appends a session_closed event and refreshes the active stream's resume snapshot for crash-resilient handoff.</span></li>
+                <li data-kind="hook"><code>stream-prompt-attribute.sh</code><span>stream-prompt-attribute.sh UserPromptSubmit hook (Agentic Work-Streams P4 — opt-in, fail-open) — no-ops unless `stream_hook: per_prompt` is set in comfort-posture.yaml; classifies each prompt against the active stream on submission.</span></li>
+                <li data-kind="hook"><code>agent-dispatch-evaluator.sh</code><span>agent-dispatch-evaluator.sh SubagentStart hook (audit-only, opt-in) — no-ops unless `enabled: true` in dispatch-config.json; fires a Haiku classifier on the about-to-be-spawned agent to right-size model selection.</span></li>
                 <li data-kind="hook"><code>ensure-default-mode.sh</code><span>ensure-default-mode.sh SessionStart hook — detects bypass/acceptEdits modes and warns that configured permission rules are being ignored.</span></li>
                 <li data-kind="hook"><code>regen-on-manifest-change.sh</code><span>regen-on-manifest-change.sh PostToolUse hook for Edit | Write | MultiEdit on plugin.json/marketplace.json — regenerates downstream artifacts when a plugin version field changes.</span></li>
                 <li data-kind="rule"><code>agent-collaboration</code><span>Rule: Agent Collaboration Protocol</span></li>
