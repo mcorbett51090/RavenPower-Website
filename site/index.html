@@ -511,7 +511,7 @@
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>The stack</p>
           <h2 class="section__title" id="stack-heading">Open methodology. Audit-ready by default.</h2>
           <p class="section__lede">
-            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 117-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
+            Every engagement runs on <a class="link" href="https://github.com/mcorbett51090/RavenClaude" rel="noopener" target="_blank">RavenClaude</a> — a 119-plugin marketplace of Claude Code agents, skills, hooks, and templates I maintain in the open. Pick a discipline to see what comes ready out of the box.
           </p>
         </header>
 
@@ -528,11 +528,11 @@
           -->
           <!-- STACK_STATS:START -->
           <ul class="stack-stats" role="list" aria-label="Marketplace at a glance">
-            <li class="stack-stat"><strong>117</strong><span>plugins</span></li>
-            <li class="stack-stat"><strong>469</strong><span>agents</span></li>
-            <li class="stack-stat"><strong>663</strong><span>skills</span></li>
-            <li class="stack-stat"><strong>142</strong><span>hooks</span></li>
-            <li class="stack-stat"><strong>408</strong><span>templates</span></li>
+            <li class="stack-stat"><strong>119</strong><span>plugins</span></li>
+            <li class="stack-stat"><strong>472</strong><span>agents</span></li>
+            <li class="stack-stat"><strong>671</strong><span>skills</span></li>
+            <li class="stack-stat"><strong>144</strong><span>hooks</span></li>
+            <li class="stack-stat"><strong>412</strong><span>templates</span></li>
           </ul>
           <!-- STACK_STATS:END -->
 
@@ -540,11 +540,11 @@
           <div class="stack-tabs" role="tablist" aria-label="Plugins">
             <button class="stack-tab is-active" role="tab" aria-selected="true" aria-controls="stack-panel-ravenclaude-core" id="stack-tab-ravenclaude-core" data-stack-tab="ravenclaude-core">
               <span class="stack-tab__name">ravenclaude-core</span>
-              <span class="stack-tab__ver">v0.171.1</span>
+              <span class="stack-tab__ver">v0.182.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-power-platform" id="stack-tab-power-platform" data-stack-tab="power-platform">
               <span class="stack-tab__name">power-platform</span>
-              <span class="stack-tab__ver">v0.41.1</span>
+              <span class="stack-tab__ver">v0.43.0</span>
             </button>
             <button class="stack-tab" role="tab" aria-selected="false" aria-controls="stack-panel-finance" id="stack-tab-finance" data-stack-tab="finance">
               <span class="stack-tab__name">finance</span>
@@ -580,10 +580,10 @@
           <!-- STACK_PANELS:START -->
           <div class="stack-panels">
             <div class="stack-panel is-active" role="tabpanel" id="stack-panel-ravenclaude-core" aria-labelledby="stack-tab-ravenclaude-core" data-stack-panel="ravenclaude-core">
-              <p class="stack-panel__desc">Domain-neutral Claude Code foundation: 15 specialist agents, 44 skills, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, Agentic Work-Streams (`rc streams` — session classifier, active-stream tracking, crash-resume), Convergence Engine (`rc converge` / `refine-to-rubric` — iterate any artifact to a bounded rubric with cross-model judge). Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`, `/stream`.</p>
+              <p class="stack-panel__desc">Domain-neutral Claude Code foundation: 15 specialist agents, 46 skills, Capability Grounding Protocol, comfort-posture dashboard, opt-in command-review tribunal (the Thing), WebFetch sanitizer, branch-archive escape hatch, Agentic Work-Streams (`rc streams` — session classifier, active-stream tracking, crash-resume), Convergence Engine (`rc converge` / `refine-to-rubric` — iterate any artifact to a bounded rubric with cross-model judge), design-project binding (`design-link` — link a repo to its claude.ai/design project), Repo-Build Studio (`repo-build-studio` — prompt → render → commit loop for self-contained HTML pages, no custom backend). Slash commands: `/init-agent-ready`, `/wrap`, `/set-posture`, `/dashboard`, `/forge`, `/reset-plugin-cache`.</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>15</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>44</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>46</strong> Skills</button></li>
                 <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>19</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="rule" aria-pressed="false"><strong>5</strong> Rules</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>46</strong> Templates</button></li>
@@ -618,6 +618,7 @@
                 <li data-kind="skill"><code>cross-platform-determinism</code><span>For any script that produces a file the repo COMMITS and CI DIFFS — generated HTML, lockfiles, JSON snapshots, fixture files, documentation rendered from source.</span></li>
                 <li data-kind="skill"><code>decision-review</code><span>Route a yes/no decision through the command-review tribunal (the Thing) for a binding verdict instead of interrupting the human.</span></li>
                 <li data-kind="skill"><code>declarative-visualization</code><span>Author or validate a Vega-Lite, Vega, Deneb, or SVG visualization spec for any platform (web, Power BI, Tableau) — ensures the chart spec passes security and rendering checks before deployment.</span></li>
+                <li data-kind="skill"><code>design-link</code><span>Bind this repo to a claude.ai/design project in one step — lists your projects, lets you pick, and writes .ravenclaude/design-project.json so every session's capability banner surfaces the link. Pairs with /design-sync for component sync.</span></li>
                 <li data-kind="skill"><code>diff-budget</code><span>Enforces a per-PR file-count and LoC budget — PRs touching &gt;5 files or &gt;400 LoC route to architectural review before merge.</span></li>
                 <li data-kind="skill"><code>draft-agent-brief</code><span>Use this skill when the user wants to create a new agent and has a clear business goal but isn't fluent in the agent's target domain.</span></li>
                 <li data-kind="skill"><code>environment-discovery</code><span>Auto-discover the consumer's environment posture by probing installed CLIs (pac / az / aws / gcloud / gh) with read-only commands at session start, decoding JWTs for role/scope claims, and assembling a draft `.ravenclaude/environment-context.md` for save/edit/skip.</span></li>
@@ -648,6 +649,7 @@
                 <li data-kind="skill"><code>update-ravenclaude</code><span>Refresh a RavenClaude installation so newly shipped skills, agents, and changes take effect in the current session.</span></li>
                 <li data-kind="skill"><code>visual-feedback-loop</code><span>Iterative visual critique loop — agent renders a visual surface, inspects its own output against objective signals, and iterates toward correctness.</span></li>
                 <li data-kind="skill"><code>refine-to-rubric</code><span>Convergence Engine — iterate any artifact (code, prose, visual report, agent file) until it measurably passes a bounded rubric. Objective/deterministic gates run first, a cross-model judge (never self-grade) scores second, stop is a model-free predicate, and the best iteration ships. Never claims perfect — verdicts are rubric-pass | capped | plateaued | budget-exhausted with an honest residual-gaps list.</span></li>
+                <li data-kind="skill"><code>repo-build-studio</code><span>Build a website or dashboard by prompting Claude and watching it render live, then commit it back — composing Claude Code on the web + self-contained HTML + GitHub Pages/githack preview + PR, no custom backend. Covers static/self-contained pages fully; tells you when a data-connected dashboard needs the heavier Tier-1 path.</span></li>
                 <li data-kind="hook"><code>enforce-layout.sh</code><span>enforce-layout.sh PreToolUse hook for Write | Edit | MultiEdit.</span></li>
                 <li data-kind="hook"><code>format-on-write.sh</code><span>format-on-write.sh PostToolUse hook for Edit | Write | MultiEdit.</span></li>
                 <li data-kind="hook"><code>guard-destructive.sh</code><span>guard-destructive.sh PreToolUse hook for Bash and tool calls — blocks obviously destructive commands.</span></li>
@@ -699,8 +701,8 @@
               <p class="stack-panel__desc">Microsoft Power Platform specialist team — 11 specialists (Test Studio + DAX + pac solution check tester, PBIP-git + DAX + ADO power-bi-engineer, canvas/Power Fx, Power Automate + connectors, Dataverse modeling, model-driven apps, pac CLI + ALM, tenant governance/DLP, PCF…</p>
               <ul class="stack-counts" role="list" aria-label="Filter by kind">
                 <li><button type="button" class="stack-chip" data-kind="agent" aria-pressed="false"><strong>11</strong> Agents</button></li>
-                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>21</strong> Skills</button></li>
-                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>3</strong> Hooks</button></li>
+                <li><button type="button" class="stack-chip" data-kind="skill" aria-pressed="false"><strong>22</strong> Skills</button></li>
+                <li><button type="button" class="stack-chip" data-kind="hook" aria-pressed="false"><strong>4</strong> Hooks</button></li>
                 <li><button type="button" class="stack-chip" data-kind="template" aria-pressed="false"><strong>3</strong> Templates</button></li>
               </ul>
               <ul class="stack-items" role="list">
@@ -719,6 +721,7 @@
                 <li data-kind="skill"><code>canvas-app-performance</code><span>Diagnose and fix Power Fx canvas app performance — delegation as a P1 design constraint, lazy-load patterns, Concurrent() vs sequential, ClearCollect vs collection growth, OnStart vs OnVisible, screen-transition cost, control-count budgets per screen, and the connector-call audit via Monitor.</span></li>
                 <li data-kind="skill"><code>code-review</code><span>Deep code audit that finds dead wiring, silent failures, unfinished features, placeholder stubs, bloated files, and unnecessary complexity.</span></li>
                 <li data-kind="skill"><code>copilot-studio-bot-design</code><span>Design Copilot Studio bots — topic vs generative-answers boundaries, knowledge-source hygiene, trigger-phrase design, slot-filling patterns, escalation-to-human criteria, AI Builder vs prompt-flow vs direct Azure OpenAI decisions, and the test-set discipline that catches regressions on every authoring change.</span></li>
+                <li data-kind="skill"><code>dataverse-payload-preflight</code><span>Validate a Dataverse create/update payload against live entity metadata in one pass before POST/PATCH — catches nonexistent columns, invalid option-set values, malformed lookup binds, missing required fields, and the owner-not-provided (SPN) trap together. Run on the first create failure or up front when each test costs a human re-fire.</span></li>
                 <li data-kind="skill"><code>dataverse-plugins</code><span>Use when developing, registering, or deploying Dataverse plugins (C# server-side extensions).</span></li>
                 <li data-kind="skill"><code>dataverse-web-api</code><span>Use when programmatically creating, modifying, or querying Dataverse schema and metadata via the Web API (OData v4.0).</span></li>
                 <li data-kind="skill"><code>dataverse-web-resources</code><span>Use when creating, deploying, or managing Dataverse web resources for model-driven apps.</span></li>
@@ -737,6 +740,7 @@
                 <li data-kind="skill"><code>update-model-driven-app</code><span>Use when programmatically updating an existing model-driven Power Apps app (including custom pages) in a real environment via service principal.</span></li>
                 <li data-kind="skill"><code>visual-qa</code><span>AI-powered visual QA testing that walks through an app in the browser, records every action with annotated captions (what was done, what should happen), captures screenshots/GIFs, and sends the evidence to Gemini for automated review.</span></li>
                 <li data-kind="hook"><code>check-house-opinions.sh</code><span>check-house-opinions.sh PostToolUse hook for Edit | Write | MultiEdit on Power Platform source files.</span></li>
+                <li data-kind="hook"><code>nudge-dataverse-preflight.sh</code><span>nudge-dataverse-preflight.sh PreToolUse hook for Bash — advisory reminder to run the dataverse-payload-preflight skill when a Dataverse create/update command is detected, to avoid iterative fix-one-field-and-retrigger cycles.</span></li>
                 <li data-kind="hook"><code>validate-flow-action-names.sh</code><span>validate-flow-action-names.sh PostToolUse hook for Edit | Write | MultiEdit — warns when Power Automate cloud-flow JSON contains auto-generated action names like 'Compose_2'.</span></li>
                 <li data-kind="hook"><code>validate-tmdl-measure-metadata.sh</code><span>validate-tmdl-measure-metadata.sh PostToolUse hook for Edit | Write | MultiEdit on TMDL files — validates Power BI measures include description, formatString, and displayFolder.</span></li>
                 <li data-kind="template"><code>maintainability-review-template.md</code><span>Maintainability Review Template</span></li>
